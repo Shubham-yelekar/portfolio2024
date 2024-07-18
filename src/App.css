@@ -35,6 +35,12 @@ h1 {
   font-size: 42px;
   line-height:normal;
 }
+
+h2 {
+  font-size: 36px;
+  line-height:normal;
+}
+
 p {
   font-size: 16px;
   line-height: normal;
@@ -184,6 +190,12 @@ canvas {
 .link-box:hover {
   color: white;
   background: #252525;
+}
+
+.projects-wrapper{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2,1fr);
 }
 
 @media screen and (max-width:1200px){
