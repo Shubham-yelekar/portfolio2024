@@ -1,15 +1,210 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --white : rgba(255,255,255,1);
+  --black: rgb(0,0,0);
+  --border-gray: rgb(40, 40, 40);
+  --gray:#161414;
+  --light-gray:#d3d3d3 ;
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
 
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #141414 0%, #000 100%);
+  background: rgb(0,0,0);
+  color: var(--white);
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: -0.035rem;
+}
+
+h1 {
+  font-size: 42px;
+  line-height:normal;
+}
+p {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  padding: 0.4rem 0.5rem ;
+  border-radius: 0.75rem;
+  border: 1px solid #282828;
+  background: #161414;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+
+}
+
+nav ul {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-link {
+  width: 70px;
+  height: 36px;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  color: var(--light-gray);
+  transition: all 500ms ease-in-out;
+  border-radius: 10px;
+}
+
+.nav-link a {
+  color: var(--light-gray);
+  transition: all 500ms ease-in-out;
+}
+
+.activeLink {
+  color: var(--white)!important;
+  position: relative;
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.25)!important;
+  transition: all 500ms ease-in-out!important;
+
+}
+
+/* .activeLink::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 22px;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  background-color: rgb(211, 211, 211);
+} */
+
+.hero-wrapper{
+  width:520px ;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--light-gray);
+}
+
+.profile-img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 0.5rem;
+  border: 1px solid #282828;
+  background: linear-gradient(180deg, #FDB25A 0%, #220606 50%, #6E96EF 100%);
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+}
+
+.highlight-text-italic {
+  background: linear-gradient(180deg, #FFF 0%, #D7D7D7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Imbue", serif;
+  /* font-style: italic; */
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+.highlight-text{
+  background: linear-gradient(180deg, #FFF 0%, #D7D7D7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  /* font-style: italic; */
+}
+
+.highlight-text-mono {
+  font-family:monospace;
+  margin: 18px 2px 10px;
+}
+
+.hero-wrapper p{
+  margin: 10px 0px;
+  font-weight: 400;
+  line-height: 1.4rem ;
+  letter-spacing: -0.02rem;
+}
+
+.dotted-line {
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed var(--border-gray);
+  margin: 16px 0px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.link-box {
+  display: inline-flex;
+  height: 2.25rem;
+  padding: 0.25rem 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  border: 1px solid #282828;
+  background: var(--gray);
+  font-size: 14px;
+  transition: all 300ms ease-in-out;
+}
+.link-box:hover {
+  color: white;
+  background: #252525;
+}
+
+@media screen and (max-width:1200px){
+  .hero-wrapper h1 {
+    font-size: 36px;
+  }
+
+}
+
+
+@media screen and (max-width:600px){
+  .hero-wrapper {
+    width: 90%;
+  }
+
+  .hero-wrapper h1 {
+    font-size: 36px;
+  }
+  .hero-wrapper p {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    width: 60px;
+  }
 }
