@@ -3,6 +3,7 @@ import MainLogo from '../icons/MainLogo'
 import XDotCom from '../icons/XDotCom'
 import Github from '../icons/Github'
 import Linkedin from '../icons/Linkedin'
+import Aurora from '../components/Aurora'
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
         </div>
 
       </div>
+      <Aurora/>
     </div>
   )
 }
