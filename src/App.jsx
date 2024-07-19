@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import Archives from './pages/Archives'
 import About from './pages/About'
 import PageNotFound from './pages/PageNotFound'
+import ProjectDetails from './pages/ProjectDetails'
 
 function App() {
   const router = createBrowserRouter(
@@ -14,6 +15,7 @@ function App() {
       <Route path='/' element={<MainLayout/>}>
         <Route index element={<Home/>}></Route>
         <Route path='/projects' element={<Projects/>}></Route>
+        <Route path='/projects/:id' element={<ProjectDetails/>}></Route>
         <Route path='/archives' element={<Archives/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='*' element={<PageNotFound/>}></Route>
