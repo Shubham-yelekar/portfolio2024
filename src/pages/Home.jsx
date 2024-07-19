@@ -7,7 +7,7 @@ import Aurora from '../components/Aurora'
 
 const Home = () => {
   return (
-    <div className='h-[100vh] bg-gradient-to-b from-gray-800 to-neutral-950'>
+    <div className='h-[100vh]'>
       <div className='hero-wrapper'>
         <div className='profile-img'>
           <MainLogo/>

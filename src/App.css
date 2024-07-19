@@ -55,7 +55,8 @@ nav {
   padding: 0.4rem 0.5rem ;
   border-radius: 0.75rem;
   border: 1px solid #282828;
-  background: #161414;
+  background: hsla(0, 5%, 8%, 0.40);
+  backdrop-filter: blur(5px);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
   z-index: 999;
 }
@@ -106,6 +107,7 @@ nav ul {
   z-index: 2;
   width: 100%;
   height: 100%;
+  /* filter: blur(2px); */
 }
 
 .hero-wrapper{
@@ -116,6 +118,7 @@ nav ul {
   top: 50%;
   transform: translate(-50%, -50%);
   color: var(--light-gray);
+  pointer-events: none;
 }
 
 .profile-img {
@@ -172,6 +175,7 @@ nav ul {
 .social-links {
   display: flex;
   gap: 10px;
+  pointer-events:all;
 }
 
 .link-box {
