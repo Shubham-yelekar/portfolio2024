@@ -101,7 +101,7 @@ nav ul {
   background-color: rgb(211, 211, 211);
 } */
 
-canvas {
+.canvas-el {
   position: absolute;
   z-index: 2;
   width: 100%;

@@ -1,12 +1,11 @@
 import React from 'react'
-
+import Spline from '@splinetool/react-spline';
 const Aurora = () => {
 
-
-
-
   return (
-    <canvas></canvas>
+    <div className='canvas-el'>
+      <Spline scene="https://prod.spline.design/yNUFGxG1JxZGMiCU/scene.splinecode" />
+    </div>
   )
 }
 
