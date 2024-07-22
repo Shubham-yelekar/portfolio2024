@@ -2,8 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const projects = [
-  {id:1, name: 'Projects One', thumbnail: '/Images/project-1/thumb-1.jpg'},
-  {id:1, name: 'Projects Two', thumbnail: '/Images/project-2/thumb-2.jpg'},
+  {id:1, name: 'Projects One', thumbnail: '/assets/projects/project-1/thumb-1.jpg'},
+  {id:1, name: 'Projects Two', thumbnail: '/assets/projects/project-2/thumb-2.jpg'},
 ]
 
 const Projects = () => {
@@ -11,7 +11,7 @@ const Projects = () => {
     <div className='p-4'>
       <div className='title-wrapper'>
         <h2>Projects</h2>
-        <p>These are all my recent works</p>
+        <p>Websites, software interfaces, icons — that’s where my heart is, <br /> dedicating my skills to perfecting these realms.</p>
       </div>
       <div className='projects-wrapper'>
       {projects.map((project) => (

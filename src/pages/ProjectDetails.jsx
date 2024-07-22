@@ -2,8 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 const projects = [
-  { id: 1, name: 'Project One', description: 'Description of Project One', thumbnail: '/src/assets/Project-1/thumb-1.jpg' },
-  { id: 2, name: 'Project Two', description: 'Description of Project Two', thumbnail: '/src/assets/Project-1/thumb-1.jpg' },
+  { id: 1, name: 'Project One', description: 'Description of Project One', thumbnail: '/assets/projects/project-1/thumb-1.jpg' },
+  { id: 2, name: 'Project Two', description: 'Description of Project Two', thumbnail: '/assets/projects/project-2/thumb-2.jpg' },
   // Add more projects as needed
 ];
 
@@ -16,8 +16,11 @@ const ProjectDetails = () => {
   }
   return (
     <div className='p-4'>
-      <div className='project-detail'>
+      <div className='title-wrapper'>
+
         <h2>{project.name}</h2>
+      </div>
+      <div className='project-detail'>
         <img src={project.thumbnail} alt={project.name} />
         <p>{project.description}</p>
       </div>

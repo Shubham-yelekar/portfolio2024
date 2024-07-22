@@ -1,14 +1,31 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 import MainLogo from '../icons/MainLogo'
 import XDotCom from '../icons/XDotCom'
 import Github from '../icons/Github'
 import Linkedin from '../icons/Linkedin'
 import Aurora from '../components/Aurora'
 
+const textVariants = {
+  initial: {
+    opacity: 0,
+    filter: "blur(5px)"
+  },
+  animate: {
+      filter: "blur(0px)",
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.5,
+        ease: [0.75,0,.36,1]
+    }
+  }
+}
+
 const Home = () => {
   return (
     <div className='h-[100vh]'>
-      <div className='hero-wrapper'>
+      <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
         <div className='profile-img'>
           <MainLogo/>
         </div>
@@ -33,7 +50,7 @@ const Home = () => {
           </a>
         </div>
 
-      </div>
+      </motion.div>
       <Aurora/>
     </div>
   )
