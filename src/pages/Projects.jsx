@@ -2,8 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const projects = [
-  {id:1, name: 'Projects One', thumbnail: '/images/project-1/thumb-1.jpg'},
-  {id:1, name: 'Projects Two', thumbnail: '/images/project-2/thumb-2.jpg'},
+  {id:1, name: 'Projects One', thumbnail: '/Images/project-1/thumb-1.jpg'},
+  {id:1, name: 'Projects Two', thumbnail: '/Images/project-2/thumb-2.jpg'},
 ]
 
 const Projects = () => {
