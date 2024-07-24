@@ -10,8 +10,21 @@
   --black: rgb(0,0,0);
   --border-gray: rgb(40, 40, 40);
   --gray:#161414;
-  --light-gray:#d3d3d3 ;
+  --light-gray:rgb(221, 221, 221) ;
 }
+
+[data-theme= 'light']{
+  --bg-color : rgb(245, 245, 245);
+  --text-color: rgb(15, 15, 15);
+  --all-dark:rgb(0, 0, 0);
+}
+
+[data-theme= 'dark']{
+  --bg-color : rgb(15, 15, 15);
+  --text-color: rgb(190, 190, 190);
+  --all-dark:rgb(255, 255, 255);
+}
+
 
 * {
   padding: 0;
@@ -24,8 +37,8 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: rgb(0,0,0);
-  color: var(--white);
+  background: var(--bg-color);
+  color: var(--text-color);
   font-weight: 500;
   line-height: 1.25rem;
   letter-spacing: -0.035rem;
@@ -34,17 +47,20 @@ body {
 h1 {
   font-size: 42px;
   line-height:normal;
+  color: var(--text-color);
 }
 
 h2 {
   font-size: 36px;
   line-height:normal;
+  color: var(--text-color);
 }
 
 p {
   font-size: 16px;
   line-height: normal;
   font-weight: 400;
+  color: var(--text-color);
 }
 
 nav {
@@ -134,7 +150,7 @@ nav ul {
 }
 
 .highlight-text-italic {
-  background: linear-gradient(180deg, #FFF 0%, #D7D7D7 100%);
+  background:linear-gradient(180deg, var(--all-dark) 0%, var(--text-color) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,7 +161,7 @@ nav ul {
 }
 
 .highlight-text{
-  background: linear-gradient(180deg, #FFF 0%, #D7D7D7 100%);
+  background:linear-gradient(180deg, var(--all-dark) 0%, var(--text-color) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -281,6 +297,55 @@ nav ul {
   bottom: 0;
   z-index: 8;
   width: 100%;
+}
+
+/* The switch - the box around the slider */
+.container {
+  width: 51px;
+  height: 31px;
+  position: relative;
+}
+
+/* Hide default HTML checkbox */
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switch {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #e9e9eb;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+
+/* The slider */
+.slider {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: calc(50% - 27px/2 - 10px);
+  top: calc(50% - 27px/2);
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.checkbox:checked + .switch {
+  background-color: #34C759;
+}
+
+.checkbox:checked + .switch .slider {
+  left: calc(50% - 27px/2 + 10px);
+  top: calc(50% - 27px/2);
 }
 
 

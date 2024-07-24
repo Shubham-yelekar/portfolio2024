@@ -8,6 +8,7 @@ import Archives from './pages/Archives'
 import About from './pages/About'
 import PageNotFound from './pages/PageNotFound'
 import ProjectDetails from './pages/ProjectDetails'
+import { ThemeProvider } from './Theme-context'
 
 function App() {
   const router = createBrowserRouter(
@@ -24,7 +25,10 @@ function App() {
   )
 
   return (
+    <ThemeProvider>
+
       <RouterProvider router={router}></RouterProvider>
+    </ThemeProvider>
   )
 }
 
