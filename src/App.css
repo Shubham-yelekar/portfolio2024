@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
@@ -25,7 +25,7 @@
 [data-theme= 'dark']{
   --nav-color: rgb(31, 31, 31);;
   --bg-color : rgb(15, 15, 15);
-  --text-color: rgb(190, 190, 190);
+  --text-color: rgb(224, 224, 224);
   --text-color-05: rgb(190, 190, 190,0.5);
   --all-dark:rgb(255, 255, 255);
   --border-gray:rgb(40, 40, 40);
@@ -51,7 +51,7 @@ body {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 52px;
   line-height:normal;
   color: var(--text-color);
 }
@@ -133,7 +133,7 @@ nav ul {
 }
 
 .hero-wrapper{
-  width:520px ;
+  width:700px ;
   position: absolute;
   z-index: 10;
   left: 50%;
@@ -160,8 +160,8 @@ nav ul {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Imbue", serif;
-  /* font-style: italic; */
+  font-family: "Cardo", serif;
+  font-style: italic;
   font-weight: 600;
   letter-spacing: normal;
 }
@@ -357,6 +357,10 @@ nav ul {
 
 
 @media screen and (max-width:1200px){
+  .hero-wrapper {
+    width: 90%;
+  }
+
   .hero-wrapper h1 {
     font-size: 36px;
   }

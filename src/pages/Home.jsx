@@ -5,22 +5,8 @@ import XDotCom from '../icons/XDotCom'
 import Github from '../icons/Github'
 import Linkedin from '../icons/Linkedin'
 import Aurora from '../components/Aurora'
+import textVariants from '../static/textVariants'
 
-const textVariants = {
-  initial: {
-    opacity: 0,
-    filter: "blur(5px)"
-  },
-  animate: {
-      filter: "blur(0px)",
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.5,
-        ease: [0.75,0,.36,1]
-    }
-  }
-}
 
 const Home = () => {
   return (
