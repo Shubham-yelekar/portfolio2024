@@ -1,5 +1,6 @@
 const textVariants = {
   initial: {
+    y:10,
     opacity: 0,
     filter: "blur(5px)"
   },
@@ -9,7 +10,7 @@ const textVariants = {
       opacity: 1,
       transition: {
         duration: 1,
-        staggerChildren: 0.5,
+        staggerChildren: 0.3,
         ease: [0.75,0,.36,1]
     }
   }
