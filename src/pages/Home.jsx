@@ -12,15 +12,16 @@ const Home = () => {
   return (
     <div className='h-[100vh]'>
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
-        <div className='profile-img'>
+        
+        <h1>Hi, I'am <span className='highlight-text-italic'>Shubham,</span><div className='profile-img'>
           <MainLogo/>
-        </div>
-        <h1>Hey, I'am <span className='highlight-text-italic'>Jia.</span></h1>
-        <h1><span className='highlight-text'>Developer</span> & <span className='highlight-text-italic'>Designer,</span></h1>
-        <h1>currently a working at <span className='highlight-text-italic'>Vercel</span></h1>
-        <p>Websites, software interfaces, icons — that’s where my heart is, dedicating my skills to perfecting these realms.</p>
+        </div></h1>
+        <h1>A Front-end</h1>
+        <h1>Developer and Designer</h1>
+        <h1>Based in Mumbai</h1>
+        <p>Currently work at Artificial Reality</p>
+        <p>I bring value to web development projects by merging <br/> technical expertise with creativity and aesthetics.</p>
         {/* <div className='dotted-line'></div> */}
-        <h6 className='highlight-text-mono'>Connect with me ^ↀᴥↀ^</h6>
         <div className='social-links'>
           <a className='link-box' href="#">
             <XDotCom/>
