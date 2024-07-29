@@ -5,6 +5,7 @@ const textVariants = {
   },
   animate: {
       filter: "blur(0px)",
+      y:0,
       opacity: 1,
       transition: {
         duration: 1,

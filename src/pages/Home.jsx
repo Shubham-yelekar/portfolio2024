@@ -10,19 +10,29 @@ import textVariants from '../static/textVariants'
 
 const Home = () => {
   return (
-    <div className='h-[100vh]'>
+    <div className='h-[100vh] flex justify-center items-center'>
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
         
-        <h1>Hi, I'am <span className='highlight-text-italic'>Shubham,</span><div className='profile-img'>
-          <MainLogo/>
-        </div></h1>
-        <h1>A Front-end</h1>
-        <h1>Developer and Designer</h1>
-        <h1>Based in Mumbai</h1>
-        <p>Currently work at Artificial Reality</p>
+        <div className='flex gap-3'>
+          <h1>Hi, I'am Shubham,</h1>
+          <div className='profile-img'></div>
+        </div>
+        <div className='flex gap-3'>
+          <div className='terminal'></div>
+          <h1>A Front-end</h1>
+        </div>
+        <div className='flex gap-3'>
+          <h1>Developer & Designer</h1>
+        <div className='figma'></div>
+        </div>
+        <div className='flex gap-3'>
+          <div className='mumbai'></div>
+          <h1>Based in Mumbai</h1>
+        </div>
+        <p>Currently work at <span className='highlight-text-italic'>Artificial Reality</span> </p>
         <p>I bring value to web development projects by merging <br/> technical expertise with creativity and aesthetics.</p>
         {/* <div className='dotted-line'></div> */}
-        <div className='social-links'>
+        {/* <div className='social-links'>
           <a className='link-box' href="#">
             <XDotCom/>
             <span>username</span>
@@ -35,7 +45,7 @@ const Home = () => {
             <Github/>
             <span>username</span>
           </a>
-        </div>
+        </div> */}
 
       </motion.div>
       {/* <Aurora/> */}

@@ -29,7 +29,7 @@
   --nav-color: rgb(31, 31, 31);;
   --bg-color : rgb(15, 15, 15);
   --text-color: rgb(245, 245, 245);
-  --text-color-2: rgb(224, 224, 224);
+  --text-color-2: rgb(204, 204, 204);
   --text-color-05: rgb(190, 190, 190,0.5);
   --all-dark:rgb(255, 255, 255);
   --border-gray:rgb(40, 40, 40);
@@ -71,8 +71,9 @@ body {
 }
 
 h1 {
-  font-size: 52px;
-  line-height:normal;
+  font-size: 56px;
+  font-weight: 500;
+  line-height:64px;
   color: var(--text-color);
 }
 
@@ -154,36 +155,63 @@ nav ul {
 
 .hero-wrapper{
   width:700px ;
-  position: absolute;
+  margin: 0 auto;
+  padding-left: 56px ;
+  /* position: absolute;
   z-index: 10;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   color: var(--light-gray);
   pointer-events: none;
+  text-wrap: nowrap;
 }
+
 
 .profile-img {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-gray);
-  background: linear-gradient(180deg, #FDB25A 0%, #220606 50%, #6E96EF 100%);
-  display: flex;
-  align-items:center ;
-  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-image: url(/public/assets/various/image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
+.terminal {
+  width: 64px;
+  height: 64px;
+  background-image: url(/public/assets/various/terminal.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.figma {
+  width: 64px;
+  height: 64px;
+  background-image: url(/public/assets/various/figma.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mumbai {
+  width: 64px;
+  height: 64px;
+  background-image: url(/public/assets/various/mumbai.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
 .highlight-text-italic {
-  background:linear-gradient(180deg, var(--all-dark) 0%, var(--text-color) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Cardo", serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: normal;
+  color: var(--text-color);
 }
 
 .highlight-text{
@@ -204,8 +232,10 @@ nav ul {
 .hero-wrapper p{
   margin: 10px 0px;
   font-weight: 400;
-  line-height: 1.4rem ;
+  font-weight: 14px;
+  line-height: 1.6rem ;
   letter-spacing: -0.02rem;
+  color: var(--text-color-2);
 }
 
 .dotted-line {
