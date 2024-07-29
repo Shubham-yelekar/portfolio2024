@@ -2,8 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const projects = [
-  {id:1, name: 'Projects One', thumbnail: '/assets/projects/project-1/thumb-1.jpg'},
-  {id:1, name: 'Projects Two', thumbnail: '/assets/projects/project-2/thumb-2.jpg'},
+  { id: 1, name: 'Kalakar India Ace', description: 'Description of Project One', thumbnail: '/assets/projects/kalakar-india-ace/hero-image.jpg' },
+  { id: 2, name: 'Apple Clone', description: 'Description of Project Two', thumbnail: '/assets/projects/apple-website-clone/apple-image.jpg' },
+  { id: 3, name: 'Project One', description: 'Description of Project One', thumbnail: '/assets/projects/project-1/thumb-1.jpg' },
 ]
 
 const Projects = () => {
@@ -16,8 +17,8 @@ const Projects = () => {
       <div className='projects-wrapper'>
       {projects.map((project) => (
           <Link to={`/projects/${project.id}`} key={project.id} className='project-card'>
-            <div className='bg-gray-800 h-[650px]'>
-              <img src={project.thumbnail} alt={project.name} />
+            <div className='bg-gray-800'>
+                <img src={project.thumbnail} alt={project.name} />
               <div className='project-info'>
                 <h3>{project.name}</h3>
               </div>

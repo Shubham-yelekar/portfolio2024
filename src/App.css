@@ -17,15 +17,17 @@
   --bg-color : rgb(235, 235, 235);
   --nav-color: rgb(255, 255, 255);
   --text-color: rgb(15, 15, 15);
+  --text-color-2: rgb(31, 31, 31);
   --all-dark:rgb(0, 0, 0);
-  --border-gray:rgb(190, 190, 190);
+  --border-gray:rgb(219, 219, 219);
   --text-color-05: rgb(15, 15, 15,0.5);
 }
 
 [data-theme= 'dark']{
   --nav-color: rgb(31, 31, 31);;
   --bg-color : rgb(15, 15, 15);
-  --text-color: rgb(224, 224, 224);
+  --text-color: rgb(245, 245, 245);
+  --text-color-2: rgb(224, 224, 224);
   --text-color-05: rgb(190, 190, 190,0.5);
   --all-dark:rgb(255, 255, 255);
   --border-gray:rgb(40, 40, 40);
@@ -225,19 +227,25 @@ nav ul {
 }
 
 .projects-wrapper{
+
+  margin: 0 auto;
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(2,1fr);
+  gap: 36px;
+  grid-template-columns: repeat(1,1fr);
+  place-items: center;
+
 }
 
 .project-card {
-  margin: 10px;
+
   text-decoration: none;
   color: white;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-
+  width: 1024px;
+  height: 640px;
+  border: 1px solid var(--border-gray);
 }
 
 .project-card img {
@@ -253,10 +261,10 @@ nav ul {
 }
 
 .project-info {
-  padding: 10px;
-  background-color: var(--white);
+  padding:1.4rem 1.0rem;
+  background-color: var(--nav-color);
   position: absolute;
-  color: var(--gray);
+  color: var(--text-color);
   font-size: 24px;
   bottom: 0;
   z-index: 8;
@@ -293,6 +301,12 @@ nav ul {
 .archive-card img {
   width: 100%;
   height: auto;
+}
+
+.archive-card video {
+  width: 100%;
+  height: auto;
+  align-items: center;
 }
 
 .archive-info {
@@ -359,6 +373,12 @@ nav ul {
 @media screen and (max-width:1200px){
   .hero-wrapper {
     width: 90%;
+  }
+
+  .project-card {
+    width: 100%;
+
+    height: 520px;
   }
 
   .hero-wrapper h1 {

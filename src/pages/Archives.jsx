@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Projects = [
   {id:1, name: 'item-1', thumbnail: '/assets/archives/archive-1/thumb-1.jpg', video: '/assets/archives/archive-1/graph-slider-2.mp4'},
-  {id:2, name: 'item-2', thumbnail: '/assets/archives/archive-2/thumb-2.jpg'},
+  {id:2, name: 'item-2', thumbnail: '/assets/archives/archive-2/thumb-2.jpg' ,video: '/assets/archives/archive-2/thumb-2.mp4'},
 ]
 
 const Archives = () => {
