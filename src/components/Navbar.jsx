@@ -5,7 +5,8 @@ import {motion} from 'framer-motion'
 
 const navVariant = {
   initial: {
-    y:10,
+    y:100,
+    x:'-50%',
     opacity: 0,
   },
   animate: {
@@ -21,7 +22,7 @@ const navVariant = {
 
 const navLinkVariant = {
   initial: {
-    y: 10,
+    y: 5,
     opacity: 0,
   },
   animate: {
@@ -37,24 +38,24 @@ const Navbar = () => {
   const linkClass = ({isActive}) => isActive ?"activeLink" : ""
 
   return (
-    <motion.nav variants={navVariant}>
+    <motion.div className='nav' initial="initial" animate="animate" variants={navVariant}>
       <ul>
-        <motion.li className='nav-link' variants={navLinkVariant}>
+        <motion.li className='nav-link' variants={navLinkVariant}  >
           <NavLink className={linkClass} to={'/'}>Home</NavLink>
         </motion.li>
-        <motion.li className='nav-link' variants={navLinkVariant}>
+        <motion.li className='nav-link' variants={navLinkVariant}  >
           <NavLink className={linkClass} to={'/projects'}>Projects</NavLink>
         </motion.li>
-        <motion.li className='nav-link' variants={navLinkVariant}>
+        <motion.li className='nav-link' variants={navLinkVariant} >
           <NavLink className={linkClass} to={'/archives'}>Archives</NavLink>
         </motion.li>
-        <motion.li className='nav-link' variants={navLinkVariant}>
+        <motion.li className='nav-link' variants={navLinkVariant} >
           <NavLink className={linkClass} to={'/about'}>About</NavLink>
         </motion.li>
         <ToggleSwitch/>
       </ul>
 
-    </motion.nav>
+    </motion.div>
   )
 }
 

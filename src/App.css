@@ -50,6 +50,7 @@
 
 body::-webkit-scrollbar {
   width: 4px;
+  display: none;
 }
 
 body::-webkit-scrollbar-track {
@@ -90,7 +91,7 @@ p {
   color: var(--text-color);
 }
 
-nav {
+.nav {
   position: fixed;
   left: 50%;
   bottom: 32px;
@@ -104,7 +105,7 @@ nav {
   z-index: 999;
 }
 
-nav ul {
+.nav ul {
   display: flex;
   gap: 12px;
 }
