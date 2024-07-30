@@ -1,6 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import ToggleSwitch from '../components/ToggleSwitch';
+import SocialLinks from '../components/SocialLinks';
 
 
 const MainLayout = () => {
@@ -8,6 +10,8 @@ const MainLayout = () => {
     <>
       <Navbar/>
       <Outlet/>
+      <ToggleSwitch/>
+      <SocialLinks/>
     </>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import ToggleSwitch from './ToggleSwitch'
 import {motion} from 'framer-motion'
 
 const navVariant = {
@@ -38,7 +37,7 @@ const Navbar = () => {
   const linkClass = ({isActive}) => isActive ?"activeLink" : ""
 
   return (
-    <motion.div className='nav' initial="initial" animate="animate" variants={navVariant}>
+    <motion.div className='nav' variants={navVariant} initial="initial" animate="animate" >
       <ul>
         <motion.li className='nav-link' variants={navLinkVariant}  >
           <NavLink className={linkClass} to={'/'}>Home</NavLink>
@@ -52,7 +51,7 @@ const Navbar = () => {
         <motion.li className='nav-link' variants={navLinkVariant} >
           <NavLink className={linkClass} to={'/about'}>About</NavLink>
         </motion.li>
-        <ToggleSwitch/>
+
       </ul>
 
     </motion.div>

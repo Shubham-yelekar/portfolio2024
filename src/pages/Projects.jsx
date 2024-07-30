@@ -1,5 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { motion } from 'framer-motion'
+import textVariants from '../static/textVariants'
+import childVariants from '../static/childVariants'
 
 const projects = [
   { id: 1, name: 'Kalakar India Ace', description: 'Description of Project One', thumbnail: '/assets/projects/kalakar-india-ace/hero-image.jpg' },
@@ -9,12 +12,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className='p-4'>
-      <div className='title-wrapper'>
+    <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>
+      <motion.div variants={childVariants} className='title-wrapper'>
         <h2>Projects</h2>
         <p>Websites, software interfaces, icons — that’s where my heart is, <br /> dedicating my skills to perfecting these realms.</p>
-      </div>
-      <div className='projects-wrapper'>
+      </motion.div>
+      <motion.div variants={textVariants} initial="initial" animate="animate" className='projects-wrapper'>
       {projects.map((project) => (
           <Link to={`/projects/${project.id}`} key={project.id} className='project-card '>
 
@@ -25,8 +28,8 @@ const Projects = () => {
 
           </Link>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

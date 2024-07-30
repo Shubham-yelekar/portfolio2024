@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +10,9 @@
   --border-gray: rgb(40, 40, 40);
   --gray:#161414;
   --light-gray:rgb(221, 221, 221) ;
+
+  --font-mono: "JetBrains Mono", monospace;
+  --font-primary: "Inter", sans-serif;;
 }
 
 [data-theme= 'light']{
@@ -96,7 +98,7 @@ p {
   left: 50%;
   bottom: 32px;
   transform: translateX(-50%);
-  padding: 0.4rem 0.5rem ;
+  padding: 0.8rem 1.4rem ;
   border-radius: 0.75rem;
   border: 1px solid var(--border-gray);
   background: var(--nav-color);
@@ -107,12 +109,12 @@ p {
 
 .nav ul {
   display: flex;
-  gap: 12px;
+  gap: 24px;
 }
 
 .nav-link {
-  width: 70px;
-  height: 36px;
+  /* width: 70px;
+  height: 36px; */
   display: flex;
   align-items:center ;
   justify-content: center;
@@ -122,6 +124,7 @@ p {
 }
 
 .nav-link a {
+  font-family: "JetBrains Mono", monospace;
   color: var(--text-color-05);
   transition: all 500ms ease-in-out;
 }
@@ -225,7 +228,7 @@ p {
 }
 
 .highlight-text-mono {
-  font-family:monospace;
+  font-family: "JetBrains Mono", monospace;
   margin: 18px 2px 10px;
   color: var(--text-color);
 }
@@ -242,32 +245,37 @@ p {
 .dotted-line {
   width: 100%;
   height: 1px;
-  border-top: 1px dashed var(--border-gray);
+  border-top: 2px dashed var(--border-gray);
   margin: 16px 0px;
 }
 
 .social-links {
+  position: absolute;
   display: flex;
   gap: 10px;
   pointer-events:all;
+  top: 14px;
+  left: 14px;
 }
 
 .link-box {
   display: inline-flex;
-  height: 2.25rem;
-  padding: 0.25rem 0.75rem;
+  height: 2.4rem;
+  width: 2.4rem;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   flex-shrink: 0;
   border-radius: 0.75rem;
-  border: 1px solid #282828;
-  background: var(--gray);
+  border: 1px solid var(--border-gray);
+  background:var(--black-white);
   font-size: 14px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1), 0px 3px 1px rgba(0, 0, 0, 0.04);
   transition: all 300ms ease-in-out;
 }
 .link-box:hover {
-  color: white;
-  background: #252525;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+  background: var(--nav-color);
 }
 
 .title-wrapper {
@@ -376,10 +384,27 @@ p {
   width: 100%;
 }
 
+.toggle-wrapper {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.toggle-wrapper h6 {
+  color: var(--text-color-05);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
 /* The switch - the box around the slider */
-.container {
-  width: 51px;
-  height: 31px;
+.toggle-container {
+  width: 48px;
+  height: 28px;
   position: relative;
 }
 
@@ -395,7 +420,7 @@ p {
   width: 100%;
   height: 100%;
   display: block;
-  background-color: #e9e9eb;
+  background-color: #d4d4d4;
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.2s ease-out;
@@ -404,11 +429,11 @@ p {
 
 /* The slider */
 .slider {
-  width: 27px;
-  height: 27px;
+  width: 22px;
+  height: 22px;
   position: absolute;
-  left: calc(50% - 27px/2 - 10px);
-  top: calc(50% - 27px/2);
+  left: calc(50% - 22px/2 - 10px);
+  top: calc(50% - 22px/2);
   border-radius: 50%;
   background: #FFFFFF;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
@@ -421,8 +446,8 @@ p {
 }
 
 .checkbox:checked + .switch .slider {
-  left: calc(50% - 27px/2 + 10px);
-  top: calc(50% - 27px/2);
+  left: calc(50% - 22px/2 + 10px);
+  top: calc(50% - 22px/2);
 }
 
 

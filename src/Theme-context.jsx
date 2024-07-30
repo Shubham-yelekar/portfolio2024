@@ -9,8 +9,13 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({children}) =>{
 
+  const getInitialTheme = () =>{
+    const hour = new Date().getHours();
+    return hour >= 7 && hour < 19 ? false : true;
+  }
+
   // usestate for handeling the dark mode
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(getInitialTheme());
 
   // a function to toggle the state
   const toggleTheme = () => {
