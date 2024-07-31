@@ -25,19 +25,32 @@
   --text-color-05: rgb(15, 15, 15,0.5);
   --black-white: rgb(255, 255, 255);
   --black-white-0: rgba(255, 255, 255, 0);
+
+  --nav-color: rgb(255, 255, 255);
+  --nav-icon-box: rgb(235, 235, 235);
+  --nav-icon-color: rgb(124,124,124);
+  --nav-highlight: rgb(209, 209, 209);
+  --nav-icon-border: rgb(96,96,96);
+  --nav-icon-higlight: rgb(38, 38, 38);
 }
 
 [data-theme= 'dark']{
-  --nav-color: rgb(31, 31, 31);;
   --bg-color : rgb(15, 15, 15);
   --text-color: rgb(245, 245, 245);
   --text-color-2: rgb(204, 204, 204);
   --text-color-05: rgb(190, 190, 190,0.5);
   --all-dark:rgb(255, 255, 255);
   --border-gray:rgb(40, 40, 40);
-
+  
   --black-white: rgb(0,0,0);
   --black-white-0: rgba(0, 0, 0, 0);
+  
+  --nav-color: rgb(24, 24, 24);
+  --nav-icon-box: rgb(38, 38, 38);
+  --nav-icon-color: rgb(124,124,124);
+  --nav-highlight: rgb(58,58,58);
+  --nav-icon-border: rgb(96,96,96);
+  --nav-icon-higlight:rgb(235, 235, 235);
 }
 
 
@@ -98,8 +111,8 @@ p {
   left: 50%;
   bottom: 32px;
   transform: translateX(-50%);
-  padding: 0.8rem 1.4rem ;
-  border-radius: 0.75rem;
+  padding: 0.8rem .8rem ;
+  border-radius: 1rem;
   border: 1px solid var(--border-gray);
   background: var(--nav-color);
   backdrop-filter: blur(5px);
@@ -112,29 +125,34 @@ p {
   gap: 24px;
 }
 
-.nav-link {
-  /* width: 70px;
-  height: 36px; */
+
+
+.nav-link a {
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items:center ;
   justify-content: center;
   color: var(--light-gray);
   transition: all 500ms ease-in-out;
-  border-radius: 10px;
+  border-radius: 9px;
+  background: var(--nav-icon-box);
 }
 
-.nav-link a {
-  font-family: "JetBrains Mono", monospace;
-  color: var(--text-color-05);
-  transition: all 500ms ease-in-out;
+
+.nav-link svg path {
+  transition: all 500ms ease-in-out!important;
 }
+
 
 .activeLink {
-  color: var(--text-color)!important;
   position: relative;
-  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.25)!important;
+  /* background-color: var(--nav-highlight); */
   transition: all 500ms ease-in-out!important;
+}
 
+.activeLink svg path {
+  fill: #FFFFFF !important;
 }
 
 /* .activeLink::before{

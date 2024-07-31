@@ -1,6 +1,10 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import {motion} from 'framer-motion'
+import HomeIcon from '../icons/HomeIcon';
+import ProjectIcon from './ProjectIcon';
+import ArchiveIcons from '../icons/ArchiveIcons';
+import MyIcon from '../icons/MyIcon';
 
 const navVariant = {
   initial: {
@@ -34,22 +38,24 @@ const navLinkVariant = {
 };
 
 const Navbar = () => {
-  const linkClass = ({isActive}) => isActive ?"activeLink" : ""
+ 
+  const linkClass = ({isActive}) => isActive ?"activeLink"  : ""
 
   return (
     <motion.div className='nav' variants={navVariant} initial="initial" animate="animate" >
       <ul>
         <motion.li className='nav-link' variants={navLinkVariant}  >
-          <NavLink className={linkClass} to={'/'}>Home</NavLink>
+          <NavLink className={linkClass} to={'/'}><HomeIcon/></NavLink>
+          
         </motion.li>
         <motion.li className='nav-link' variants={navLinkVariant}  >
-          <NavLink className={linkClass} to={'/projects'}>Projects</NavLink>
+          <NavLink className={linkClass} to={'/projects'}><ProjectIcon/></NavLink>
         </motion.li>
         <motion.li className='nav-link' variants={navLinkVariant} >
-          <NavLink className={linkClass} to={'/archives'}>Archives</NavLink>
+          <NavLink className={linkClass} to={'/archives'}><ArchiveIcons/></NavLink>
         </motion.li>
         <motion.li className='nav-link' variants={navLinkVariant} >
-          <NavLink className={linkClass} to={'/about'}>About</NavLink>
+          <NavLink className={linkClass} to={'/about'}><MyIcon/></NavLink>
         </motion.li>
 
       </ul>
