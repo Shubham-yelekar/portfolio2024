@@ -11,9 +11,13 @@ const ArchiveIcons = () => {
     };
 
     useEffect(() => {
-        const newFillColor = theme === 'dark'
-        ? getCssVariableValue('--nav-icon-color')
-        : getCssVariableValue('--nav-icon-color');
+        let newFillColor
+        if (theme === 'dark'){
+          newFillColor = getCssVariableValue('--nav-icon-color')
+        } else {
+          newFillColor = getCssVariableValue('--nav-icon-color')
+        }
+
         setFillColor(newFillColor);
     }, [theme]);
 

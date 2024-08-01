@@ -29,7 +29,9 @@ const Archives = () => {
               ) : (
                 <img src={items.thumbnail} alt={items.name} />
               )}
-              <h1>{items.name}</h1>
+              <div className='archive-info'>
+                <h4>{items.name}</h4>
+              </div>
             </div>
 
           ))}

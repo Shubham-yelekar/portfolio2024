@@ -8,6 +8,7 @@ const projects = [
   { id: 1, name: 'Kalakar India Ace', description: 'Description of Project One', thumbnail: '/assets/projects/kalakar-india-ace/hero-image.jpg' },
   { id: 2, name: 'Apple Clone', description: 'Description of Project Two', thumbnail: '/assets/projects/apple-website-clone/apple-image.jpg' },
   { id: 3, name: 'Portfolio 1.0', description: 'Description of Project One', thumbnail: '/assets/projects/portfolio-1/thumb-1.jpg' },
+  { id: 4, name: 'Project', description: 'Description of Project One', thumbnail: '/assets/projects/project-1/thumb-1.jpg' }
 ]
 
 const Projects = () => {
