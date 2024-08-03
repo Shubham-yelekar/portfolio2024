@@ -21,6 +21,7 @@ const Aurora = () => {
     <motion.div  variants={textVariants2} initial='initial' animate='animate' className='canvas-el'>
       {/* <Spline scene="https://prod.spline.design/yNUFGxG1JxZGMiCU/scene.splinecode" /> */}
       <Spline scene="https://prod.spline.design/20mldG2STaXyfmBH/scene.splinecode" />
+      {/* <Spline scene="https://prod.spline.design/BfKARC7NytCMM6m3/scene.splinecode" /> */}
     </motion.div>
   )
 }

@@ -33,7 +33,7 @@ const Home = () => {
 
       </motion.div>
 
-      {/* <Aurora/> */}
+      <Aurora/>
     </div>
   )
 }
