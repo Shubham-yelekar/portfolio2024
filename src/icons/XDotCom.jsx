@@ -1,14 +1,29 @@
 import React from 'react'
 import { useTheme } from '../Theme-context'
+import { useState, useEffect } from 'react';
 
 const xDotCom = () => {
+
   const {theme} = useTheme();
-  const fillColor = theme === 'dark' ? '#ffffff':'#000000';
+    const [fillColor, setFillColor] = useState('');
+
+    const getCssVariableValue = (variable) => {
+        return getComputedStyle(document.documentElement).getPropertyValue(variable);
+    };
+
+    useEffect(() => {
+        const newFillColor = theme === 'dark'
+        ? getCssVariableValue('--all-dark')
+        : getCssVariableValue('--all-dark');
+        setFillColor(newFillColor);
+
+    }, [theme]);
+
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" fill="none">
     <g clipPath="url(#clip0_72_461)">
-    <g filter="url(#filter0_d_72_461)">
+    <g>
     <path d="M12.2178 1.26929H14.4668L9.55347 6.88495L15.3337 14.5266H10.8078L7.26302 9.89198L3.20696 14.5266H0.956613L6.21195 8.52002L0.666992 1.26929H5.30773L8.51192 5.50551L12.2178 1.26929ZM11.4285 13.1805H12.6747L4.63059 2.54471H3.2933L11.4285 13.1805Z" fill={fillColor}/>
     </g>
     </g>

@@ -22,7 +22,7 @@ const navLinkVariant = {
 const SocialLinks = () => {
   return (
     <motion.div className='social-links' variants={textVariants} initial="initial" animate="animate">
-          <motion.a className='link-box' href="#" variants={navLinkVariant} initial="initial" animate="animate">
+          <motion.a className='link-box ' href="#" variants={navLinkVariant} initial="initial" animate="animate">
             <XDotCom/>
             {/* <span>username</span> */}
           </motion.a>

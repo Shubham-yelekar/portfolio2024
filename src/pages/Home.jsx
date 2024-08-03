@@ -5,14 +5,13 @@ import Aurora from '../components/Aurora'
 import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
 
-
 const Home = () => {
   return (
     <div className='h-[100vh] flex justify-center items-center'>
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
 
         <motion.div variants={childVariants} className='flex gap-3'>
-          <h1>Hi, I'am Shubham,</h1>
+          <h1>Hi, I'm Shubham,</h1>
           <div className='profile-img'></div>
         </motion.div>
         <motion.div variants={childVariants}  className='flex gap-3'>
@@ -33,6 +32,7 @@ const Home = () => {
 
 
       </motion.div>
+
       {/* <Aurora/> */}
     </div>
   )
