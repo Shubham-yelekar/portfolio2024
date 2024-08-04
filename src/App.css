@@ -141,6 +141,7 @@ p {
 
 
 .nav-link svg path {
+  fill: var(--nav-icon-color) !important;
   transition: all 500ms ease-in-out!important;
 }
 
