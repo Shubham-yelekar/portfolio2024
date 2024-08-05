@@ -10,8 +10,13 @@ export const useTheme = () => {
 export const ThemeProvider = ({children}) =>{
 
   const getInitialTheme = () =>{
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
+    if(systemPrefersDark != undefined){
+      return systemPrefersDark
+    }
     const hour = new Date().getHours();
     return hour >= 7 && hour < 19 ? false : true;
+
   }
 
   // usestate for handeling the dark mode

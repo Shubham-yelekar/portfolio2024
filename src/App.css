@@ -91,6 +91,7 @@ h1 {
   font-weight: 500;
   line-height:64px;
   color: var(--text-color);
+  letter-spacing: -0.09rem;
 }
 
 h2 {
@@ -196,7 +197,7 @@ p {
   height: 64px;
   background-image: url(/public/assets/various/image.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 
 }
@@ -207,7 +208,7 @@ p {
   background-image: url(/public/assets/various/terminal.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .figma {
@@ -216,7 +217,7 @@ p {
   background-image: url(/public/assets/various/figma.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .mumbai {
@@ -225,7 +226,7 @@ p {
   background-image: url(/public/assets/various/mumbai.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 
@@ -259,6 +260,10 @@ p {
   line-height: 1.6rem ;
   letter-spacing: -0.02rem;
   color: var(--text-color-2);
+
+    width: 60ch;
+    text-wrap: wrap;
+
 }
 
 .dotted-line {
@@ -303,7 +308,16 @@ p {
 
 .title-wrapper {
   max-width: 768px;
-  margin: 36px auto;
+  margin: 56px auto 24px;
+}
+.title-wrapper h2 {
+
+  line-height:52px ;
+}
+
+.title-wrapper p {
+  line-height: 24px;
+  width: 48ch;
 }
 
 .projects-wrapper{
@@ -354,7 +368,7 @@ p {
   left: -2px;
   z-index: 8;
   width: 100.4%;
-  height: 10%;
+  /* height: 10%; */
   border-radius: 0 0 18px 18px;
 }
 
@@ -415,7 +429,7 @@ p {
   z-index: 8;
   width: 100.4%;
   border-top: 1px solid var(--border-gray) ;
-  border-radius: 0 0 18px 18px;
+  /* border-radius: 0 0 18px 18px; */
 }
 
 .toggle-wrapper {
@@ -487,12 +501,12 @@ p {
 
 @media screen and (max-width:1200px){
   .hero-wrapper {
-    width: 90%;
+    width: 800px;
   }
 
 
   .hero-wrapper h1 {
-    font-size: 36px;
+    font-size: 56px;
   }
 
   .project-card {
@@ -500,12 +514,71 @@ p {
     height: 600px;
   }
 
+  .profile-img {
+    height: 56px;
+    width: 56px;
+  }
+
+  .terminal {
+    height: 56px;
+    width: 56px;
+  }
+
+  .figma {
+    height: 56px;
+    width: 56px;
+  }
+
+  .mumbai {
+    height: 56px;
+    width: 56px;
+  }
+
+  .archive-wrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+
 }
 
 
-@media screen and (max-width:600px){
+@media screen and (max-width:992px){
   .hero-wrapper {
     width: 90%;
+    padding-left: 24px;
+  }
+
+  .hero-wrapper h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .title-wrapper h2 {
+    font-size: 36px;
+    line-height:48px ;
+  }
+
+  .hero-wrapper p {
+    width: 60ch;
+    text-wrap: wrap;
+  }
+
+  .projects-wrapper{
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+  }
+  .archive-wrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+
+
+}
+
+
+@media screen and (max-width:768px){
+  .hero-wrapper {
+    width: 90%;
+    padding-left:0px;
   }
 
   .hero-wrapper h1 {
@@ -527,6 +600,102 @@ p {
 
   .nav-link {
     font-size: 14px;
-    width: 60px;
+
+  }
+
+  .profile-img {
+    height: 48px;
+    width: 48px;
+  }
+
+  .terminal {
+    height: 48px;
+    width: 48px;
+  }
+
+  .figma {
+    height: 48px;
+    width: 48px;
+  }
+
+  .mumbai {
+    height: 48px;
+    width: 48px;
+  }
+  .link-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .link-box svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dotted-line{
+    margin: 10px 0px;
+  }
+
+  .hero-wrapper p {
+    font-size: 14px;
+
+    text-wrap: wrap ;
+  }
+
+  .project-info{
+    padding: 01rem;
+
+  }
+
+  .project-info h3{
+    font-size: 24px;
+  }
+
+  .archive-wrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .archive-card {
+    height: 380px;
+  }
+
+}
+
+@media screen and (max-width:576px){
+  .hero-wrapper {
+    width: 96%;
+    padding-left:0px;
+  }
+  .hero-wrapper h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .profile-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .terminal {
+    height: 40px;
+    width: 40px;
+  }
+
+  .figma {
+    height: 40px;
+    width: 40px;
+  }
+
+  .mumbai {
+    height: 40px;
+    width: 40px;
+  }
+  .project-info h3{
+    font-size: 18px;
+  }
+
+  .archive-wrapper {
+    grid-template-columns: repeat(1,1fr);
   }
 }
+

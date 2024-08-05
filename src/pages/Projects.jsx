@@ -16,7 +16,7 @@ const Projects = () => {
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
         <h2>Projects</h2>
-        <p>Websites, software interfaces, icons — that’s where my heart is, <br /> dedicating my skills to perfecting these realms.</p>
+        <p>Websites, software interfaces, icons — that’s where my heart is,dedicating my skills to perfecting these realms.</p>
       </motion.div>
       <motion.div variants={textVariants} initial="initial" animate="animate" className='projects-wrapper'>
       {projects.map((project) => (
