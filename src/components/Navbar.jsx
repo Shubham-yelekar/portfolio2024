@@ -38,23 +38,29 @@ const navLinkVariant = {
 };
 
 const Navbar = () => {
- 
+
   const linkClass = ({isActive}) => isActive ?"activeLink"  : ""
 
   return (
     <motion.div className='nav' variants={navVariant} initial="initial" animate="animate" >
       <ul>
         <motion.li className='nav-link' variants={navLinkVariant}  >
-          <NavLink className={linkClass} to={'/'}><HomeIcon/></NavLink>
-          
+          <span className='tool-tip' style={{left:'4%'}}>/home</span>
+          <NavLink className={linkClass} to={'/'}>
+
+          <HomeIcon/>
+          </NavLink>
         </motion.li>
         <motion.li className='nav-link' variants={navLinkVariant}  >
+        <span className='tool-tip' style={{left:'24%'}} >/projects</span>
           <NavLink className={linkClass} to={'/projects'}><ProjectIcon/></NavLink>
         </motion.li>
         <motion.li className='nav-link' variants={navLinkVariant} >
+        <span className='tool-tip' style={{left:'50%'}}>/archives</span>
           <NavLink className={linkClass} to={'/archives'}><ArchiveIcons/></NavLink>
         </motion.li>
         <motion.li className='nav-link' variants={navLinkVariant} >
+        <span className='tool-tip' style={{left:'80%'}}>/about</span>
           <NavLink className={linkClass} to={'/about'}><MyIcon/></NavLink>
         </motion.li>
 

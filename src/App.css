@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -135,27 +136,59 @@ p {
   align-items:center ;
   justify-content: center;
   color: var(--light-gray);
-  transition: all 500ms ease-in-out;
+  transition: all 300ms ease-in-out;
   border-radius: 9px;
   background: var(--nav-icon-box);
 }
 
+.tool-tip {
+  position: absolute;
+  font-family: var(--font-mono);
+  color: var(--nav-icon-higlight);
+  font-weight: 200;
+  font-size: 14px;
+  top: -24px;
+  opacity: 0;
+  visibility: hidden;
+  filter: invert(75%);
+  transition: opacity 0.4s ease, visibility 0.3s ease;
+}
+
+
+.nav-link:hover .tool-tip{
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-link:focus .tool-tip{
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-link a:hover {
+  background: var(--nav-highlight);
+}
+
+.nav-link a:focus    {
+  background: var(--nav-highlight);
+}
 
 .nav-link svg path {
   fill: var(--nav-icon-color) !important;
-  transition: all 500ms ease-in-out!important;
+  transition: all 300ms ease-in-out!important;
 }
 
 
 .activeLink {
   position: relative;
   /* background-color: var(--nav-highlight); */
-  transition: all 500ms ease-in-out!important;
+  transition: all 300ms ease-in-out!important;
 }
 
 .activeLink svg path {
   fill: var(--nav-icon-higlight) !important;
 }
+
 
 /* .activeLink::before{
   content: '';
@@ -168,6 +201,8 @@ p {
   width: 5px;
   background-color: rgb(211, 211, 211);
 } */
+
+
 
 .canvas-el {
   position: absolute;
