@@ -25,7 +25,7 @@ const Archives = () => {
           {Projects.map((items)=>(
             <div key={items.id} className='archive-card'>
               {items.video ? (
-                <video autoPlay muted  src={items.video} alt={items.name}></video>
+                <video autoPlay muted playsInline src={items.video} alt={items.name}></video>
               ) : (
                 <img src={items.thumbnail} alt={items.name} />
               )}
