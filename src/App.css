@@ -206,6 +206,8 @@ p {
 .home-page {
   height: 100vh;
   height: 100svh;
+
+  overflow: hidden;
 }
 .canvas-el {
   position: absolute;
@@ -213,6 +215,34 @@ p {
   width: 100%;
   height: 100%;
   /* filter: blur(2px); */
+}
+
+.top-blob-home {
+  background-image: linear-gradient(90deg, #FFFFFF 0%, #6284FF 50%, #abff73 100%);
+
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  position: absolute;
+  top: -50vw;
+  filter: blur(100px) invert(80%);
+  z-index: 50;
+  opacity: 1;
+}
+
+.bot-blob-home {
+  background-image: url(/public/assets/various/Rectangle.png);
+  background-repeat: repeat;
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 8/3;
+  position: absolute;
+  top: 0%;
+
+    -webkit-mask-image:linear-gradient(180deg, #404040 0%, rgba(64, 64, 64, 0.00)100%);
+    mask-image: linear-gradient(180deg, #404040 0%, rgba(64, 64, 64, 0.00)100%);
+    opacity: 0.5;
 }
 
 .hero-wrapper{
@@ -704,6 +734,10 @@ p {
 }
 
 @media screen and (max-width:576px){
+  .nav {
+    bottom: 24px;
+  }
+
   .hero-wrapper {
     width: 90%;
     padding-left:0px;
@@ -744,6 +778,13 @@ p {
 
   .hero-wrapper p {
     width: auto;
+  }
+
+  .top-blob-home {
+    top: -30vw;
+  }
+  .bot-blob-home {
+    aspect-ratio: 8 / 6;
   }
 
 

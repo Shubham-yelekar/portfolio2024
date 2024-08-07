@@ -7,9 +7,10 @@ import childVariants from '../static/childVariants'
 
 const Home = () => {
   return (
-    <div className='flex justify-center items-center home-page'>
+    <div className='flex justify-center items-center home-page overflow-hidden'>
+      <motion.div className='top-blob-home'></motion.div>
+      <motion.div className='bot-blob-home'></motion.div>
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
-
         <motion.div variants={childVariants} className='flex gap-[4px] '>
           <h1>Hi, I'm Shubham,</h1>
           <div className='profile-img'></div>
