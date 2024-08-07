@@ -11,19 +11,19 @@ const Home = () => {
       <motion.div className='top-blob-home'></motion.div>
       <motion.div className='bot-blob-home'></motion.div>
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
-        <motion.div variants={childVariants} className='flex gap-[4px] '>
+        <motion.div variants={childVariants} className='flex gap-[8px] '>
           <h1>Hi, I'm Shubham,</h1>
           <div className='profile-img'></div>
         </motion.div>
-        <motion.div variants={childVariants}  className='flex gap-[4px] '>
+        <motion.div variants={childVariants}  className='flex gap-[8px] xm:gap-[8px]'>
           <div className='terminal'></div>
           <h1>A Front-end</h1>
         </motion.div>
-        <motion.div variants={childVariants} className='flex gap-[4px] '>
+        <motion.div variants={childVariants} className='flex gap-[8px] '>
           <h1>Developer & Designer</h1>
         <div className='figma'></div>
         </motion.div>
-        <motion.div variants={childVariants} className='flex gap-[4px] '>
+        <motion.div variants={childVariants} className='flex gap-[8px] '>
           <div className='mumbai'></div>
           <h1>Based in Mumbai</h1>
         </motion.div>

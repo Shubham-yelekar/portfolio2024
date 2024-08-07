@@ -92,7 +92,7 @@ h1 {
   font-weight: 500;
   line-height:64px;
   color: var(--text-color);
-  letter-spacing: -0.09rem;
+  letter-spacing: -0.06rem;
 }
 
 h2 {
@@ -747,7 +747,7 @@ p {
     line-height: 48px;
   }
 
-  .profile-img {
+  /* .profile-img {
     height: 40px;
     width: 40px;
   }
@@ -765,7 +765,7 @@ p {
   .mumbai {
     height: 40px;
     width: 40px;
-  }
+  } */
   .project-info h3{
     font-size: 18px;
   }
@@ -789,4 +789,11 @@ p {
 
 
 }
+
+@media screen and (max-width:420px){
+  .figma{
+    display: none;
+  }
+}
+
 
