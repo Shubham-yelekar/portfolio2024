@@ -13,7 +13,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <motion.div variants={textVariants} initial="initial" animate="animate">
+    <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
         <h2>Projects</h2>
         <p>Websites, software interfaces, icons — that’s where my heart is,dedicating my skills to perfecting these realms.</p>

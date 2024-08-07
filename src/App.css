@@ -61,7 +61,7 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 body::-webkit-scrollbar {
@@ -694,6 +694,10 @@ p {
     height: 380px;
   }
 
+  .title-wrapper p {
+    width: auto;
+  }
+
 }
 
 @media screen and (max-width:576px){
@@ -728,9 +732,13 @@ p {
   .project-info h3{
     font-size: 18px;
   }
-
+  .title-wrapper p {
+    width: auto;
+  }
   .archive-wrapper {
     grid-template-columns: repeat(1,1fr);
   }
+
+
 }
 
