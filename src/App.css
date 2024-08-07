@@ -698,7 +698,7 @@ p {
 
 @media screen and (max-width:576px){
   .hero-wrapper {
-    width: 96%;
+    width: 90%;
     padding-left:0px;
   }
   .hero-wrapper h1 {
