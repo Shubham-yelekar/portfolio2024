@@ -539,7 +539,7 @@ p {
 
 @media screen and (max-width:1200px){
   .hero-wrapper {
-    width: 800px;
+    width: 700px;
   }
 
 
@@ -550,6 +550,41 @@ p {
   .project-card {
     width: 100%;
     height: 600px;
+  }
+
+
+
+  .archive-wrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+
+@media screen and (max-width:992px){
+
+
+  .hero-wrapper h1 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .title-wrapper h2 {
+    font-size: 36px;
+    line-height:48px ;
+  }
+
+  .hero-wrapper p {
+    width: 60ch;
+    text-wrap: wrap;
+  }
+
+  .projects-wrapper{
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+  }
+  .archive-wrapper {
+    grid-template-columns: repeat(2,1fr);
   }
 
   .profile-img {
@@ -572,42 +607,6 @@ p {
     width: 56px;
   }
 
-  .archive-wrapper {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-}
-
-
-@media screen and (max-width:992px){
-  .hero-wrapper {
-    width: 90%;
-    padding-left: 24px;
-  }
-
-  .hero-wrapper h1 {
-    font-size: 48px;
-    line-height: 56px;
-  }
-
-  .title-wrapper h2 {
-    font-size: 36px;
-    line-height:48px ;
-  }
-
-  .hero-wrapper p {
-    width: 60ch;
-    text-wrap: wrap;
-  }
-
-  .projects-wrapper{
-    grid-template-columns: repeat(1,1fr);
-    place-items: center;
-  }
-  .archive-wrapper {
-    grid-template-columns: repeat(2,1fr);
-  }
-
 
 
 }
@@ -620,7 +619,8 @@ p {
   }
 
   .hero-wrapper h1 {
-    font-size: 36px;
+    font-size: 48px;
+    line-height: 56px;
   }
   .hero-wrapper p {
     font-size: 14px;
@@ -709,7 +709,7 @@ p {
     padding-left:0px;
   }
   .hero-wrapper h1 {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 48px;
   }
 
@@ -740,6 +740,10 @@ p {
   }
   .archive-wrapper {
     grid-template-columns: repeat(1,1fr);
+  }
+
+  .hero-wrapper p {
+    width: auto;
   }
 
 
