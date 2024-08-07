@@ -7,7 +7,7 @@ import childVariants from '../static/childVariants'
 
 const Home = () => {
   return (
-    <div className='h-[100vh] flex justify-center items-center'>
+    <div className='flex justify-center items-center home-page'>
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
 
         <motion.div variants={childVariants} className='flex gap-[4px] '>

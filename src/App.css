@@ -203,7 +203,10 @@ p {
 } */
 
 
-
+.home-page {
+  height: 100vh;
+  height: 100svh;
+}
 .canvas-el {
   position: absolute;
   z-index: -1;
