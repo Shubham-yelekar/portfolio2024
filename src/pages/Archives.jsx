@@ -13,7 +13,8 @@ const Projects = [
 const Archives = () => {
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>
-
+      <motion.div className='top-blob-archive'></motion.div>
+      <motion.div className='top-grid-archive'></motion.div>
       <motion.div variants={childVariants} initial="initial" animate="animate"  className='title-wrapper'>
         <h2>Archives</h2>
         <p>These are all my recent works</p>
