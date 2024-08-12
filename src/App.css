@@ -970,7 +970,7 @@ background-image: url(/public/assets/various/dot.png);
 
 @media screen and (max-width:576px){
   .nav {
-    bottom: 24px;
+    bottom: 10px;
   }
 
   .hero-wrapper {
@@ -1001,6 +1001,10 @@ background-image: url(/public/assets/various/dot.png);
     height: 40px;
     width: 40px;
   } */
+
+  .title-wrapper {
+    margin: 64px auto 24px;
+  }
 
   .title-wrapper h2 {
     font-size: 32px;

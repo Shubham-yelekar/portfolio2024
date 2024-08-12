@@ -23,7 +23,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>
+    <motion.div variants={textVariants} initial="initial" animate="animate" className='p-2 sm:p-4'>
       <motion.div className='top-blob-projects'></motion.div>
       <motion.div className='top-grid-projects'></motion.div>
       <motion.div variants={childVariants} className='title-wrapper'>
