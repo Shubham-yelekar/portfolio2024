@@ -385,7 +385,7 @@ p {
 
 .title-wrapper p {
   margin-top: 8px;
-  line-height: 28px;
+  line-height: 26px;
   width: 48ch;
   color: var(--text-color-2);
 }
@@ -589,6 +589,7 @@ background-image: url(/public/assets/various/dot.png);
     .project-detail img {
     width: 100%;
     height: auto;
+    border-radius: 14px;
 }
 
 .project-detail {
@@ -783,7 +784,19 @@ background-image: url(/public/assets/various/dot.png);
     width: 56px;
   }
 
+  .title-wrapper p {
+    width: 50ch;
+    line-height: 24px;
+  }
 
+  .project-info p {
+    width: 40ch;
+    line-height: 24px;
+  }
+
+  .tech-used {
+    font-size: 14px;
+  }
 
 }
 
@@ -805,7 +818,7 @@ background-image: url(/public/assets/various/dot.png);
 
   .project-card {
     width: 100%;
-    height: 420px;
+    height: 520px;
   }
 
   .social-links {
@@ -852,17 +865,22 @@ background-image: url(/public/assets/various/dot.png);
 
   .hero-wrapper p {
     font-size: 14px;
-
+    line-height:21px ;
     text-wrap: wrap ;
   }
 
   .project-info{
-    padding: 01rem;
+    padding: 0rem;
 
   }
 
   .project-info h3{
     font-size: 24px;
+  }
+
+  .project-info p {
+    line-height: 21px;
+    width: auto;
   }
 
   .archive-wrapper {
@@ -875,6 +893,12 @@ background-image: url(/public/assets/various/dot.png);
 
   .title-wrapper p {
     width: auto;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .project-card {
+    padding: 10px;
   }
 
 }
@@ -912,9 +936,24 @@ background-image: url(/public/assets/various/dot.png);
     height: 40px;
     width: 40px;
   } */
-  .project-info h3{
-    font-size: 18px;
+
+  .title-wrapper h2 {
+    font-size: 32px;
+    line-height:36px ;
   }
+
+  .project-info h3{
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  .tech-used {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+
   .title-wrapper p {
     width: auto;
   }
@@ -941,6 +980,13 @@ background-image: url(/public/assets/various/dot.png);
   /* .top-blob-archive {
     width: 60%;
   } */
+
+  .project-info p {
+    margin-left: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 21px;
+  }
 
 }
 

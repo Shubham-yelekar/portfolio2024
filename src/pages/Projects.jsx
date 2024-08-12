@@ -35,8 +35,8 @@ const Projects = () => {
 
             <div className='project-info'>
                 <h3>{project.name}</h3>
-                <p>{project.description}</p>
                 <h5 className='tech-used'>{project.tech}</h5>
+                <p>{project.description}</p>
             </div>
             {/* <img src={project.thumbnail} alt={project.name} /> */}
             <div className='project-card-image'style={{
