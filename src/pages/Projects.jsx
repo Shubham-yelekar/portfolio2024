@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { motion } from 'framer-motion'
 import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
+import Footer from '../components/Footer'
 
 const projects = [
   { id: 1,
@@ -51,6 +52,7 @@ const Projects = () => {
           </Link>
         ))}
       </motion.div>
+      <Footer/>
     </motion.div>
   )
 }
