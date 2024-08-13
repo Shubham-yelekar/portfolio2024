@@ -28,7 +28,7 @@ const Home = () => {
           <h1>Based in Mumbai</h1>
         </motion.div>
         <motion.div variants={childVariants} className='dotted-line'></motion.div>
-        <motion.p variants={childVariants}>Currently work at <span className='highlight-text-italic'>Artificial Reality</span> </motion.p>
+        <motion.p variants={childVariants}>Currently working at <span className='highlight-text-italic'>Artificial Reality</span> </motion.p>
         <motion.p variants={childVariants}>This is my online spot where I show what I make and do.You can see my finished work, things I'm still working on, and stuff I'm learning about.</motion.p>
 
 
