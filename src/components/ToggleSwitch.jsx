@@ -8,7 +8,7 @@ const ToggleSwitch = () => {
   const {theme, toggleTheme} = useTheme()
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='toggle-wrapper' >
-      <h6>Mode : <strong>{theme}</strong></h6>
+      <label>Mode : <span>{theme}</span></label>
       <div variants={textVariants} initial="initial" animate="animate" className='toggle-container'>
         <input
         type="checkbox"

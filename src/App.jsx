@@ -2,13 +2,13 @@
 import '../src/App.css'
 import { createBrowserRouter, createRoutesFromElements, RouterProvider,Route } from 'react-router-dom'
 import MainLayout from './layout/MainLayout'
+import { ThemeProvider } from './Theme-context'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Archives from './pages/Archives'
 import About from './pages/About'
 import PageNotFound from './pages/PageNotFound'
 import ProjectDetails from './pages/ProjectDetails'
-import { ThemeProvider } from './Theme-context'
 
 function App() {
   const router = createBrowserRouter(

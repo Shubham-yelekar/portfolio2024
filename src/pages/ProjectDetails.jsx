@@ -30,7 +30,7 @@ const ProjectDetails = () => {
   return (
     <motion.div  variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
-        <Link to="/projects" className='back-btn' > <ArrowLeft/> <span>Back</span></Link>
+        <Link to="/projects" className='back-btn' >Back</Link>
         <h2>{project.name}</h2>
         <div className='flex gap-4 justify-between mt-4'>
           <div className='project-detail-points'>

@@ -56,11 +56,10 @@
 
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
   /* outline: 1px solid red; */
 }
 
@@ -88,22 +87,51 @@ body {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: 500;
-  line-height:64px;
+  line-height:6.4rem;
   color: var(--text-color);
-  letter-spacing: -0.06rem;
+  letter-spacing: -0.07rem;
 }
 
 h2 {
-  font-size: 42px;
-  line-height:normal;
+  font-size: 4.8rem;
+  line-height:5.6rem;
   color: var(--text-color);
+  letter-spacing: -0.07rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+  line-height:4.4rem;
+  color: var(--text-color);
+  letter-spacing: -0.07rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+  line-height:3.6rem;
+  color: var(--text-color);
+  letter-spacing: -0.04rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  line-height:3.2rem;
+  color: var(--text-color);
+  letter-spacing: -0.04rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+  line-height:2.6rem;
+  color: var(--text-color);
+  letter-spacing: -0.00rem;
 }
 
 p {
-  font-size: 16px;
-  line-height: normal;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 400;
   color: var(--text-color);
 }
@@ -111,10 +139,10 @@ p {
 .nav {
   position: fixed;
   left: 50%;
-  bottom: 32px;
+  bottom: 3.2rem;
   transform: translateX(-50%);
-  padding: 0.8rem .8rem ;
-  border-radius: 1rem;
+  padding: 1rem 1rem ;
+  border-radius: 1.8rem;
   border: 1px solid var(--border-gray);
   background: var(--nav-color);
   backdrop-filter: blur(5px);
@@ -124,20 +152,20 @@ p {
 
 .nav ul {
   display: flex;
-  gap: 24px;
+  gap: 2.4rem;
 }
 
 
 
 .nav-link a {
-  width: 48px;
-  height: 48px;
+  width: 4.8rem;
+  height: 4.8rem;
   display: flex;
   align-items:center ;
   justify-content: center;
   color: var(--light-gray);
   transition: all 300ms ease-in-out;
-  border-radius: 9px;
+  border-radius: 1.4rem;
   background: var(--nav-icon-box);
 }
 
@@ -146,8 +174,8 @@ p {
   font-family: var(--font-mono);
   color: var(--nav-icon-higlight);
   font-weight: 200;
-  font-size: 14px;
-  top: -24px;
+  font-size: 1.4rem;
+  top: -2.4rem;
   opacity: 0;
   visibility: hidden;
   filter: invert(75%);
@@ -236,7 +264,7 @@ p {
   background-repeat: repeat;
   width: 100vw;
   height: auto;
-  aspect-ratio: 8/3;
+  aspect-ratio: 6/1;
   position: absolute;
   top: 0%;
 
@@ -246,9 +274,9 @@ p {
 }
 
 .hero-wrapper{
-  width:700px ;
+  width:70rem ;
   margin: 0 auto;
-  padding-left: 56px ;
+  padding-left: 5.6rem ;
   /* position: absolute;
   z-index: 10;
   left: 50%;
@@ -259,10 +287,13 @@ p {
   text-wrap: nowrap;
 }
 
+.fancy-image-box {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
 
 .profile-img {
-  width: 64px;
-  height: 64px;
   background-image: url(/public/assets/various/image.png);
   background-position: center;
   background-size: contain;
@@ -271,8 +302,6 @@ p {
 }
 
 .terminal {
-  width: 64px;
-  height: 64px;
   background-image: url(/public/assets/various/terminal.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -280,8 +309,7 @@ p {
 }
 
 .figma {
-  width: 64px;
-  height: 64px;
+
   background-image: url(/public/assets/various/figma.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -289,8 +317,6 @@ p {
 }
 
 .mumbai {
-  width: 64px;
-  height: 64px;
   background-image: url(/public/assets/various/mumbai.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -317,28 +343,32 @@ p {
 
 .highlight-text-mono {
   font-family: "JetBrains Mono", monospace;
-  margin: 18px 2px 10px;
+  margin: 1.8rem 0.2rem 1rem;
   color: var(--text-color);
 }
 
 .hero-wrapper p{
-  margin: 10px 0px;
+  margin: 1rem 0px;
   font-weight: 400;
-  font-weight: 14px;
-  line-height: 1.6rem ;
+  font-size: 1.6rem;
+  line-height: 2.4rem ;
   letter-spacing: -0.02rem;
   color: var(--text-color-2);
 
     width: 60ch;
     text-wrap: wrap;
+}
 
+.hero-wrapper span{
+  font-size: 1.6rem;
+  line-height: 2.4rem ;
 }
 
 .dotted-line {
   width: 100%;
   height: 1px;
   border-top: 2px dashed var(--border-gray);
-  margin: 16px 0px;
+  margin: 1.6rem 0rem;
 }
 
 .social-links {
@@ -377,16 +407,12 @@ p {
 .title-wrapper {
   position: relative;
   max-width: 768px;
-  margin: 72px auto 36px;
+  margin: 7.2rem auto 3.6rem;
 }
-.title-wrapper h2 {
 
-  line-height:56px ;
-}
 
 .title-wrapper p {
-  margin-top: 8px;
-  line-height: 26px;
+  margin-top: 1rem;
   width: 48ch;
   color: var(--text-color-2);
 }
@@ -532,44 +558,26 @@ background-image: url(/public/assets/various/dot.png);
   transition: all 400ms ease-in-out;
 }
 
-/* .project-card-image img {
-  object-position: center center;
-  object-fit: cover;
-  image-rendering: auto;
-  } */
-
-  .project-info img {
+.project-info img {
     width: 100%;
     height: 100%;
-  }
-
-  /* .project-card img {
-    object-fit: cover;
-    border-radius: 16px;
-    transition: all 300ms cubic-bezier(0.25, 1, 0.5, 1);
-
-    } */
+}
 
 
-    /* background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.40) 71.5%, rgba(0, 0, 0, 0.00) 100%); */
-
-    .project-info {
+.project-info {
       display: flex;
       align-items: flex-start;
       flex-direction: column;
       gap: 4px;
-    }
-    .project-info h3 {
+}
+    .project-info h4 {
       color: var(--text-color);
-      line-height: 42px;
-      font-size: 32px;
+
       margin-left: 8px;
       transition: all 300ms ease-in-out;
     }
 
     .project-info p {
-      font-size: 16px;
-      line-height: 28px;
       color: var(--text-color-2);
       width: 50%;
       margin-left: 8px;
@@ -601,14 +609,15 @@ background-image: url(/public/assets/various/dot.png);
 .project-detail-points h6 {
   font-family: var(--font-mono);
   color: var(--text-color-05);
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  /* margin-bottom: 1rem; */
 }
 
 .project-detail-points li {
   margin: 4px 0px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
 }
 
 .project-detail-grid {
@@ -627,10 +636,11 @@ background-image: url(/public/assets/various/dot.png);
   background-color: var(--nav-color);
   border: 1px solid var(--border-gray);
   padding: 8px 24px;
-  border-radius: 24px;
+  border-radius: 2.4rem;
   color: var(--text-color);
   cursor:pointer;
   transition: all 300ms ease-in-out;
+  font-size: 1.4rem;
 }
 
 .link-button:hover {
@@ -690,26 +700,33 @@ background-image: url(/public/assets/various/dot.png);
 
 .toggle-wrapper {
   position: fixed;
-  top: 14px;
-  right: 14px;
+  top: 1.4rem;
+  right: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 1.2rem;
 }
 
-.toggle-wrapper h6 {
+.toggle-wrapper label {
   color: var(--text-color-05);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 1.4rem;
   text-transform: capitalize;
+  font-weight: 400;
+}
+
+.toggle-wrapper label span {
+  font-size: 1.4rem;
+ font-weight: 800;
 }
 
 /* The switch - the box around the slider */
 .toggle-container {
-  width: 48px;
-  height: 28px;
+  width: 4.8rem;
+  height: 2.8rem;
   position: relative;
+
 }
 
 /* Hide default HTML checkbox */
@@ -725,7 +742,7 @@ background-image: url(/public/assets/various/dot.png);
   height: 100%;
   display: block;
   background-color: #d4d4d4;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
@@ -757,30 +774,36 @@ background-image: url(/public/assets/various/dot.png);
 .back-btn {
   position: absolute;
   left: -12%;
-  top: 5%;
+  top: 8%;
   display: flex;
   align-items: center;
-  padding: 8px 8px;
+  justify-content: space-around;
+  padding: 0.8rem 1rem;
   gap: 4px;
   border-radius: 16px;
-  width: 86px;
-  background-color: var(--bg-color);
+  font-size: 1.4rem;
+  /* background-color: var(--nav-color); */
+  border: 1px solid var(--border-gray);
+  border-radius: 2.4rem;
+  max-width: 5.6rem;
 }
+
+
 
 
 @media screen and (max-width:1200px){
   .hero-wrapper {
-    width: 700px;
+    width: 70rem;
   }
 
 
   .hero-wrapper h1 {
-    font-size: 56px;
+    font-size: 5.5rem;
   }
 
   .project-card {
     width: 100%;
-    height: 600px;
+    height: 60rem;
   }
 
 
@@ -795,9 +818,11 @@ background-image: url(/public/assets/various/dot.png);
 @media screen and (max-width:992px){
 
 
+
+
   .hero-wrapper h1 {
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 48px;
+    line-height: 56px;
   }
 
   .title-wrapper h2 {
@@ -818,38 +843,25 @@ background-image: url(/public/assets/various/dot.png);
     grid-template-columns: repeat(2,1fr);
   }
 
-  .profile-img {
-    height: 56px;
-    width: 56px;
+  .fancy-image-box {
+    width: 5.6rem;
+    height: 5.6rem;
   }
 
-  .terminal {
-    height: 56px;
-    width: 56px;
-  }
-
-  .figma {
-    height: 56px;
-    width: 56px;
-  }
-
-  .mumbai {
-    height: 56px;
-    width: 56px;
-  }
 
   .title-wrapper p {
     width: 50ch;
-    line-height: 24px;
+    line-height: 2.4rem;
   }
 
   .project-info p {
     width: 40ch;
-    line-height: 24px;
+    line-height: 2.4rem;
   }
 
   .tech-used {
-    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
   .back-btn {
     position: unset;
@@ -860,6 +872,12 @@ background-image: url(/public/assets/various/dot.png);
 
 
 @media screen and (max-width:768px){
+
+  p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
   .hero-wrapper {
     width: 90%;
     padding-left:0px;
@@ -870,13 +888,12 @@ background-image: url(/public/assets/various/dot.png);
     line-height: 56px;
   }
   .hero-wrapper p {
-    font-size: 14px;
     width: 80%;
   }
 
   .project-card {
     width: 100%;
-    height: 520px;
+    height: 72svh;
   }
 
   .social-links {
@@ -888,25 +905,12 @@ background-image: url(/public/assets/various/dot.png);
 
   }
 
-  .profile-img {
-    height: 48px;
-    width: 48px;
+
+  .fancy-image-box {
+    width: 4.8rem;
+    height: 4.8rem;
   }
 
-  .terminal {
-    height: 48px;
-    width: 48px;
-  }
-
-  .figma {
-    height: 48px;
-    width: 48px;
-  }
-
-  .mumbai {
-    height: 48px;
-    width: 48px;
-  }
   .link-box {
     width: 36px;
     height: 36px;
@@ -969,6 +973,16 @@ background-image: url(/public/assets/various/dot.png);
 }
 
 @media screen and (max-width:576px){
+  h3 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
   .nav {
     bottom: 10px;
   }
@@ -982,38 +996,15 @@ background-image: url(/public/assets/various/dot.png);
     line-height: 48px;
   }
 
-  /* .profile-img {
-    height: 40px;
-    width: 40px;
-  }
-
-  .terminal {
-    height: 40px;
-    width: 40px;
-  }
-
-  .figma {
-    height: 40px;
-    width: 40px;
-  }
-
-  .mumbai {
-    height: 40px;
-    width: 40px;
-  } */
-
   .title-wrapper {
-    margin: 64px auto 24px;
+    margin: 7.2rem auto 3.2rem;
   }
 
-  .title-wrapper h2 {
-    font-size: 32px;
-    line-height:36px ;
+  .title-wrapper p {
+    margin-top: 0.8rem;
   }
 
-  .project-info h3{
-    font-size: 21px;
-    line-height: 26px;
+  .project-info h4{
     margin: 0;
   }
 
@@ -1054,7 +1045,7 @@ background-image: url(/public/assets/various/dot.png);
     margin-left: 0;
     margin-bottom: 8px;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 22px;
   }
 
 }
@@ -1063,6 +1054,17 @@ background-image: url(/public/assets/various/dot.png);
   .figma{
     display: none;
   }
+
+  .project-info p {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
+
+  .project-info p {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
+
 }
 
 

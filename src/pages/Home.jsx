@@ -13,18 +13,18 @@ const Home = () => {
       <motion.div  variants={textVariants} initial='initial' animate='animate' className='hero-wrapper'>
         <motion.div variants={childVariants} className='flex gap-[8px] '>
           <h1>Hi, I'm Shubham,</h1>
-          <div className='profile-img'></div>
+          <div className='fancy-image-box profile-img'></div>
         </motion.div>
         <motion.div variants={childVariants}  className='flex gap-[8px] xm:gap-[8px]'>
-          <div className='terminal'></div>
+          <div className='fancy-image-box terminal'></div>
           <h1>A Front-end</h1>
         </motion.div>
         <motion.div variants={childVariants} className='flex gap-[8px] '>
           <h1>Developer & Designer</h1>
-        <div className='figma'></div>
+        <div className='fancy-image-box figma'></div>
         </motion.div>
         <motion.div variants={childVariants} className='flex gap-[8px] '>
-          <div className='mumbai'></div>
+          <div className='fancy-image-box mumbai'></div>
           <h1>Based in Mumbai</h1>
         </motion.div>
         <motion.div variants={childVariants} className='dotted-line'></motion.div>
