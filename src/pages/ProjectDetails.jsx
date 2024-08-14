@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
+import Footer from '../components/Footer';
+
+import { IoReturnUpBack } from "react-icons/io5";
+import { BiLinkExternal } from "react-icons/bi";
 
 const projects = [
   { id: 1,
@@ -30,7 +34,7 @@ const ProjectDetails = () => {
   return (
     <motion.div  variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
-        <Link to="/projects" className='back-btn' >Back</Link>
+        <Link to="/projects" className='back-btn' ><IoReturnUpBack size={18} /> Back</Link>
         <h2>{project.name}</h2>
         <div className='flex gap-4 justify-between mt-4'>
           <div className='project-detail-points'>
@@ -52,8 +56,7 @@ const ProjectDetails = () => {
           </div>
           <div className='project-detail-points items-start'>
             <a className="link-button">
-              Visit
-
+              Visit <BiLinkExternal size={18} />
             </a>
           </div>
       </div>
@@ -64,6 +67,8 @@ const ProjectDetails = () => {
           <img key={index} src={item} alt={`${project.name} - Image ${index + 1}`} />
         ))}
       </motion.div>
+
+      <Footer/>
     </motion.div>
   )
 }
