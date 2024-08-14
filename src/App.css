@@ -367,7 +367,7 @@ p {
 .dotted-line {
   width: 100%;
   height: 1px;
-  border-top: 2px dashed var(--border-gray);
+  border-top: 1px solid var(--border-gray);
   margin: 1.6rem 0rem;
 }
 
@@ -810,6 +810,98 @@ background-image: url(/public/assets/various/dot.png);
   max-width:  8rem;
 }
 
+.about-grid-wrapper {
+  margin: 9.6rem auto 2.4rem;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 200px);
+  gap: 1rem;
+
+}
+
+.bento-card {
+  border-radius: 1.4rem;
+  background-color: var(--nav-color);
+  padding: 1.6rem;
+}
+
+.intro-box {
+  grid-area: 1 / 1 / 3 / 4;
+
+}
+
+.profile-img-box {
+  grid-area: 1/4/3/6;
+  background-image: url(/public/assets/various/profile-image/image-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.experience-box {
+  grid-area: 3/1/5/4;
+}
+
+.map-box {
+  grid-area: 3/4/4/6;
+}
+
+
+.linkdin-box {
+  grid-area: 4/5/5/6;
+}
+
+.x-box {
+  grid-area: 4/4/5/5;
+}
+
+.tech-stack-box {
+  grid-area: 5/1/5/4;
+}
+
+.tool-box {
+  grid-area: 5/4/7/6;
+}
+
+.experimental-box {
+  grid-area: 6/1/6/4;
+}
+
+.more-about-box {
+  grid-area: 7/1/9/6 ;
+}
+
+.hobby-box {
+  grid-area: 9/3/10/6
+}
+
+.bucket-box {
+  grid-area: 9/1/10/3;
+}
+
+.thankyou-boy {
+  grid-area: 10/2/11/5 ;
+}
+.footer-box {
+  height: 150px;
+  position: relative;
+}
+.footer-grid {
+  background-image: url(/public/assets/various/slide-line.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8/2;
+  position: absolute;
+  bottom: 0%;
+  left: 0px;
+    -webkit-mask-image:linear-gradient(0deg, #404040 0%, rgba(64, 64, 64, 0.00)100%);
+    mask-image: linear-gradient(0deg, #404040 0%, rgba(64, 64, 64, 0.00)100%);
+    opacity: 0.15;
+    z-index: -1;
+}
 
 
 
@@ -890,6 +982,10 @@ background-image: url(/public/assets/various/dot.png);
     margin-bottom: 8px;
   }
 
+  .about-grid-wrapper {
+    max-width: 750px;
+    grid-template-rows: repeat(10, 150px);
+  }
 }
 
 
@@ -992,12 +1088,20 @@ background-image: url(/public/assets/various/dot.png);
     font-size: 14px;
   }
 
+  .about-grid-wrapper {
+    grid-template-rows: repeat(10, 120px);
+  }
+
 }
 
 @media screen and (max-width:576px){
+  .about-grid-wrapper {
+    margin: 7.2rem auto 2.4rem;
+  }
+
   h3 {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
   }
 
   h4 {
@@ -1008,8 +1112,6 @@ background-image: url(/public/assets/various/dot.png);
   .nav {
     bottom: 10px;
   }
-
-
 
   .hero-wrapper {
     width: 90%;
@@ -1070,6 +1172,65 @@ background-image: url(/public/assets/various/dot.png);
     margin-bottom: 8px;
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .footer-box {
+    height: 140px;
+  }
+
+  .about-grid-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 100px);
+  }
+
+  .intro-box {
+    grid-area: 1 / 1 / 3 / 5;
+  }
+  .profile-img-box {
+    grid-area: 3 / 1 / 5 / 3;
+  }
+  .experience-box{
+    display: none;
+  }
+
+  .map-box {
+    grid-area: 3 / 3/ 4 / 5;
+  }
+
+  .linkdin-box {
+    display: none;
+  }
+
+  .x-box {
+    display: none;
+  }
+
+  .tech-stack-box {
+    display: none;
+  }
+
+  .tool-box {
+    display: none;
+  }
+
+  .experimental-box {
+    display: none;
+  }
+
+  .more-about-box {
+    display: none;
+  }
+
+  .hobby-box {
+    display: none;
+  }
+
+  .bucket-box {
+    display: none;
+  }
+
+  .thankyou-boy {
+    display: none;
   }
 
 }

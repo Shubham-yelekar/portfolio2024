@@ -2,8 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='mt-8'>
-      <div  className='dotted-line'></div>
+    <footer className='footer-box'>
+       <div className='footer-grid'></div>
+
     </footer>
   )
 }
