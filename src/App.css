@@ -1180,7 +1180,12 @@ background-image: url(/public/assets/various/dot.png);
 
   .about-grid-wrapper {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 100px);
+    grid-template-rows: repeat(14, 100px);
+  }
+
+  .bento-card {
+    padding: 1rem;
+
   }
 
   .intro-box {
@@ -1190,7 +1195,7 @@ background-image: url(/public/assets/various/dot.png);
     grid-area: 3 / 1 / 5 / 3;
   }
   .experience-box{
-    display: none;
+    grid-area: 5 / 1 / 7 / 5;
   }
 
   .map-box {
@@ -1198,11 +1203,11 @@ background-image: url(/public/assets/various/dot.png);
   }
 
   .linkdin-box {
-    display: none;
+    grid-area: 4/ 4/ 4 / 5;
   }
 
   .x-box {
-    display: none;
+    grid-area: 4/ 3/ 4 / 4;
   }
 
   .tech-stack-box {
