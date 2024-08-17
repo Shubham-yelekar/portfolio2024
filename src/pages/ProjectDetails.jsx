@@ -1,11 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import ArrowLeft from '../icons/ArrowLeft';
+// import {ArrowLeft }from '../icons/ArrowLeft';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
 import Footer from '../components/Footer';
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
 import { IoReturnUpBack } from "react-icons/io5";
 import { BiLinkExternal } from "react-icons/bi";
@@ -17,20 +18,30 @@ const projects = [
     thumbnail: ['/assets/projects/kalakar-india-ace/hero-image.jpg', '/assets/projects/kalakar-india-ace/hero-image.jpg', '/assets/projects/kalakar-india-ace/hero-image.jpg'],
     services : ['Web Design', 'Web Development'],
     tech : ['React js', 'Tailwind', 'Framer'] },
-  { id: 2, name: 'Apple Clone', description: 'Description of Project Two', thumbnail: '/assets/projects/apple-website-clone/hero-image' },
-  { id: 3, name: 'Project One', description: 'Description of Project One', thumbnail: '/assets/projects/project-1/thumb-1.jpg' },
-  { id: 4, name: 'Project Two', description: 'Description of Project Two', thumbnail: '/assets/projects/project-2/thumb-2.jpg' },
-  // Add more projects as needed
+
+  { id: 2,
+     name: 'Apple Clone',
+     description: 'Description of Project Two',
+     thumbnail: ['/assets/projects/apple-website-clone/hero-image' ],
+     services : ['Web Design', 'Web Development'],
+     tech : ['React js', 'Tailwind', 'Framer']
+    },
 ];
 
 const ProjectDetails = () => {
   const {id} = useParams();
+  const projectId = parseInt(id);
   const project = projects.find((p)=> p.id === parseInt(id));
 
 
   if(!project){
     return <div>Project Not found</div>
   }
+
+  const currentIndex = projects.findIndex((p)=> p.id === projectId);
+  const prevProject = projects[currentIndex - 1];
+  const nextProject = projects[currentIndex + 1]
+
   return (
     <motion.div  variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
@@ -67,7 +78,18 @@ const ProjectDetails = () => {
           <img key={index} src={item} alt={`${project.name} - Image ${index + 1}`} />
         ))}
       </motion.div>
-
+        <div className='navigation-buttons'>
+        {prevProject && (
+          <Link to={`/projects/${prevProject.id}`} className='prev-btn'>
+            <RiArrowLeftSLine size={24} /> Previous Project
+          </Link>
+        )}
+        {nextProject && (
+          <Link to={`/projects/${nextProject.id}`} className='next-btn'>
+            Next Project <RiArrowRightSLine size={24} />
+          </Link>
+        )}
+        </div>
       <Footer/>
     </motion.div>
   )

@@ -5,6 +5,7 @@ import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
 import Footer from '../components/Footer'
 
+
 const projects = [
   { id: 1,
     name: 'Kalakar India Ace',
@@ -22,6 +23,7 @@ const projects = [
 ]
 
 const Projects = () => {
+
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-2 sm:p-4'>
       <motion.div className='top-blob-projects'></motion.div>
