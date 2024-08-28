@@ -14,13 +14,15 @@ import { BiLinkExternal } from "react-icons/bi";
 const projects = [
   { id: 1,
     name: 'Kalakar India Ace',
+    url: 'https://kalakarindiaace.com/',
     description: 'Description of Project One',
-    thumbnail: ['/assets/projects/kalakar-india-ace/hero-image.jpg', '/assets/projects/kalakar-india-ace/hero-image.jpg', '/assets/projects/kalakar-india-ace/hero-image.jpg'],
+    thumbnail: ['/assets/projects/kalakar-india-ace/ss-1.png', '/assets/projects/kalakar-india-ace/ss-2.png',],
     services : ['Web Design', 'Web Development'],
     tech : ['React js', 'Tailwind', 'Framer'] },
 
   { id: 2,
      name: 'Apple Clone',
+     url: 'https://kalakarindiaace.com/',
      description: 'Description of Project Two',
      thumbnail: ['/assets/projects/apple-website-clone/hero-image' ],
      services : ['Web Design', 'Web Development'],
@@ -28,6 +30,7 @@ const projects = [
     },
     { id: 3,
       name: 'New Website',
+      url: 'https://kalakarindiaace.com/',
       description: 'Description of Project Two',
       thumbnail: ['/assets/projects/apple-website-clone/hero-image' ],
       services : ['Web Design', 'Web Development'],
@@ -73,7 +76,7 @@ const ProjectDetails = () => {
             </ul>
           </div>
           <div className='project-detail-points items-start'>
-            <a className="link-button">
+            <a href={project.url} target='_blank' className="link-button">
               Visit <BiLinkExternal size={18} />
             </a>
           </div>
