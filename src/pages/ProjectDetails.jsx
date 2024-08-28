@@ -26,6 +26,13 @@ const projects = [
      services : ['Web Design', 'Web Development'],
      tech : ['React js', 'Tailwind', 'Framer']
     },
+    { id: 3,
+      name: 'New Website',
+      description: 'Description of Project Two',
+      thumbnail: ['/assets/projects/apple-website-clone/hero-image' ],
+      services : ['Web Design', 'Web Development'],
+      tech : ['React js', 'Tailwind', 'Framer']
+     },
 ];
 
 const ProjectDetails = () => {

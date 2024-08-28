@@ -32,7 +32,7 @@ const About = () => {
        <div className='bento-card tech-stack-box'><h6>Tech Stack</h6></div>
        <div className='bento-card tool-box'><h6>Tool box</h6></div>
        <div className='bento-card experimental-box'><h6>Experimantal</h6></div>
-       <div className='bento-card thankyou-boy'><h6>Thank you</h6></div>
+       <div className='bento-card thankyou-boy'></div>
 
       </motion.div>
 

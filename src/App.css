@@ -928,6 +928,11 @@ background-image: url(/public/assets/various/dot.png);
 
 .thankyou-boy{
   grid-area: 7/1/9/6 ;
+
+  background-image: url(/public/assets/various/Twitch\ Banner.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: contrast(80%);
 }
 
 .footer-box {
