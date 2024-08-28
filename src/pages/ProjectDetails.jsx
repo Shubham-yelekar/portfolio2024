@@ -51,7 +51,7 @@ const ProjectDetails = () => {
   const currentIndex = projects.findIndex((p)=> p.id === projectId);
   const prevProject = projects[currentIndex - 1];
   const nextProject = projects[currentIndex + 1]
-
+  
   return (
     <motion.div  variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
@@ -88,15 +88,27 @@ const ProjectDetails = () => {
           <img key={index} src={item} alt={`${project.name} - Image ${index + 1}`} />
         ))}
       </motion.div>
-        <div className='navigation-buttons'>
+
+
+
+      <div className='navigation-buttons'>
         {prevProject && (
           <Link to={`/projects/${prevProject.id}`} className='prev-btn'>
-            <RiArrowLeftSLine size={24} /> Previous Project
+            <RiArrowLeftSLine size={24} /> 
+            <div>
+
+            <p>Previous Project</p>
+            <h5>{prevProject.name}</h5>
+            </div>
           </Link>
         )}
+        <div></div>
         {nextProject && (
           <Link to={`/projects/${nextProject.id}`} className='next-btn'>
-            Next Project <RiArrowRightSLine size={24} />
+            <div>
+              <p>Next Project</p>
+              <h5>{nextProject.name}</h5>
+            </div><RiArrowRightSLine size={24} />
           </Link>
         )}
         </div>

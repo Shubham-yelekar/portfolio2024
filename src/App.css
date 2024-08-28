@@ -669,6 +669,36 @@ background-image: url(/public/assets/various/dot.png);
   border: 1px solid var(--nav-highlight);
 }
 
+.navigation-buttons {
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  margin: top 2.4rem ;
+}
+
+.navigation-buttons p{
+  font-size: 1.4rem;
+  color: var(--text-color-05);
+  
+}
+
+.navigation-buttons h5 {
+  font-size: 2rem;
+}
+
+.prev-btn {
+  display: flex;
+  align-items: center;
+}
+
+.next-btn {
+  display: flex;
+  align-items: center;
+}
+
 .archive-wrapper {
   /* max-width: 768px; */
   margin: 0 auto;
