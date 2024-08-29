@@ -15,7 +15,7 @@ const projects = [
   { id: 1,
     name: 'Kalakar India Ace',
     url: 'https://kalakarindiaace.com/',
-    description: 'Description of Project One',
+    description: 'Proven to increase developer productivity and accelerate the pace of software development.',
     thumbnail: ['/assets/projects/kalakar-india-ace/ss-1.png', '/assets/projects/kalakar-india-ace/ss-2.png',],
     services : ['Web Design', 'Web Development'],
     tech : ['React js', 'Tailwind', 'Framer'] },
@@ -23,19 +23,11 @@ const projects = [
   { id: 2,
      name: 'Apple Clone',
      url: 'https://kalakarindiaace.com/',
-     description: 'Description of Project Two',
-     thumbnail: ['/assets/projects/apple-website-clone/hero-image' ],
+     description: 'Proven to increase developer productivity and accelerate the pace of software development.',
+     thumbnail: ['/assets/projects/apple-website-clone/apple-image.jpg' ],
      services : ['Web Design', 'Web Development'],
      tech : ['React js', 'Tailwind', 'Framer']
-    },
-    { id: 3,
-      name: 'New Website',
-      url: 'https://kalakarindiaace.com/',
-      description: 'Description of Project Two',
-      thumbnail: ['/assets/projects/apple-website-clone/hero-image' ],
-      services : ['Web Design', 'Web Development'],
-      tech : ['React js', 'Tailwind', 'Framer']
-     },
+    }
 ];
 
 const ProjectDetails = () => {
@@ -51,7 +43,7 @@ const ProjectDetails = () => {
   const currentIndex = projects.findIndex((p)=> p.id === projectId);
   const prevProject = projects[currentIndex - 1];
   const nextProject = projects[currentIndex + 1]
-  
+
   return (
     <motion.div  variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div variants={childVariants} className='title-wrapper'>
@@ -94,7 +86,7 @@ const ProjectDetails = () => {
       <div className='navigation-buttons'>
         {prevProject && (
           <Link to={`/projects/${prevProject.id}`} className='prev-btn'>
-            <RiArrowLeftSLine size={24} /> 
+            <RiArrowLeftSLine size={24} />
             <div>
 
             <p>Previous Project</p>

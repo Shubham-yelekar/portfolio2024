@@ -17,9 +17,7 @@ const projects = [
     description: 'Description of Project Two',
     thumbnail: '/assets/projects/apple-website-clone/apple-image.jpg',
      tech : 'Web Developement, Web Design'
-  },
-  { id: 3, name: 'Portfolio 1.0', description: 'Description of Project One', thumbnail: '/assets/projects/portfolio-1/thumb-1.jpg' },
-  { id: 4, name: 'Project', description: 'Description of Project One', thumbnail: '/assets/projects/project-1/thumb-1.jpg' }
+  }
 ]
 
 const Projects = () => {
