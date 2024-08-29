@@ -14,9 +14,10 @@ const About = () => {
       <motion.div  variants={textVariants} initial='initial' animate='animate'  className='about-grid-wrapper'>
 
         <motion.div variants={childVariants} className='bento-card intro-box'>
-          <motion.h6 variants={childVariants}>"I like to build what i design,"</motion.h6>
-          <p>I love bringing my designs to life, turning ideas into interactive, user-friendly experiences.</p>
-          <p>I’m passionate about using technology to make human-computer interactions better.</p>
+          <motion.h3 variants={childVariants}>"I like to build what i design,"</motion.h3>
+          <p>I love bringing my designs to life, turning ideas into interactive, user-friendly experiences.
+          I’m passionate about using technology to make human-computer interactions better.
+          </p>
           <p>My goal is to create UIs that are not only visually appealing but also practical and easy to use. </p>
        </motion.div>
 
@@ -27,8 +28,8 @@ const About = () => {
         <div className='map-marking'></div>
        </div>
 
-       <div className='bento-card x-box'><XDotCom/></div>
-       <div className='bento-card linkdin-box'><Linkedin/></div>
+       <a href='#' className='bento-card x-box'><XDotCom/></a>
+       <a className='bento-card linkdin-box'><Linkedin/></a>
        <div className='bento-card tech-stack-box'><h6>Tech Stack</h6></div>
        <div className='bento-card tool-box'><h6>Tool box</h6></div>
        <div className='bento-card experimental-box'><h6>Experimantal</h6></div>
