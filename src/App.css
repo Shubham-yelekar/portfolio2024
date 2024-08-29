@@ -414,12 +414,17 @@ p {
   position: relative;
   max-width: 768px;
   margin: 7.2rem auto 3.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 
-.title-wrapper p {
+.title-wrapper h5 {
   margin-top: 1rem;
-  width: 48ch;
+  font-weight: 400;
+  max-width: fit-content;
   color: var(--text-color-2);
 }
 
@@ -535,7 +540,6 @@ background-image: url(/public/assets/various/dot.png);
   width: 100%;
   height: 800px;
   border: 1px solid var(--border-gray);
-  padding: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -558,9 +562,9 @@ background-image: url(/public/assets/various/dot.png);
 .project-card-image {
   width: 100%;
   height: auto;
-  border: 1px solid var(--border-gray);
+  border-top: 1px solid var(--border-gray);
   flex-grow: 1;
-  border-radius: 12px;
+  border-radius: 0 0 1.6rem 1.6rem;
   transition: all 400ms ease-in-out;
 }
 
@@ -575,6 +579,7 @@ background-image: url(/public/assets/various/dot.png);
       align-items: flex-start;
       flex-direction: column;
       gap: 4px;
+      padding: 1.6rem;
 }
     .project-info h4 {
       color: var(--text-color);
@@ -598,6 +603,7 @@ background-image: url(/public/assets/various/dot.png);
       right: 16px;
       top: 24px;
       font-weight: 400;
+      font-size: 16px;
     }
 
 
@@ -826,7 +832,7 @@ background-image: url(/public/assets/various/dot.png);
 .back-btn {
   position: absolute;
   left: -12%;
-  top: 8%;
+  top: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1014,13 +1020,11 @@ background-image: url(/public/assets/various/dot.png);
   grid-area: 6/1/6/4;
 }
 
-.thankyou-boy{
+.thankyou-box{
   grid-area: 7/1/9/6 ;
 
-  background-image: url(/public/assets/various/Twitch\ Banner.jpg);
-  background-position: center;
-  background-size: cover;
-  filter: contrast(80%);
+  background: linear-gradient(180deg, var(--nav-color) 0%, rgba(0, 0, 0, 0.00) 100%);
+
 }
 
 .footer-box {
@@ -1109,6 +1113,10 @@ background-image: url(/public/assets/various/dot.png);
     height: 5.6rem;
   }
 
+  .title-wrapper {
+    align-items: flex-start;
+  }
+
 
   .title-wrapper p {
     width: 50ch;
@@ -1167,7 +1175,7 @@ background-image: url(/public/assets/various/dot.png);
 
   .project-card {
     width: 100%;
-    height: 72svh;
+    height: 60svh;
   }
 
   .social-links {
@@ -1206,8 +1214,8 @@ background-image: url(/public/assets/various/dot.png);
   }
 
   .project-info{
-    padding: 0rem;
-
+    padding: 0.8rem;
+    gap: 8px;
   }
 
   .project-info h3{
@@ -1231,10 +1239,6 @@ background-image: url(/public/assets/various/dot.png);
     width: auto;
     font-size: 14px;
     line-height: 21px;
-  }
-
-  .project-card {
-    padding: 10px;
   }
 
   .project-detail-grid {
@@ -1338,6 +1342,7 @@ background-image: url(/public/assets/various/dot.png);
 
   .title-wrapper p {
     width: auto;
+
   }
   .archive-wrapper {
     grid-template-columns: repeat(1,1fr);
@@ -1362,6 +1367,15 @@ background-image: url(/public/assets/various/dot.png);
   /* .top-blob-archive {
     width: 60%;
   } */
+
+  .projects-wrapper {
+    gap: 16px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: 50svh;
+  }
 
   .project-info p {
     margin-left: 0;
@@ -1390,11 +1404,13 @@ background-image: url(/public/assets/various/dot.png);
 
   .intro-box h3 {
     font-size: 2.4rem;
+    margin-bottom: 0.5rem;
   }
 
   .intro-box p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.4rem;
+    margin-bottom: 0.5rem;
   }
 
   .profile-img-box {
@@ -1432,7 +1448,7 @@ background-image: url(/public/assets/various/dot.png);
     grid-area:7/ 3/ 9 / 5 ;
   }
 
-  .thankyou-boy {
+  .thankyou-box {
     grid-area:9/ 1/ 9 / 5 ;
   }
 

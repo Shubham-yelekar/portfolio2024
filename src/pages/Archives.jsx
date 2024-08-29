@@ -18,8 +18,7 @@ const Archives = () => {
       <motion.div className='top-blob-archive'></motion.div>
       <motion.div className='top-grid-archive'></motion.div>
       <motion.div variants={childVariants} initial="initial" animate="animate"  className='title-wrapper'>
-        <h3>Archives</h3>
-        <p>These are all my recent works</p>
+        <h3 className='text-center w-full'>Archives</h3>
         <div className='dotted-line'></div>
       </motion.div>
 

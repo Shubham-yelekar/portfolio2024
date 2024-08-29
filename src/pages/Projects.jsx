@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 const projects = [
   { id: 1,
     name: 'Kalakar India Ace',
-    description: 'Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    description: 'For Kalakar India ACE, I designed an engaging UI/UX and developed a responsive, high-performing website using React and Tailwind',
     thumbnail: '/assets/projects/kalakar-india-ace/thumb-image-desktop.png',
     tech : 'Web Developement, Web Design'
    },
@@ -27,8 +27,8 @@ const Projects = () => {
       <motion.div className='top-blob-projects'></motion.div>
       <motion.div className='top-grid-projects'></motion.div>
       <motion.div variants={childVariants} className='title-wrapper'>
-        <h3>Projects</h3>
-        <p className='italic'>Websites, software interfaces, icons — that’s where my heart is,dedicating my skills to perfecting these realms.</p>
+        <h3 className='text-center w-full'>Projects</h3>
+        <div className='dotted-line'></div>
       </motion.div>
       <motion.div variants={textVariants} initial="initial" animate="animate" className='projects-wrapper'>
       {projects.map((project) => (
