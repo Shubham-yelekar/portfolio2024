@@ -16,6 +16,8 @@
   --font-primary: "Inter", sans-serif;
   --green-light: rgba(166, 252, 8, 0.2);
   --green: rgba(166, 252, 8, 1);
+
+  --orange : rgb(249, 115, 0);
 }
 
 [data-theme= 'light']{
@@ -868,11 +870,11 @@ background-image: url(/public/assets/various/dot.png);
   transition: all 0.3s ease-in-out;
 }
 
-.bento-card h6 {
+.about-title{
   color: var(--text-color-2);
   font-family: var(--font-mono);
   font-weight:300;
-  padding: 4px 12px;
+  padding: 8px 12px;
   border: 1px solid var(--border-gray);
   width: fit-content;
   font-size: 1.4rem;
@@ -917,25 +919,41 @@ background-image: url(/public/assets/various/dot.png);
 
 .experience-list {
   height: 10rem;
-  border-radius: 0.4rem;
+  border-radius: 1.2rem;
   overflow: hidden;
-  margin-top: 1.4rem;
-  
+  margin-top: 2rem;
+
 }
 
-.experience-list-date {
-  padding: 1rem;
-  background-size: 8rem 8rem;
-  background-color: var(--green-light);
-  border-left:4px solid var(--green) ;
-  
+.experience-list-item {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+  background-color: var(--nav-icon-box);
+  padding: 8px 12px;
+
+  border-radius: 1.2rem;
+  width: 100%;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.50);
 }
 
-.experience-list h5 {
-  font-size: 1.4rem;
-  color: var(--text-color);
+.experience-list-item h5 {
+  font-size: 2rem;
 }
 
+.experience-list-item span {
+  font-style: italic;
+  font-size: 2rem;
+    line-height: 3.2rem;
+    color: var(--text-color-2);
+    letter-spacing: -0.02rem;
+    font-weight: 300;
+
+}
+
+.experience-list-item h6 {
+  color: var(--text-color-05);
+  font-family: var(--font-mono);
+  margin-top: 4px;
+}
 
 .map-box {
   grid-area: 3/4/4/6;

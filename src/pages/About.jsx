@@ -5,6 +5,7 @@ import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
 import Linkedin from '../icons/Linkedin'
 import XDotCom from '../icons/XDotCom'
+import { MdWork } from "react-icons/md";
 
 const About = () => {
   return (
@@ -24,17 +25,16 @@ const About = () => {
        <div className='bento-card profile-img-box'></div>
 
        <div className='bento-card experience-box'>
-        <h6>Experience</h6>
-        <div className='flex experience-list'>
-          <div className='flex flex-col justify-between experience-list-date'>
-            <h5>- Present</h5>
-            <h5>- 2023</h5>
+        <div className='flex gap-2 about-title'> <MdWork  size={24}/> <h6>Experience</h6> </div>
+        <div className='flex gap-8 experience-list'>
+          <div className='experience-list-item'>
+            <h5>Front-end Developer <span> ＠ Artificial Reality</span> </h5>
+            <h6>2023 - Present</h6>
           </div>
-          <div>
-            <h4>Font End Developer</h4>
-          </div>
+
+
         </div>
-        
+
         </div>
        <div className='bento-card map-box'>
         <div className='map-marking'></div>
