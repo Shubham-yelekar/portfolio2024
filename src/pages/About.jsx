@@ -70,7 +70,7 @@ const About = () => {
         <div className='flex  gap-4 sm:mt-1 '>
           <div className='tech-stack-list-item'>
             <div className='flex items-center gap-4 text-4xl'>
-            <AiFillCode fill='#63E313' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Web developer </h5>
+            <AiFillCode fill='#63E313' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Web Dev </h5>
             </div>
             <h6>⤷ JavaScript</h6>
             <h6>⤷ Vite.js</h6>
@@ -78,7 +78,7 @@ const About = () => {
             <h6>⤷ Next.js</h6>
             <h6>⤷ Angular</h6>
             <h6>⤷ Jquery</h6>
-            <h6>⤷ Node.js</h6>
+
 
           </div>
           <div className='tech-stack-list-item'>
@@ -100,36 +100,36 @@ const About = () => {
          <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6>Tool Box</h6></div>
          <div className='flex gap-4 flex-wrap sm:p-4 m:p-6 lg:p-8'>
             <div className='tool-box-grid'>
-              <div className='flex flex-col items-center tools-box-items'>
-                <FaFigma fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <FaFigma fill='#FF885B'  size={18} />
                 <h6>Figma</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <VscVscodeInsiders fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <VscVscodeInsiders fill='#BF2EF0'  size={18} />
                 <h6>VSCode</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <FaGithub fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <FaGithub fill='#3A1078'  size={18} />
                 <h6>GitHub</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <FaGitAlt fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <FaGitAlt fill='#E44D26'  size={18} />
                 <h6>Git</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <BiLogoNetlify fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <BiLogoNetlify fill='#3795BD'  size={18} />
                 <h6>Netlify</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <SiAdobephotoshop fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <SiAdobephotoshop fill='#8576FF'  size={18} />
                 <h6>Photoshop</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <SiAdobeillustrator fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <SiAdobeillustrator fill='#FF9800'  size={18} />
                 <h6>Illustrator</h6>
               </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <SiAdobeaftereffects fill='#E44D26'  size={24} />
+              <div className='flex items-center tools-box-items'>
+                <SiAdobeaftereffects fill='#874CCC'  size={18} />
                 <h6>After Effects</h6>
               </div>
            </div>
@@ -138,8 +138,8 @@ const About = () => {
         </div>
 
        <div className='bento-card thankyou-box'>
-       <PiHandsPrayingBold fill='#E44D26' width={24}/>
-
+       <PiHandsPrayingBold  size={32}/>
+        <h6>"Inspired by" <a href="https://www.perryw.ca/" target='_blank'>@perryw</a>, <a href="https://rauno.me/" target='_blank'>@rouno</a> and <a href="https://jrhu.me/" target='_blank'>@Jia</a> </h6>
        </div>
 
       </motion.div>

@@ -27,6 +27,7 @@
   --text-color-2: rgb(31, 31, 31);
   --all-dark:rgb(0, 0, 0);
   --border-gray:rgb(219, 219, 219);
+  --text-color-08: rgb(15, 15, 15,0.8);
   --text-color-05: rgb(15, 15, 15,0.5);
   --black-white: rgb(255, 255, 255);
   --black-white-0: rgba(255, 255, 255, 0);
@@ -43,6 +44,7 @@
   --bg-color : rgb(15, 15, 15);
   --text-color: rgb(245, 245, 245);
   --text-color-2: rgb(204, 204, 204);
+  --text-color-08: rgb(190, 190, 190,0.8);
   --text-color-05: rgb(190, 190, 190,0.5);
   --all-dark:rgb(255, 255, 255);
   --border-gray:rgb(40, 40, 40);
@@ -875,7 +877,7 @@ background-image: url(/public/assets/various/dot.png);
   font-family: var(--font-mono);
   font-weight:300;
   padding: 1rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   width: auto;
   font-size: 1.4rem;
   border-bottom: 1px solid var(--border-gray);
@@ -1041,7 +1043,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .tech-stack-list-item h6 {
   margin: 14px 8px;
-  color: var(--text-color-05);
+  color: var(--text-color-08);
   font-size: 1.4rem;
   font-family: var(--font-mono);
   font-weight: 200;
@@ -1049,7 +1051,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .teck-stack-1  {
   margin-top: 1.2rem;
-  color: var(--text-color-05);
+  color: var(--text-color-08);
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -1061,12 +1063,13 @@ background-image: url(/public/assets/various/dot.png);
 }
 
 .tools-box-items h6 {
-  color: var(--text-color-05);
-  font-size: 1.6rem;
+  color: var(--text-color-08);
+  font-size: 1.4rem;
   line-height: 2.1rem;
   font-family: var(--font-mono);
   font-weight: 200;
-
+  text-align: start;
+  line-height: normal;
 }
 
 .tools-box {
@@ -1077,13 +1080,9 @@ background-image: url(/public/assets/various/dot.png);
 
 .tool-box-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 24px;
-}
-
-.tool-box-grid h6 {
-  text-align: center;
-  line-height: normal;
+  padding: 16px;
 }
 
 .experimental-box {
@@ -1092,9 +1091,29 @@ background-image: url(/public/assets/various/dot.png);
 
 .thankyou-box{
   grid-area: 7/1/9/6 ;
-
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
   /* background: linear-gradient(180deg, var(--nav-color) 0%, rgba(0, 0, 0, 0.00) 100%); */
 
+}
+
+.thankyou-box h6 {
+  font-family: var(--font-mono);
+  font-weight: 200;
+  font-style: italic;
+  color: var(--text-color-05);
+  font-size: 1.6rem;
+}
+
+.thankyou-box a {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #6284FF;
 }
 
 .footer-box {
@@ -1222,7 +1241,7 @@ background-image: url(/public/assets/various/dot.png);
   }
   .about-title{
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .experience-list {
@@ -1262,8 +1281,8 @@ background-image: url(/public/assets/various/dot.png);
 }
 
 .tech-stack-list-item h6 {
-  margin: 8px 8px;
-  color: var(--text-color-05);
+  margin: 6px 8px;
+  
   font-size: 1.4rem;
 }
 
@@ -1365,13 +1384,10 @@ background-image: url(/public/assets/various/dot.png);
     font-size: 14px;
   }
 
-  .bento-card {
-    padding: 1rem;
-  }
 
   .about-title{
     padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 
   }
 
@@ -1450,7 +1466,6 @@ background-image: url(/public/assets/various/dot.png);
 
   .tech-stack-list-item h6 {
     margin: 8px 12px;
-    color: var(--text-color-05);
     font-size: 1.4rem;
     line-height: 2.1rem;
   }
@@ -1564,14 +1579,10 @@ background-image: url(/public/assets/various/dot.png);
 
   .about-grid-wrapper {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 110px);
+    grid-template-rows: repeat(12, 120px);
   }
 
-  .bento-card {
-    padding: 0.4rem;
-
-  }
-
+  
   .bento-card  h6 {
     font-size: 1.4rem;
   }
@@ -1648,7 +1659,7 @@ background-image: url(/public/assets/various/dot.png);
 
   .tech-stack-list-item h6 {
     margin: 2px 8px;
-    color: var(--text-color-05);
+    
     font-size: 1.2rem;
   }
 
