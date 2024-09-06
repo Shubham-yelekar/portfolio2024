@@ -6,6 +6,18 @@ import childVariants from '../static/childVariants'
 import Linkedin from '../icons/Linkedin'
 import XDotCom from '../icons/XDotCom'
 import { MdWork } from "react-icons/md";
+import { AiFillCode } from "react-icons/ai";
+import { FaTools } from "react-icons/fa";
+import { RiJavascriptFill } from "react-icons/ri";
+import { SiCss3 } from "react-icons/si";
+import { FaFigma } from "react-icons/fa6";
+import { SiAdobephotoshop } from "react-icons/si";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import { SiAdobeillustrator } from "react-icons/si";
+import { SiAdobeaftereffects } from "react-icons/si";
+import { FaGithub } from "react-icons/fa6";
+import { FaGitAlt } from "react-icons/fa6";
+
 
 const About = () => {
   return (
@@ -25,11 +37,19 @@ const About = () => {
        <div className='bento-card profile-img-box'></div>
 
        <div className='bento-card experience-box'>
-        <div className='flex gap-2 about-title'> <MdWork  size={24}/> <h6>Experience</h6> </div>
-        <div className='flex gap-8 experience-list'>
+        <div className='flex  gap-4 items-center  about-title'> <MdWork  size={18}/> <h6>Experience</h6> </div>
+        <div className='flex flex-col experience-list'>
           <div className='experience-list-item'>
             <h5>Front-end Developer <span> ＠ Artificial Reality</span> </h5>
-            <h6>2023 - Present</h6>
+            <h6>⤷ 2023 ―― Present</h6>
+          </div>
+          <div className='experience-list-item'>
+            <h5>Web Developer & Designer <span> ＠ Freelance</span> </h5>
+            <h6>⤷ 2022 ―― 2023</h6>
+          </div>
+          <div className='experience-list-item'>
+            <h5>Electronics Engineer<span> ＠ R.A.I.T., Navi Mumbai  </span> </h5>
+            <h6>⤷ passout 2022</h6>
           </div>
 
 
@@ -39,11 +59,84 @@ const About = () => {
        <div className='bento-card map-box'>
         <div className='map-marking'></div>
        </div>
+       <a className='bento-card linkdin-box'>
+        {/* <Linkedin/> */}
+        </a>
+       <div className='bento-card tech-stack-box'>
+       <div className='flex  gap-4 items-center  about-title'> <AiFillCode size={18}/> <h6>Tech Stack</h6> </div>
+        <div className='flex  gap-4 sm:mt-1 '>
+          <div className='tech-stack-list-item'>
+            <div className='flex items-center gap-4 text-4xl'>
+            <RiJavascriptFill fill='#63E313' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Javascript</h5>
+            </div>
+            <h6>⤷ Vite.js</h6>
+            <h6>⤷ React.js</h6>
+            <h6>⤷ Next.js</h6>
+            <h6>⤷ Angular</h6>
+            <h6>⤷ Jquery</h6>
+            <h6>⤷ Node.js</h6>
 
-       <a href='#' className='bento-card x-box'><XDotCom/></a>
-       <a className='bento-card linkdin-box'><Linkedin/></a>
-       <div className='bento-card tech-stack-box'><h6>Tech Stack</h6></div>
-       <div className='bento-card tool-box'><h6>Tool box</h6></div>
+          </div>
+          <div className='tech-stack-list-item'>
+            <div className='flex items-center gap-4 text-4xl'>
+            <SiCss3 fill='#E44D26' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>CSS</h5>
+            </div>
+            <h6>⤷ Tailwind</h6>
+            <h6>⤷ Shadcn</h6>
+            <h6>⤷ SCSS </h6>
+            <h6>⤷ Bootstrap</h6>
+            <h6>⤷ PostCss</h6>
+          </div>
+
+        </div>
+
+
+        </div>
+       <div className='bento-card tools-box'>
+         <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6>Tool Box</h6></div>
+         <div className='flex gap-4 flex-wrap'>
+            <div className='flex gap-4 flex-wrap'>
+              <div className='flex flex-col items-center tools-box-items'>
+                <FaFigma fill='#E44D26'  size={32} />
+                <h6>Figma</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <VscVscodeInsiders fill='#E44D26'  size={32} />
+                <h6>VSCode</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <FaGithub fill='#E44D26'  size={32} />
+                <h6>GitHub</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <FaGithub fill='#E44D26'  size={32} />
+                <h6>Git</h6>
+              </div>
+           </div>
+           <div className='flex gap-4 flex-wrap'>
+              <div className='flex flex-col items-center tools-box-items'>
+                <FaGitAlt fill='#E44D26'  size={32} />
+                <h6>Git</h6>
+              </div>
+           </div>
+            <div className='flex gap-4 flex-wrap'>
+              <div className='flex flex-col items-center tools-box-items'>
+                <SiAdobephotoshop fill='#E44D26'  size={32} />
+                <h6>Photoshop</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <SiAdobeillustrator fill='#E44D26'  size={32} />
+                <h6>Illustrator</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <SiAdobeaftereffects fill='#E44D26'  size={32} />
+                <h6>After Effects</h6>
+              </div>
+          </div>
+
+
+         </div>
+        </div>
 
        <div className='bento-card thankyou-box'>
         Thank you For visiting the website
