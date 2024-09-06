@@ -17,7 +17,10 @@ import { SiAdobeillustrator } from "react-icons/si";
 import { SiAdobeaftereffects } from "react-icons/si";
 import { FaGithub } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa6";
-
+import { PiHandsPrayingBold } from "react-icons/pi";
+import { BiLogoNetlify } from "react-icons/bi";
+import { TiStarFullOutline } from "react-icons/ti";
+import { MdDesignServices } from "react-icons/md";
 
 const About = () => {
   return (
@@ -63,12 +66,13 @@ const About = () => {
         {/* <Linkedin/> */}
         </a>
        <div className='bento-card tech-stack-box'>
-       <div className='flex  gap-4 items-center  about-title'> <AiFillCode size={18}/> <h6>Tech Stack</h6> </div>
+       <div className='flex  gap-4 items-center  about-title'> <TiStarFullOutline size={18}/> <h6>Skills</h6> </div>
         <div className='flex  gap-4 sm:mt-1 '>
           <div className='tech-stack-list-item'>
             <div className='flex items-center gap-4 text-4xl'>
-            <RiJavascriptFill fill='#63E313' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Javascript</h5>
+            <AiFillCode fill='#63E313' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Web developer </h5>
             </div>
+            <h6>⤷ JavaScript</h6>
             <h6>⤷ Vite.js</h6>
             <h6>⤷ React.js</h6>
             <h6>⤷ Next.js</h6>
@@ -79,7 +83,7 @@ const About = () => {
           </div>
           <div className='tech-stack-list-item'>
             <div className='flex items-center gap-4 text-4xl'>
-            <SiCss3 fill='#E44D26' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>CSS</h5>
+            <MdDesignServices fill='#2684FF' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Design</h5>
             </div>
             <h6>⤷ Tailwind</h6>
             <h6>⤷ Shadcn</h6>
@@ -94,52 +98,48 @@ const About = () => {
         </div>
        <div className='bento-card tools-box'>
          <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6>Tool Box</h6></div>
-         <div className='flex gap-4 flex-wrap'>
-            <div className='flex gap-4 flex-wrap'>
+         <div className='flex gap-4 flex-wrap sm:p-4 m:p-6 lg:p-8'>
+            <div className='tool-box-grid'>
               <div className='flex flex-col items-center tools-box-items'>
-                <FaFigma fill='#E44D26'  size={32} />
+                <FaFigma fill='#E44D26'  size={24} />
                 <h6>Figma</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
-                <VscVscodeInsiders fill='#E44D26'  size={32} />
+                <VscVscodeInsiders fill='#E44D26'  size={24} />
                 <h6>VSCode</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
-                <FaGithub fill='#E44D26'  size={32} />
+                <FaGithub fill='#E44D26'  size={24} />
                 <h6>GitHub</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
-                <FaGithub fill='#E44D26'  size={32} />
+                <FaGitAlt fill='#E44D26'  size={24} />
                 <h6>Git</h6>
               </div>
-           </div>
-           <div className='flex gap-4 flex-wrap'>
               <div className='flex flex-col items-center tools-box-items'>
-                <FaGitAlt fill='#E44D26'  size={32} />
-                <h6>Git</h6>
+                <BiLogoNetlify fill='#E44D26'  size={24} />
+                <h6>Netlify</h6>
               </div>
-           </div>
-            <div className='flex gap-4 flex-wrap'>
               <div className='flex flex-col items-center tools-box-items'>
-                <SiAdobephotoshop fill='#E44D26'  size={32} />
+                <SiAdobephotoshop fill='#E44D26'  size={24} />
                 <h6>Photoshop</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
-                <SiAdobeillustrator fill='#E44D26'  size={32} />
+                <SiAdobeillustrator fill='#E44D26'  size={24} />
                 <h6>Illustrator</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
-                <SiAdobeaftereffects fill='#E44D26'  size={32} />
+                <SiAdobeaftereffects fill='#E44D26'  size={24} />
                 <h6>After Effects</h6>
               </div>
-          </div>
-
+           </div>
 
          </div>
         </div>
 
        <div className='bento-card thankyou-box'>
-        Thank you For visiting the website
+       <PiHandsPrayingBold fill='#E44D26' width={24}/>
+
        </div>
 
       </motion.div>
