@@ -15,7 +15,7 @@ const projects = [
    },
   { id: 2, name: 'Apple Clone',
     description: 'Description of Project Two',
-    thumbnail: '/assets/projects/apple-website-clone/apple-image.jpg',
+    thumbnail: '/assets/projects/apple-website-clone/apple-image.webp',
      tech : 'Web Developement, Web Design'
   }
 ]

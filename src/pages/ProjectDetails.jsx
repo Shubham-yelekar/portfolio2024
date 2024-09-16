@@ -15,16 +15,16 @@ const projects = [
   { id: 1,
     name: 'Kalakar India Ace',
     url: 'https://kalakarindiaace.com/',
-    description: 'Kalakar India ACE is a leading music studio and talent company in India, focused on nurturing and promoting artists. They offer music production, talent management, and artist promotion services, creating a collaborative platform for talents to excel.',
+    description: 'Kalakar India ACE is a music studio and talent management based in Pune, focused on nurturing and promoting artists. They offer music production, talent management, and artist promotion services, creating a collaborative platform for talents to excel.',
     thumbnail: ['/assets/projects/kalakar-india-ace/ss-1.png', '/assets/projects/kalakar-india-ace/ss-2.png',],
     services : ['Web Design', 'Web Development'],
     tech : ['React js', 'Tailwind', 'Framer'] },
 
   { id: 2,
      name: 'Apple Clone',
-     url: 'https://kalakarindiaace.com/',
-     description: 'Proven to increase developer productivity and accelerate the pace of software development.',
-     thumbnail: ['/assets/projects/apple-website-clone/apple-image.jpg' ],
+     url: 'https://applewebsitecloneshubu.netlify.app/',
+     description: 'Apple Websites always inspired me and motivated me to deconstruct and re-engineer the complex interactions. ',
+     thumbnail: ['/assets/projects/apple-website-clone/apple-image.webp', '/assets/projects/apple-website-clone/ss-1.webp' ],
      services : ['Web Design', 'Web Development'],
      tech : ['React js', 'Tailwind', 'Framer']
     }
