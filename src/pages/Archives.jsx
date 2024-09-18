@@ -8,7 +8,7 @@ import { BiLinkExternal } from "react-icons/bi";
 
 
 const Projects = [
-  {id:1, name: 'item-1', thumbnail: '/assets/archives/archive-1/thumb-1.jpg', video: '/assets/archives/archive-1/graph-slider-2.mp4', linkType: 'Read',link: '#'},
+  {id:1, name: 'Shiny Animated Button',description:"React.js , Tailwind CSS & Framer Motion  ", thumbnail: '/assets/archives/archive-1/thumb-1.jpg', video: '/assets/archives/shiny-button/shiny-button.mp4', linkType: 'Demo',link: 'https://shiny-animated-button.netlify.app/'},
   {id:2, name: 'item-2', thumbnail: '/assets/archives/archive-2/thumb-2.jpg' ,video: '/assets/archives/archive-2/thumb-2.mp4',linkType: 'Demo', link: '#'},
 ]
 
@@ -34,9 +34,9 @@ const Archives = () => {
               <div className='archive-info'>
                 <div>
                 <h5>{items.name}</h5>
-                <p>Lorem ipsum</p>
+                <p>{items.description}</p>
                 </div>
-                <a className="link-button">
+                <a href={items.link} target='_blank' className="link-button">
                  <span>{items.linkType}</span>  <BiLinkExternal size={18} />
                 </a>
               </div>

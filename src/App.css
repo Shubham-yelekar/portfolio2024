@@ -762,6 +762,12 @@ background-image: url(/public/assets/various/dot.png);
   /* border-radius: 0 0 18px 18px; */
 }
 
+.archive-info p {
+  font-family: var(--font-mono);
+  color: var(--text-color-05);
+  margin-top: 4px;
+}
+
 .toggle-wrapper {
   position: fixed;
   top: 1.4rem;
@@ -1282,7 +1288,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .tech-stack-list-item h6 {
   margin: 6px 8px;
-  
+
   font-size: 1.4rem;
 }
 
@@ -1582,7 +1588,7 @@ background-image: url(/public/assets/various/dot.png);
     grid-template-rows: repeat(12, 120px);
   }
 
-  
+
   .bento-card  h6 {
     font-size: 1.4rem;
   }
@@ -1659,7 +1665,7 @@ background-image: url(/public/assets/various/dot.png);
 
   .tech-stack-list-item h6 {
     margin: 2px 8px;
-    
+
     font-size: 1.2rem;
   }
 
