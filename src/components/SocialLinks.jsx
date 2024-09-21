@@ -22,15 +22,15 @@ const navLinkVariant = {
 const SocialLinks = () => {
   return (
     <motion.div className='social-links' variants={textVariants} initial="initial" animate="animate">
-          <motion.a className='link-box ' href="#" variants={navLinkVariant} initial="initial" animate="animate">
+          <motion.a className='link-box ' href="https://x.com/@shubu_y" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
             <XDotCom/>
             {/* <span>username</span> */}
           </motion.a>
-          <motion.a className='link-box' href="#" variants={navLinkVariant} initial="initial" animate="animate">
+          <motion.a className='link-box' href="https://shubham-yelekar.netlify.app/" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
             <Linkedin/>
             {/* <span>username</span> */}
           </motion.a>
-          <motion.a className='link-box' href="#" variants={navLinkVariant} initial="initial" animate="animate">
+          <motion.a className='link-box' href="https://github.com/Shubham-yelekar" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
             <Github/>
             {/* <span>username</span> */}
           </motion.a>
