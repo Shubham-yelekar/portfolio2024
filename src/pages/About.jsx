@@ -29,7 +29,14 @@ const About = () => {
       <motion.div className='top-grid-about'></motion.div>
       <motion.div  variants={textVariants} initial='initial' animate='animate'  className='about-grid-wrapper'>
 
+        
+      <motion.div variants={childVariants} className='bento-card intro-box'>
+      <div className='about-image-1'>
+                
+      </div>
+      </motion.div>
         <motion.div variants={childVariants} className='bento-card intro-box'>
+          
           <motion.h3 variants={childVariants}>"I like to build what i design,"</motion.h3>
           <p>I love bringing my designs to life, turning ideas into interactive, user-friendly experiences.
           I’m passionate about using technology to make human-computer interactions better.
@@ -38,9 +45,16 @@ const About = () => {
           <p>. . . </p>
        </motion.div>
 
-       <div className='bento-card profile-img-box'>
+       {/* <div className='bento-card profile-img-box'>
        
-       </div>
+       </div> */}
+
+       <div className='flex flex-col sm:flex-row  bento-card gap-8 '>
+          <div className='map-box'>
+            <div className='map-marking'></div>
+          </div>
+        </div>
+      
 
        <div className='bento-card experience-box'>
         <div className='flex text-[24px]  gap-4 items-center about-title'> <MdWork  size={18}/> <h6 className='text-[16px]'>Experience</h6> </div>
@@ -51,29 +65,21 @@ const About = () => {
           </div>
           <div className='experience-list-item'>
             <h5>Web Developer & Designer <span> ＠ Freelance</span> </h5>
-            <h6>⤷ 2022 ―― 2023</h6>
+            <h6>➜ 2022 ―― 2023</h6>
           </div>
           <div className='experience-list-item'>
             <h5>Electronics Engineer<span> ＠ R.A.I.T., Navi Mumbai  </span> </h5>
-            <h6>⤷ passout 2022</h6>
-          </div>
-
-
-        </div>
-
-        </div>
-        <div className='bento-card'>
-          <div className='map-box'>
-            <div className='map-marking'></div>
+            <h6>➜ passout 2022</h6>
           </div>
         </div>
-      
+
+        </div>
+        
        <a className='bento-card linkdin-box'>
         {/* <Linkedin/> */}
         </a>
-      {/* <div className='2xl:grid 2xl:grid-cols-2 '>
 
-       <div className='bento-card tech-stack-box'>
+       {/* <div className='bento-card tech-stack-box'>
        <div className='flex gap-4 items-center  about-title'> <TiStarFullOutline size={18}/> <h6 className='text-[16px]' >Skills</h6> </div>
         <div className='flex  gap-4 sm:mt-1 '>
           <div className='tech-stack-list-item'>
@@ -99,52 +105,52 @@ const About = () => {
             <h6>⤷ Bootstrap</h6>
             <h6>⤷ PostCss</h6>
           </div>
+          </div>
+        </div> */}
 
-        </div>
-
-
-        </div>
        <div className='bento-card tools-box'>
          <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6 className='text-[16px]' >Tool Box</h6></div>
          <div className='flex gap-4 flex-wrap'>
             <div className='tool-box-grid'>
-              <div className='flex items-center tools-box-items'>
-                <FaFigma fill='#FF885B'  size={24} />
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box figma-2 '></div>
                 <h6>Figma</h6>
               </div>
-              <div className='flex items-center tools-box-items'>
-                <VscVscodeInsiders fill='#BF2EF0'  size={24} />
-                <h6>VSCode</h6>
-              </div>
-              <div className='flex items-center tools-box-items'>
-                <FaGithub fill='#3A1078'  size={24} />
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box github '></div>
                 <h6>GitHub</h6>
               </div>
-              <div className='flex items-center tools-box-items'>
-                <FaGitAlt fill='#E44D26'  size={24} />
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box vscode '></div>
+                <h6>Vscode</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box git '></div>
                 <h6>Git</h6>
               </div>
-              <div className='flex items-center tools-box-items'>
-                <BiLogoNetlify fill='#3795BD'  size={24} />
-                <h6>Netlify</h6>
-              </div>
-              <div className='flex items-center tools-box-items'>
-                <SiAdobephotoshop fill='#8576FF'  size={24} />
-                <h6>Photoshop</h6>
-              </div>
-              <div className='flex items-center tools-box-items'>
-                <SiAdobeillustrator fill='#FF9800'  size={24} />
+             
+             
+           </div>
+           <div className='tool-box-grid'>
+             
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box illustrator '></div>
                 <h6>Illustrator</h6>
               </div>
-              <div className='flex items-center tools-box-items'>
-                <SiAdobeaftereffects fill='#874CCC'  size={24} />
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box photoshop '></div>
+                <h6>Photoshop</h6>
+              </div>
+              <div className='flex flex-col items-center tools-box-items'>
+                <div className='fancy-image-box aftereffects '></div>
                 <h6>After Effects</h6>
               </div>
+             
            </div>
 
          </div>
         </div>
-      </div> */}
+      
 
        <div className='bento-card thankyou-box'>
        <PiHandsPrayingBold  size={32}/>

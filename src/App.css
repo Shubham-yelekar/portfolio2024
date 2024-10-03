@@ -321,9 +321,57 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.figma-2 {
 
+  background-image: url(/public/assets/various/figma.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .mumbai {
   background-image: url(/public/assets/various/mumbai.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.github {
+  background-image: url(/public/assets/various/github.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.illustrator{
+  background-image: url(/public/assets/various/illustrator.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.vscode{
+  background-image: url(/public/assets/various/vscode.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.git{
+  background-image: url(/public/assets/various/git.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.aftereffects{
+  background-image: url(/public/assets/various/aftereffects.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.photoshop{
+  background-image: url(/public/assets/various/photoshop.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -864,7 +912,7 @@ background-image: url(/public/assets/various/dot.png);
 .about-grid-wrapper {
   margin: 9.6rem auto 2.4rem;
   max-width: 700px;
-  gap: 14px;
+  gap: 18px;
   display: flex;
   flex-direction: column;
   /* gap: 24px; */
@@ -934,7 +982,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .experience-list-item {
   width: 100%;
-  padding: px 0px;
+  padding: 8px 0px 14px;
   border-bottom: 0.5px solid var(--nav-highlight);
   
   width: 100%;
@@ -965,10 +1013,16 @@ background-image: url(/public/assets/various/dot.png);
   font-size: 1.4rem;
 }
 
+.about-image-1 {
+  height: 250px;
+  width: 200px;
+  background-image: url('../public//assets/various/about-1.png');
+  
+}
 
 .map-box {
 position: relative;
-  margin: 24px 0px;
+  /* margin: 24px 0px; */
   grid-area: 2/1/2/3;
   width: 36rem;
   height: 18rem;
@@ -1085,9 +1139,9 @@ position: relative;
 }
 
 .tool-box-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
   padding: 24px 0px;
 }
 
@@ -1257,11 +1311,7 @@ position: relative;
     gap: 1.2rem;
   }
 
-  .experience-list-item {
-    padding: 8px 12px;
 
-
-  }
   .experience-list-item h5 {
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -1408,6 +1458,7 @@ position: relative;
 
   .about-grid-wrapper {
     grid-template-rows: repeat(8, 140px);
+    padding: 0px 8px;
   }
 
   .intro-box  {
@@ -1449,12 +1500,6 @@ position: relative;
     gap: 1rem;
   }
 
-  .experience-list-item {
-
-    padding: 10px 10px;
-
-
-  }
   .experience-list-item h5 {
     font-size: 1.6rem;
     line-height: 2rem;
@@ -1500,7 +1545,8 @@ position: relative;
 @media screen and (max-width:576px){
   .about-grid-wrapper {
     margin: 7.2rem auto 2.4rem;
-    gap: 8px;
+    gap: 16px;
+    padding: 0px 8px;
   }
 
   .intro-box p{
@@ -1603,7 +1649,8 @@ position: relative;
   .about-grid-wrapper {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 115px);
-    gap: 8px;
+    gap: 16px;
+   
   }
 
 
@@ -1639,12 +1686,7 @@ position: relative;
     gap: 1rem;
   }
 
-  .experience-list-item {
-
-    padding: 14px 14px;
-
-
-  }
+ 
   .experience-list-item h5 {
     font-size: 1.6rem;
     line-height: 2.4rem;
