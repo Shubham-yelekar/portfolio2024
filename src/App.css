@@ -929,10 +929,10 @@ background-image: url(/public/assets/various/dot.png);
   font-family: var(--font-mono);
   font-weight:300;
   width: auto;
-  font-size: 1.4rem !important; 
+  font-size: 1.4rem !important;
   transition: all 0.3s ease-in-out;
   /* padding: 24px 0px 0px; */
-  
+
 }
 
 
@@ -964,7 +964,7 @@ background-image: url(/public/assets/various/dot.png);
 }
 
 .profile-img-box p {
-  
+
 }
 
 .experience-box {
@@ -984,7 +984,7 @@ background-image: url(/public/assets/various/dot.png);
   width: 100%;
   padding: 8px 0px 14px;
   border-bottom: 0.5px solid var(--nav-highlight);
-  
+
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1008,7 +1008,7 @@ background-image: url(/public/assets/various/dot.png);
 .experience-list-item h6 {
   color: var(--text-color-05);
   font-family: var(--font-mono);
-  
+
   font-weight: 300;
   font-size: 1.4rem;
 }
@@ -1017,7 +1017,10 @@ background-image: url(/public/assets/various/dot.png);
   height: 250px;
   width: 200px;
   background-image: url('../public//assets/various/about-1.png');
-  
+  border-radius: 14px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .map-box {
@@ -1119,7 +1122,7 @@ position: relative;
 .tools-box-items{
   border-radius: 1.4rem;
   gap: 8px;
-  
+
 }
 
 .tools-box-items h6 {
@@ -1135,7 +1138,7 @@ position: relative;
 .tools-box {
   grid-area: 4/3/7/6;
   /* border: 0.5px solid var(--border-gray) ; */
-  
+
 }
 
 .tool-box-grid {
@@ -1650,7 +1653,7 @@ position: relative;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 115px);
     gap: 16px;
-   
+
   }
 
 
@@ -1686,7 +1689,7 @@ position: relative;
     gap: 1rem;
   }
 
- 
+
   .experience-list-item h5 {
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -1736,9 +1739,9 @@ position: relative;
   .thankyou-box {
     grid-area:12/ 1/ 13 / 5 ;
     gap: 8px;
-   
+
   }
-  
+
 
   .title-wrapper h5 {
     font-size: 1.6rem;
@@ -1761,7 +1764,7 @@ position: relative;
     font-size: 1.3rem;
     line-height: 2.1rem;
   }
-  
+
 
 }
 

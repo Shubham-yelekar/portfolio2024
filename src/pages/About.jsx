@@ -29,24 +29,25 @@ const About = () => {
       <motion.div className='top-grid-about'></motion.div>
       <motion.div  variants={textVariants} initial='initial' animate='animate'  className='about-grid-wrapper'>
 
-        
-      <motion.div variants={childVariants} className='bento-card intro-box'>
-      <div className='about-image-1'>
-                
-      </div>
-      </motion.div>
+      <motion.div  variants={textVariants} initial='initial' animate='animate' className='flex flex-col gap-8 sm:flex-row'>
+
         <motion.div variants={childVariants} className='bento-card intro-box'>
-          
-          <motion.h3 variants={childVariants}>"I like to build what i design,"</motion.h3>
-          <p>I love bringing my designs to life, turning ideas into interactive, user-friendly experiences.
+          <div className='about-image-1'>
+          </div>
+        </motion.div>
+        <motion.div variants={childVariants} className='bento-card '>
+
+          <motion.h3 variants={childVariants} className='mb-8'>"I like to build what i design,"</motion.h3>
+          <p className='mb-4'>I love bringing my designs to life, turning ideas into interactive, user-friendly experiences.
           I’m passionate about using technology to make human-computer interactions better.
           </p>
-          <p>My goal is to create UIs that are not only visually appealing but also practical and easy to use. </p>
-          <p>. . . </p>
+          <p className='mb-4'>My goal is to create UIs that are not only visually appealing but also practical and easy to use. </p>
+          <p className='mb-4'>. . . </p>
        </motion.div>
+      </motion.div>
 
        {/* <div className='bento-card profile-img-box'>
-       
+
        </div> */}
 
        <div className='flex flex-col sm:flex-row  bento-card gap-8 '>
@@ -54,7 +55,7 @@ const About = () => {
             <div className='map-marking'></div>
           </div>
         </div>
-      
+
 
        <div className='bento-card experience-box'>
         <div className='flex text-[24px]  gap-4 items-center about-title'> <MdWork  size={18}/> <h6 className='text-[16px]'>Experience</h6> </div>
@@ -74,7 +75,7 @@ const About = () => {
         </div>
 
         </div>
-        
+
        <a className='bento-card linkdin-box'>
         {/* <Linkedin/> */}
         </a>
@@ -128,11 +129,11 @@ const About = () => {
                 <div className='fancy-image-box git '></div>
                 <h6>Git</h6>
               </div>
-             
-             
+
+
            </div>
            <div className='tool-box-grid'>
-             
+
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box illustrator '></div>
                 <h6>Illustrator</h6>
@@ -145,12 +146,12 @@ const About = () => {
                 <div className='fancy-image-box aftereffects '></div>
                 <h6>After Effects</h6>
               </div>
-             
+
            </div>
 
          </div>
         </div>
-      
+
 
        <div className='bento-card thankyou-box'>
        <PiHandsPrayingBold  size={32}/>
