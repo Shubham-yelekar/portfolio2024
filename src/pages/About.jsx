@@ -29,12 +29,9 @@ const About = () => {
       <motion.div className='top-grid-about'></motion.div>
       <motion.div  variants={textVariants} initial='initial' animate='animate'  className='about-grid-wrapper'>
 
-      <motion.div  variants={textVariants} initial='initial' animate='animate' className='flex flex-col gap-8 sm:flex-row'>
+      <motion.div  variants={textVariants} initial='initial' animate='animate' className='flex flex-col gap-10 sm:flex-row'>
 
-        <motion.div variants={childVariants} className='bento-card intro-box'>
-          <div className='about-image-1'>
-          </div>
-        </motion.div>
+
         <motion.div variants={childVariants} className='bento-card '>
 
           <motion.h3 variants={childVariants} className='mb-8'>"I like to build what i design,"</motion.h3>
@@ -42,8 +39,12 @@ const About = () => {
           I’m passionate about using technology to make human-computer interactions better.
           </p>
           <p className='mb-4'>My goal is to create UIs that are not only visually appealing but also practical and easy to use. </p>
-          <p className='mb-4'>. . . </p>
+
        </motion.div>
+       <motion.div variants={childVariants} className='bento-card intro-box'>
+          <div className='about-image-1'>
+          </div>
+        </motion.div>
       </motion.div>
 
        {/* <div className='bento-card profile-img-box'>
@@ -53,6 +54,9 @@ const About = () => {
        <div className='flex flex-col sm:flex-row  bento-card gap-8 '>
           <div className='map-box'>
             <div className='map-marking'></div>
+          </div>
+          <div className='about-image-2'>
+
           </div>
         </div>
 
@@ -111,7 +115,7 @@ const About = () => {
 
        <div className='bento-card tools-box'>
          <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6 className='text-[16px]' >Tool Box</h6></div>
-         <div className='flex gap-4 flex-wrap'>
+         <div className='flex flex-col gap-4 '>
             <div className='tool-box-grid'>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box figma-2 '></div>

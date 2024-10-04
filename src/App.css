@@ -139,6 +139,7 @@ p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 400;
+  letter-spacing: normal;
   color: var(--text-color);
 }
 
@@ -925,14 +926,18 @@ background-image: url(/public/assets/various/dot.png);
 }
 
 .about-title{
-  color: var(--text-color-2);
+  color: var(--text-color-08);
+  transition: all 0.3s ease-in-out;
+  padding: 24px 0px 0px;
+
+}
+
+.about-title h6 {
+  color: var(--text-color-08);
   font-family: var(--font-mono);
   font-weight:300;
   width: auto;
-  font-size: 1.4rem !important;
-  transition: all 0.3s ease-in-out;
-  /* padding: 24px 0px 0px; */
-
+  font-size: 1.6rem !important;
 }
 
 
@@ -982,7 +987,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .experience-list-item {
   width: 100%;
-  padding: 8px 0px 14px;
+  padding: 8px 0px 12px;
   border-bottom: 0.5px solid var(--nav-highlight);
 
   width: 100%;
@@ -1025,11 +1030,20 @@ background-image: url(/public/assets/various/dot.png);
 
 .map-box {
 position: relative;
-  /* margin: 24px 0px; */
-  grid-area: 2/1/2/3;
+
   width: 36rem;
   height: 18rem;
   background-image: url(../public//assets/various/map.jpg);
+  background-position:bottom right;
+  background-size: cover;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.about-image-2 {
+  width: 36rem;
+  height: 18rem;
+  background-image: url(../public//assets/various/about-image-2.jpeg);
   background-position:bottom right;
   background-size: cover;
   border-radius: 14px;
@@ -1122,7 +1136,7 @@ position: relative;
 .tools-box-items{
   border-radius: 1.4rem;
   gap: 8px;
-
+  width: 96px;
 }
 
 .tools-box-items h6 {
@@ -1734,6 +1748,14 @@ position: relative;
 
   .tools-box {
     grid-area:10/ 1/ 12 / 5 ;
+  }
+
+  .tool-box-grid {
+    gap: 24px;
+  }
+
+  .tools-box-items {
+    width: 90px;
   }
 
   .thankyou-box {
