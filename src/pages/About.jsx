@@ -29,22 +29,16 @@ const About = () => {
       <motion.div className='top-grid-about'></motion.div>
       <motion.div  variants={textVariants} initial='initial' animate='animate'  className='about-grid-wrapper'>
 
-      <motion.div  variants={textVariants} initial='initial' animate='animate' className='flex flex-col gap-10 sm:flex-row'>
-
+      <motion.div  variants={textVariants} initial='initial' animate='animate' className='flex flex-col gap-10'>
 
         <motion.div variants={childVariants} className='bento-card '>
-
-          <motion.h3 variants={childVariants} className='mb-8'>"I like to build what i design,"</motion.h3>
-          <p className='mb-4'>I love bringing my designs to life, turning ideas into interactive, user-friendly experiences.
-          I’m passionate about using technology to make human-computer interactions better.
+          <p className='mb-4'>Hey, I’m <span className='about-text-span'>Shubham Yelekar</span>, a Front-end engineer who enjoys designing and coding.
           </p>
-          <p className='mb-4'>My goal is to create UIs that are not only visually appealing but also practical and easy to use. </p>
+          <p className='mb-4'>I focus on creating easy-to-use and visually pleasing interfaces. I’m currently working at <span className='about-text-span'>Artificial Reality</span>, where I turn my designs into working applications.</p>
+          <p>I like using tools like React.js, Next.js, and Figma to bring ideas to life.</p>
 
        </motion.div>
-       <motion.div variants={childVariants} className='bento-card intro-box'>
-          <div className='about-image-1'>
-          </div>
-        </motion.div>
+
       </motion.div>
 
        {/* <div className='bento-card profile-img-box'>
@@ -54,10 +48,15 @@ const About = () => {
        <div className='flex flex-col sm:flex-row  bento-card gap-8 '>
           <div className='map-box'>
             <div className='map-marking'></div>
+
           </div>
           <div className='about-image-2'>
 
           </div>
+          <motion.div variants={childVariants} className='bento-card intro-box'>
+          <div className='about-image-1'>
+          </div>
+        </motion.div>
         </div>
 
 
@@ -119,19 +118,19 @@ const About = () => {
             <div className='tool-box-grid'>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box figma-2 '></div>
-                <h6>Figma</h6>
+                <p>Figma</p>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box github '></div>
-                <h6>GitHub</h6>
+                <p>GitHub</p>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box vscode '></div>
-                <h6>Vscode</h6>
+                <p>Vscode</p>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box git '></div>
-                <h6>Git</h6>
+                <p>Git</p>
               </div>
 
 
@@ -140,15 +139,15 @@ const About = () => {
 
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box illustrator '></div>
-                <h6>Illustrator</h6>
+                <p>Illustrator</p>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box photoshop '></div>
-                <h6>Photoshop</h6>
+                <p>Photoshop</p>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box aftereffects '></div>
-                <h6>After Effects</h6>
+                <p>After Effects</p>
               </div>
 
            </div>
