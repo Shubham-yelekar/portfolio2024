@@ -913,7 +913,7 @@ background-image: url(/public/assets/various/dot.png);
 .about-grid-wrapper {
   margin: 9.6rem auto 2.4rem;
   max-width: 700px;
-  gap: 18px;
+  gap: 3.2rem;
   display: flex;
   flex-direction: column;
   /* gap: 24px; */
@@ -928,6 +928,8 @@ background-image: url(/public/assets/various/dot.png);
 
 .bento-card p {
   color: var(--text-color-2);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
 }
 
 .about-text-span {
@@ -938,7 +940,7 @@ background-image: url(/public/assets/various/dot.png);
 .about-title{
   color: var(--text-color-08);
   transition: all 0.3s ease-in-out;
-  padding: 24px 0px 0px;
+  padding: 0px 0px 0px;
 
 }
 
@@ -1268,7 +1270,7 @@ position: relative;
   }
 
   .hero-wrapper p {
-    width: 60ch;
+    width: 40ch;
     text-wrap: wrap;
   }
 

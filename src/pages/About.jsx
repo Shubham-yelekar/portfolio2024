@@ -79,9 +79,7 @@ const About = () => {
 
         </div>
 
-       <a className='bento-card linkdin-box'>
-        {/* <Linkedin/> */}
-        </a>
+      
 
        {/* <div className='bento-card tech-stack-box'>
        <div className='flex gap-4 items-center  about-title'> <TiStarFullOutline size={18}/> <h6 className='text-[16px]' >Skills</h6> </div>
@@ -118,19 +116,19 @@ const About = () => {
             <div className='tool-box-grid'>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box figma-2 '></div>
-                <p>Figma</p>
+                <h6>Figma</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box github '></div>
-                <p>GitHub</p>
+                <h6>GitHub</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box vscode '></div>
-                <p>Vscode</p>
+                <h6>Vscode</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box git '></div>
-                <p>Git</p>
+                <h6>Git</h6>
               </div>
 
 
@@ -139,15 +137,15 @@ const About = () => {
 
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box illustrator '></div>
-                <p>Illustrator</p>
+                <h6>Illustrator</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box photoshop '></div>
-                <p>Photoshop</p>
+                <h6>Photoshop</h6>
               </div>
               <div className='flex flex-col items-center tools-box-items'>
                 <div className='fancy-image-box aftereffects '></div>
-                <p>After Effects</p>
+                <h6>After Effects</h6>
               </div>
 
            </div>
