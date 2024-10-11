@@ -479,8 +479,9 @@ p {
 .title-wrapper h5 {
   margin-top: 1rem;
   font-weight: 400;
-  max-width: fit-content;
+  /* max-width: fit-content; */
   color: var(--text-color-2);
+  text-align: left;
 }
 
 .top-blob-projects {
@@ -780,6 +781,9 @@ background-image: url(/public/assets/various/dot.png);
   color: var(--text-color);
   position: relative;
   overflow: hidden;
+  display:flex ;
+  flex-direction: column;
+  justify-content:space-between ;
 }
 
 .archive-card img {
@@ -789,7 +793,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .archive-card video {
   width: 100%;
-  height: 80%;
+  flex-grow: 1;
   object-fit: cover;
   align-items: center;
 
@@ -804,9 +808,6 @@ background-image: url(/public/assets/various/dot.png);
   backdrop-filter:blur(2px);
   color: var(--text-color);
   font-size: 24px;
-  height: 20%;
-
-
   border-top: 1px solid var(--border-gray) ;
   /* border-radius: 0 0 18px 18px; */
 }
@@ -1462,7 +1463,7 @@ position: relative;
   }
 
   .archive-card {
-    height: 380px;
+    /* height: 380px; */
   }
 
   .title-wrapper p {

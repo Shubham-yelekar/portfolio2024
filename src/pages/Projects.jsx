@@ -14,8 +14,13 @@ const projects = [
     tech : 'Web Developement, Web Design'
    },
   { id: 2, name: 'Apple Clone',
-    description: 'Description of Project Two',
+    description: 'Recreating complex, animation, transitions and componenets of official Apple website. ',
     thumbnail: '/assets/projects/apple-website-clone/apple-image.webp',
+     tech : 'Web Developement, Web Design'
+  },
+  { id: 3, name: 'Portfolio 1.0 - 2023',
+    description: 'First portfolio website ',
+    thumbnail: '/assets/projects/portfolio-1/thumb.jpeg',
      tech : 'Web Developement, Web Design'
   }
 ]

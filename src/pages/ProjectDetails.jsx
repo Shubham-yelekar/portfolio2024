@@ -18,7 +18,8 @@ const projects = [
     description: 'Kalakar India ACE is a music studio and talent management based in Pune, focused on nurturing and promoting artists. They offer music production, talent management, and artist promotion services, creating a collaborative platform for talents to excel.',
     thumbnail: ['/assets/projects/kalakar-india-ace/ss-1.png', '/assets/projects/kalakar-india-ace/ss-2.png',],
     services : ['Web Design', 'Web Development'],
-    tech : ['React js', 'Tailwind', 'Framer'] },
+    tech : ['React js', 'Tailwind', 'Framer']
+  },
 
   { id: 2,
      name: 'Apple Clone',
@@ -28,6 +29,17 @@ const projects = [
      services : ['Web Design', 'Web Development'],
      tech : ['React js', 'Tailwind', 'Framer']
     }
+  ,
+  { id: 3,
+    name: 'Portfolio 1.0 - 2023',
+    url: 'https://shubham-yelekar.netlify.app/',
+    description: 'First portfolio website.',
+    thumbnail: ['/assets/projects/portfolio-1/thumb.jpeg', '/assets/projects/portfolio-1/ss-1.jpeg', '/assets/projects/portfolio-1/ss-2.jpeg' ],
+    services : ['Web Design', 'Web Development'],
+    tech : ['Vanila js', 'Css', 'Rive Animations']
+   }
+
+
 ];
 
 const ProjectDetails = () => {
