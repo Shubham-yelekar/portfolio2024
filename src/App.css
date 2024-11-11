@@ -322,63 +322,12 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.figma-2 {
-
-  background-image: url(/public/assets/various/figma.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 .mumbai {
   background-image: url(/public/assets/various/mumbai.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-.github {
-  background-image: url(/public/assets/various/github.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.illustrator{
-  background-image: url(/public/assets/various/illustrator.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.vscode{
-  background-image: url(/public/assets/various/vscode.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.git{
-  background-image: url(/public/assets/various/git.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.aftereffects{
-  background-image: url(/public/assets/various/aftereffects.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.photoshop{
-  background-image: url(/public/assets/various/photoshop.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-
 
 .highlight-text-italic {
   font-style: italic;
@@ -913,7 +862,7 @@ background-image: url(/public/assets/various/dot.png);
 
 .about-grid-wrapper {
   margin: 9.6rem auto 2.4rem;
-  max-width: 700px;
+  max-width: 768px;
   gap: 3.2rem;
   display: flex;
   flex-direction: column;
@@ -1179,6 +1128,57 @@ position: relative;
   grid-area: 6/1/6/4;
 }
 
+.tools-box h4 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+
+}
+
+.tools-box h6 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+}
+
+.tools-box p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.logo-box {
+  /* background-color: var(--nav-icon-color); */
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.tech-box {
+  flex-grow: 1;
+  background-color: var(--nav-color);
+  padding: 8px;
+  border-radius: 1.6rem;
+  border: 1px solid var(--border-gray);
+  transition: all 0.4s ease-in-out;
+}
+
+.tech-box:hover{
+  background-color: var(--nav-icon-box);
+}
+
+.tech-box-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+
+.logo-box {
+  width: 48px;
+  height: 48px;
+}
+
 .thankyou-box{
   grid-area: 5/1/5/6 ;
   padding: 16px;
@@ -1319,7 +1319,7 @@ position: relative;
   }
 
   .about-grid-wrapper {
-    max-width: 700px;
+    max-width: 768px;
     grid-template-rows: repeat(4, auto);
   }
 
@@ -1569,6 +1569,12 @@ position: relative;
     line-height: 2rem;
   }
 
+  .tech-box-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 14px;
+  }
+
 
 }
 
@@ -1768,9 +1774,7 @@ position: relative;
     gap: 24px;
   }
 
-  .tools-box-items {
-    width: 90px;
-  }
+
 
   .thankyou-box {
     grid-area:12/ 1/ 13 / 5 ;
@@ -1782,6 +1786,12 @@ position: relative;
   .title-wrapper h5 {
     font-size: 1.6rem;
     line-height: 2.4rem;
+  }
+
+  .tech-box-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
 }
@@ -1801,6 +1811,11 @@ position: relative;
     line-height: 2.1rem;
   }
 
+  .tech-box-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
 }
 

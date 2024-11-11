@@ -6,23 +6,87 @@ import childVariants from '../static/childVariants'
 import Linkedin from '../icons/Linkedin'
 import XDotCom from '../icons/XDotCom'
 import { MdWork } from "react-icons/md";
-import { AiFillCode } from "react-icons/ai";
+
 import { FaTools } from "react-icons/fa";
-import { RiJavascriptFill } from "react-icons/ri";
-import { SiCss3 } from "react-icons/si";
-import { FaFigma } from "react-icons/fa6";
-import { SiAdobephotoshop } from "react-icons/si";
-import { VscVscodeInsiders } from "react-icons/vsc";
-import { SiAdobeillustrator } from "react-icons/si";
-import { SiAdobeaftereffects } from "react-icons/si";
-import { FaGithub } from "react-icons/fa6";
-import { FaGitAlt } from "react-icons/fa6";
+
 import { PiHandsPrayingBold } from "react-icons/pi";
-import { BiLogoNetlify } from "react-icons/bi";
-import { TiStarFullOutline } from "react-icons/ti";
-import { MdDesignServices } from "react-icons/md";
+
+
+
+
+const design = [
+  {
+    name: 'Figma',
+    logo: '../../public/assets/various/figma-logo.png',
+    desc: 'Design & Prototyiping'
+  },
+  {
+    name: 'Spline',
+    logo: '../../public/assets/various/spline-logo.png',
+    desc: '3d Editor'
+  },
+  {
+    name: 'Illustrator',
+    logo: '../../public/assets/various/ai-logo.png',
+    desc: 'Vector Design Tool'
+  },
+  {
+    name: 'Photoshop',
+    logo: '../../public/assets/various/ps-logo.png',
+    desc: 'Image Editor'
+  },
+]
+
+const webDev = [
+  {
+    name: 'JavaScript',
+    logo: '../../public/assets/various/js-logo.png',
+    desc: 'Languages of the web'
+  },
+  {
+    name: 'ReactJS',
+    logo: '../../public/assets/various/react-logo.png',
+    desc: 'A JavaScript Library'
+  },
+  {
+    name: 'Tailwind & SASS',
+    logo: '../../public/assets/various/tailwind-logo.png',
+    desc: 'CSS Frameworks'
+  },
+  {
+    name: 'NextJS',
+    logo: '../../public/assets/various/next-logo.svg',
+    desc: 'React Framework'
+  },
+  {
+    name: 'Angular',
+    logo: '../../public/assets/various/angular-logo.png',
+    desc: 'JavaScript Framework'
+  },
+  {
+    name: 'Redux',
+    logo: '../../public/assets/various/redux-logo.png',
+    desc: 'State Managment'
+  },
+  {
+    name: 'Git & GitHub',
+    logo: '../../public/assets/various/github-logo.png',
+    desc: 'Version Control'
+  },
+  {
+    name: 'Appwrite',
+    logo: '../../public/assets/various/appwrite-logo.png',
+    desc: 'Backend tool'
+  },
+  {
+    name: 'Supabase',
+    logo: '../../public/assets/various/supabase-logo.png',
+    desc: 'Backend tool'
+  },
+]
 
 const About = () => {
+
   return (
     <motion.div className='p-2 sm:p-4'>
       <motion.div className='top-blob-about'></motion.div>
@@ -50,9 +114,9 @@ const About = () => {
             <div className='map-marking'></div>
 
           </div>
-          <div className='about-image-2'>
+          {/* <div className='about-image-2'>
 
-          </div>
+          </div> */}
           <motion.div variants={childVariants} className='bento-card intro-box'>
           <div className='about-image-1'>
           </div>
@@ -79,78 +143,49 @@ const About = () => {
 
         </div>
 
-      
-
-       {/* <div className='bento-card tech-stack-box'>
-       <div className='flex gap-4 items-center  about-title'> <TiStarFullOutline size={18}/> <h6 className='text-[16px]' >Skills</h6> </div>
-        <div className='flex  gap-4 sm:mt-1 '>
-          <div className='tech-stack-list-item'>
-            <div className='flex items-center gap-4 text-4xl'>
-            <AiFillCode fill='#63E313' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Web Dev </h5>
-            </div>
-            <h6>⤷ JavaScript</h6>
-            <h6>⤷ Vite.js</h6>
-            <h6>⤷ React.js</h6>
-            <h6>⤷ Next.js</h6>
-            <h6>⤷ Angular</h6>
-            <h6>⤷ Jquery</h6>
-
-
-          </div>
-          <div className='tech-stack-list-item'>
-            <div className='flex items-center gap-4 text-4xl'>
-            <MdDesignServices fill='#2684FF' size={24}/> <h5 className='sm:text-sm md:text-2xl lg:text-3xl '>Design</h5>
-            </div>
-            <h6>⤷ Tailwind</h6>
-            <h6>⤷ Shadcn</h6>
-            <h6>⤷ SCSS </h6>
-            <h6>⤷ Bootstrap</h6>
-            <h6>⤷ PostCss</h6>
-          </div>
-          </div>
-        </div> */}
 
        <div className='bento-card tools-box'>
-         <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6 className='text-[16px]' >Tool Box</h6></div>
-         <div className='flex flex-col gap-4 '>
-            <div className='tool-box-grid'>
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box figma-2 '></div>
-                <h6>Figma</h6>
-              </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box github '></div>
-                <h6>GitHub</h6>
-              </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box vscode '></div>
-                <h6>Vscode</h6>
-              </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box git '></div>
-                <h6>Git</h6>
-              </div>
-
-
-           </div>
-           <div className='tool-box-grid'>
-
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box illustrator '></div>
-                <h6>Illustrator</h6>
-              </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box photoshop '></div>
-                <h6>Photoshop</h6>
-              </div>
-              <div className='flex flex-col items-center tools-box-items'>
-                <div className='fancy-image-box aftereffects '></div>
-                <h6>After Effects</h6>
-              </div>
-
-           </div>
-
+         <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6 className='text-[16px]' >Technologies and Tool Box</h6>
          </div>
+         <div className='mt-12'>
+            <h4>Web - Development</h4>
+            <div className='mt-8 tech-box-grid'>
+
+              {webDev.map((box, index)=>(
+              <div key={index} className='tech-box flex gap-4'>
+                <div className='logo-box'>
+                  <img src={box.logo} alt="" />
+                </div>
+                <div>
+                  <h6>{box.name}</h6>
+                  <p>{box.desc}</p>
+                </div>
+              </div>
+              ))}
+
+            </div>
+         </div>
+
+
+         <div className='mt-8'>
+            <h4>UI Design</h4>
+            <div className='mt-8 tech-box-grid'>
+
+              {design.map((box, index)=>(
+              <div key={index} className='tech-box flex gap-4'>
+                <div className='logo-box'>
+                  <img src={box.logo} alt="" />
+                </div>
+                <div>
+                  <h6>{box.name}</h6>
+                  <p>{box.desc}</p>
+                </div>
+              </div>
+              ))}
+
+            </div>
+         </div>
+
         </div>
 
 
