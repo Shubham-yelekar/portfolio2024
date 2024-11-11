@@ -26,7 +26,7 @@ const SocialLinks = () => {
             <XDotCom/>
             {/* <span>username</span> */}
           </motion.a>
-          <motion.a className='link-box' href="https://shubham-yelekar.netlify.app/" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
+          <motion.a className='link-box' href="https://www.linkedin.com/in/shubhamy1997" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
             <Linkedin/>
             {/* <span>username</span> */}
           </motion.a>

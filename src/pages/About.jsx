@@ -114,9 +114,9 @@ const About = () => {
             <div className='map-marking'></div>
 
           </div>
-          {/* <div className='about-image-2'>
+          <div className='about-image-2'>
 
-          </div> */}
+          </div>
           <motion.div variants={childVariants} className='bento-card intro-box'>
           <div className='about-image-1'>
           </div>
@@ -147,7 +147,7 @@ const About = () => {
        <div className='bento-card tools-box'>
          <div className='flex  gap-4 items-center  about-title'> <FaTools size={18}/> <h6 className='text-[16px]' >Technologies and Tool Box</h6>
          </div>
-         <div className='mt-12'>
+         <div className='mt-8'>
             <h4>Web - Development</h4>
             <div className='mt-8 tech-box-grid'>
 
