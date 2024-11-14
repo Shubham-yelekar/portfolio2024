@@ -17,22 +17,22 @@ import { PiHandsPrayingBold } from "react-icons/pi";
 const design = [
   {
     name: 'Figma',
-    logo: 'assets/various/figma-logo.png',
+    logo: '../../public/assets/various/figma-logo.png',
     desc: 'Design & Prototyiping'
   },
   {
     name: 'Spline',
-    logo: 'assets/various/spline-logo.png',
+    logo: '../../public/assets/various/spline-logo.png',
     desc: '3d Editor'
   },
   {
     name: 'Illustrator',
-    logo: 'assets/various/ai-logo.png',
+    logo: '../../public/assets/various/ai-logo.png',
     desc: 'Vector Design Tool'
   },
   {
     name: 'Photoshop',
-    logo: 'assets/various/ps-logo.png',
+    logo: '../../public/assets/various/ps-logo.png',
     desc: 'Image Editor'
   },
 ]
@@ -40,47 +40,47 @@ const design = [
 const webDev = [
   {
     name: 'JavaScript',
-    logo: 'assets/various/js-logo.png',
+    logo: '../../public/assets/various/js-logo.png',
     desc: 'Languages of the web'
   },
   {
     name: 'ReactJS',
-    logo: 'assets/various/react-logo.png',
+    logo: '../../public/assets/various/react-logo.png',
     desc: 'A JavaScript Library'
   },
   {
     name: 'Tailwind & SASS',
-    logo: 'assets/various/tailwind-logo.png',
+    logo: '../../public/assets/various/tailwind-logo.png',
     desc: 'CSS Frameworks'
   },
   {
     name: 'NextJS',
-    logo: 'assets/various/next-logo.svg',
+    logo: '../../public/assets/various/next-logo.svg',
     desc: 'React Framework'
   },
   {
     name: 'Angular',
-    logo: 'assets/various/angular-logo.png',
+    logo: '../../public/assets/various/angular-logo.png',
     desc: 'JavaScript Framework'
   },
   {
     name: 'Redux',
-    logo: 'assets/various/redux-logo.png',
+    logo: '../../public/assets/various/redux-logo.png',
     desc: 'State Managment'
   },
   {
     name: 'Git & GitHub',
-    logo: 'assets/various/github-logo.png',
+    logo: '../../public/assets/various/github-logo.png',
     desc: 'Version Control'
   },
   {
     name: 'Appwrite',
-    logo: 'assets/various/appwrite-logo.png',
+    logo: '../../public/assets/various/appwrite-logo.png',
     desc: 'Backend tool'
   },
   {
     name: 'Supabase',
-    logo: 'assets/various/supabase-logo.png',
+    logo: '../../public/assets/various/supabase-logo.png',
     desc: 'Backend tool'
   },
 ]
