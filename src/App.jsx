@@ -9,6 +9,7 @@ import Archives from './pages/Archives'
 import About from './pages/About'
 import PageNotFound from './pages/PageNotFound'
 import ProjectDetails from './pages/ProjectDetails'
+import Blogs from './pages/Blogs'
 
 function App() {
   const router = createBrowserRouter(
@@ -19,6 +20,7 @@ function App() {
         <Route path='/projects/:id' element={<ProjectDetails/>}></Route>
         <Route path='/archives' element={<Archives/>}></Route>
         <Route path='/about' element={<About/>}></Route>
+        <Route path='/blogs' element={<Blogs/>}></Route>
         <Route path='*' element={<PageNotFound/>}></Route>
       </Route>
     )
