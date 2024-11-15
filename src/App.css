@@ -1227,6 +1227,39 @@ position: relative;
 }
 
 
+.blog-content-h1 {
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+
+.blog-content-h2 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+.blog-content-h3 {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+
+.blog-content-p {
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+.blog-content-ul {
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+
+.blog-content img {
+  max-width: 100%; /* Makes images responsive */
+  height: auto;
+  margin: 1em 0; /* Adds spacing */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
 
 @media screen and (max-width:1200px){
   .hero-wrapper {
