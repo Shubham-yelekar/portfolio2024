@@ -40,8 +40,8 @@ const Archives = () => {
 
       <div className='archive-wrapper'>
 
-          {archivePost.map((items)=>(
-            <div key={items.id} className='archive-card'>
+          {archivePost.map((items,index)=>(
+            <div key={index} className='archive-card'>
               {items.video ? (
                 <video autoPlay muted playsInline loop src={items.video} alt={items.name}></video>
               ) : (
