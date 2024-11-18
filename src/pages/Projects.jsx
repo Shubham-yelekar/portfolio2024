@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import { motion } from 'framer-motion'
 import textVariants from '../static/textVariants'
@@ -6,26 +6,21 @@ import childVariants from '../static/childVariants'
 import Footer from '../components/Footer'
 
 
-const projects = [
-  { id: 1,
-    name: 'Kalakar India Ace',
-    description: 'For Kalakar India ACE, I designed an engaging UI/UX and developed a responsive, high-performing website using React and Tailwind',
-    thumbnail: '/assets/projects/kalakar-india-ace/thumb-image-desktop.png',
-    tech : 'Web Developement, Web Design'
-   },
-  { id: 2, name: 'Apple Clone',
-    description: 'Recreating complex, animation, transitions and componenets of official Apple website. ',
-    thumbnail: '/assets/projects/apple-website-clone/apple-image.webp',
-     tech : 'Web Developement, Web Design'
-  },
-  { id: 3, name: 'Portfolio 1.0 - 2023',
-    description: 'First portfolio website ',
-    thumbnail: '/assets/projects/portfolio-1/thumb.jpeg',
-     tech : 'Web Developement, Web Design'
-  }
-]
-
 const Projects = () => {
+
+  const [projects , SetProjects] = useState([])
+
+  useEffect(() => {
+    fetch('https://shubham-yelekar.github.io/projects-json/projects.json')
+      .then(res => res.json())
+      .then(data => {
+        SetProjects(data.projectList)
+        console.log(projects)
+      })
+
+      .catch(error => console.error("Error fetch json", error))
+
+  }, [])
 
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-2 sm:p-4'>
