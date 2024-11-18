@@ -1,53 +1,39 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-// import {ArrowLeft }from '../icons/ArrowLeft';
-import { Link } from 'react-router-dom';
-import { color, motion } from 'framer-motion'
+import React, {useEffect, useState} from 'react'
+import { useParams, Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
 import Footer from '../components/Footer';
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-
 import { IoReturnUpBack } from "react-icons/io5";
 import { BiLinkExternal } from "react-icons/bi";
 
-const projects = [
-  { id: 1,
-    name: 'Kalakar India Ace',
-    url: 'https://kalakarindiaace.com/',
-    description: 'Kalakar India ACE is a music studio and talent management based in Pune, focused on nurturing and promoting artists. They offer music production, talent management, and artist promotion services, creating a collaborative platform for talents to excel.',
-    thumbnail: ['/assets/projects/kalakar-india-ace/ss-1.png', '/assets/projects/kalakar-india-ace/ss-2.png',],
-    services : ['Web Design', 'Web Development'],
-    tech : ['React js', 'Tailwind', 'Framer']
-  },
-
-  { id: 2,
-     name: 'Apple Clone',
-     url: 'https://applewebsitecloneshubu.netlify.app/',
-     description: 'Apple Websites always inspired me and motivated me to deconstruct and re-engineer the complex interactions. ',
-     thumbnail: ['/assets/projects/apple-website-clone/apple-image.webp', '/assets/projects/apple-website-clone/ss-1.webp' ],
-     services : ['Web Design', 'Web Development'],
-     tech : ['React js', 'Tailwind', 'Framer']
-    }
-  ,
-  { id: 3,
-    name: 'Portfolio 1.0 - 2023',
-    url: 'https://shubham-yelekar.netlify.app/',
-    description: 'First portfolio website.',
-    thumbnail: ['/assets/projects/portfolio-1/thumb.jpeg', '/assets/projects/portfolio-1/ss-1.jpeg', '/assets/projects/portfolio-1/ss-2.jpeg' ],
-    services : ['Web Design', 'Web Development'],
-    tech : ['Vanila js', 'Css', 'Rive Animations']
-   }
-
-
-];
-
 const ProjectDetails = () => {
+
+  const [projects , SetProjects] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://shubham-yelekar.github.io/projects-json/projects.json')
+      .then(res => res.json())
+      .then((data) => {
+        SetProjects(data.projectDetails)
+        setIsLoading(false)
+        console.log(projects)
+      })
+      .catch((error) =>  {
+        console.error("Error fetch json", error)
+        setIsLoading(false)
+      })
+
+  }, [])
+
+
   const {id} = useParams();
   const projectId = parseInt(id);
   const project = projects.find((p)=> p.id === parseInt(id));
 
-
+  if(isLoading) return <div>Loading...</div>
   if(!project){
     return <div>Project Not found</div>
   }
