@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import ToggleSwitch from '../components/ToggleSwitch';
 import SocialLinks from '../components/SocialLinks';
+import ScrollToTop from '../utils/ScrollToTop';
 
 
 const MainLayout = () => {
@@ -10,6 +11,7 @@ const MainLayout = () => {
     <>
       <Navbar/>
       <Outlet/>
+      <ScrollToTop/>
       <ToggleSwitch/>
       <SocialLinks/>
     </>
