@@ -17,7 +17,7 @@ const Archives = () => {
   const [archivePost , setArchivePost] = useState([])
 
   useEffect(() => {
-    fetch('https://shubham-yelekar.github.io/projects-json/projects.json')
+    fetch('https://shubham-yelekar.github.io/projects-json/projects.json', {cache : "no-cache"})
       .then(res => res.json())
       .then(data => {
       setArchivePost(data.archive)
