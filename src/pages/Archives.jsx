@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import textVariants from '../static/textVariants';
 import childVariants from '../static/childVariants';
 import { BiLinkExternal } from "react-icons/bi";
-
+import Footer from '../components/Footer';
 
 
 // const Projects = [
@@ -60,6 +60,7 @@ const Archives = () => {
 
           ))}
       </div>
+      <Footer/>
     </motion.div>
   )
 }
