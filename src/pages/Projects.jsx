@@ -4,23 +4,25 @@ import { motion } from 'framer-motion'
 import textVariants from '../static/textVariants'
 import childVariants from '../static/childVariants'
 import Footer from '../components/Footer'
-
+import { useData } from '../DataContext'
 
 const Projects = () => {
 
   const [projects , SetProjects] = useState([])
+  const {data, loading} = useData()
 
   useEffect(() => {
-    fetch('https://shubham-yelekar.github.io/projects-json/projects.json')
-      .then(res => res.json())
-      .then(data => {
-        SetProjects(data.projectList)
-        console.log(projects)
-      })
+    if (data?.projectList){
+      SetProjects(data.projectList)
 
-      .catch(error => console.error("Error fetch json", error))
 
-  }, [])
+    }
+
+  }, [data])
+
+  if (loading){
+    return <p>Loading</p>
+  }
 
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-2 sm:p-4'>

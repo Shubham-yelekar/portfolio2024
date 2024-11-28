@@ -7,40 +7,40 @@ import Footer from '../components/Footer';
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { IoReturnUpBack } from "react-icons/io5";
 import { BiLinkExternal } from "react-icons/bi";
+import { useData } from '../DataContext';
 
 const ProjectDetails = () => {
 
-  const [projects , SetProjects] = useState([])
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('https://shubham-yelekar.github.io/projects-json/projects.json')
-      .then(res => res.json())
-      .then((data) => {
-        SetProjects(data.projectDetails)
-        setIsLoading(false)
-        console.log(projects)
-      })
-      .catch((error) =>  {
-        console.error("Error fetch json", error)
-        setIsLoading(false)
-      })
-
-  }, [])
-
-
+  const {data, loading} = useData()
   const {id} = useParams();
   const projectId = parseInt(id);
-  const project = projects.find((p)=> p.id === parseInt(id));
 
-  if(isLoading) return <div>Loading...</div>
-  if(!project){
-    return <div>Project Not found</div>
+  const [projects , SetProjects] = useState([])
+  const [project , SetProject] = useState(null)
+
+  useEffect(() => {
+    if (data?.projectDetails){
+      SetProjects(data.projectDetails)
+      const currentProject = data.projectDetails.find((p) => p.id === projectId);
+      SetProject(currentProject)
+    }
+
+  }, [data, projectId])
+
+
+
+  if (loading){
+    return <p>Loading</p>
+  }
+
+  if (!project){
+    return <p>project not found</p>
   }
 
   const currentIndex = projects.findIndex((p)=> p.id === projectId);
   const prevProject = projects[currentIndex - 1];
   const nextProject = projects[currentIndex + 1]
+
 
   return (
     <motion.div  variants={textVariants} initial="initial" animate="animate" className='p-4'>

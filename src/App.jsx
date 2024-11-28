@@ -9,6 +9,7 @@ import Archives from './pages/Archives'
 import About from './pages/About'
 import PageNotFound from './pages/PageNotFound'
 import ProjectDetails from './pages/ProjectDetails'
+import { DataProvider } from './DataContext'
 
 
 function App() {
@@ -28,8 +29,9 @@ function App() {
 
   return (
     <ThemeProvider>
-
-      <RouterProvider router={router}></RouterProvider>
+      <DataProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </DataProvider>
     </ThemeProvider>
   )
 }

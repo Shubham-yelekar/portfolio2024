@@ -5,29 +5,29 @@ import textVariants from '../static/textVariants';
 import childVariants from '../static/childVariants';
 import { BiLinkExternal } from "react-icons/bi";
 import Footer from '../components/Footer';
+import { useData } from "../DataContext"; //
 
-
-// const Projects = [
-//   {id:1, name: 'Shiny Animated Button',description:"React.js , Tailwind CSS & Framer Motion  ", thumbnail: '/assets/archives/archive-1/thumb-1.jpg', video: '/assets/archives/shiny-button/shiny-button.mp4', linkType: 'Demo',link: 'https://shiny-animated-button.netlify.app/'},
-
-// ]
 
 const Archives = () => {
 
   const [archivePost , setArchivePost] = useState([])
+  const { data, loading} = useData();
 
   useEffect(() => {
-    fetch('https://shubham-yelekar.github.io/projects-json/projects.json', {cache : "no-cache"})
-      .then(res => res.json())
-      .then(data => {
+    if (data?.archive){
       setArchivePost(data.archive)
-        console.log(archivePost)
-      })
 
-      .catch(error => console.error("Error fetch json", error))
+    }
 
-  }, [])
+  }, [data])
 
+  if (loading){
+    return <p>Loading</p>
+  }
+
+  if (!archivePost.length) {
+    return <p>No Archives found</p>
+  }
 
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>

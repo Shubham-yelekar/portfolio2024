@@ -11,7 +11,7 @@ export default function ScrollToTop(){
       behavior: "instant",
     });
 
-    console.log(pathname);
+    // console.log(pathname);
 
 
   }, [pathname])
