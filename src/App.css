@@ -991,8 +991,26 @@ background-image: url(/public/assets/various/dot.png);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   transition: all 0.3s ease-in-out;
 }
-.about-image-1:hover {
+.about-image-1:hover:focus {
   background-image: url('../public//assets/various/about-1.jpg');
+}
+
+.resume-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background-color: var(--white);
+  padding: 2rem 2.4rem;
+  border-radius: 1.6rem;
+  border: 4px solid var(--nav-highlight);
+  transition: all 0.4s ease-in-out;
+  font-size: 1.6rem;
+  color: var(--bg-color) ;
+}
+
+.resume-button:hover{
+  background-color: var(--nav-icon-higlight);
+  color: var(--border-gray) ;
 }
 
 .map-box {

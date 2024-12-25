@@ -8,6 +8,7 @@ import XDotCom from '../icons/XDotCom'
 import { MdWork } from "react-icons/md";
 
 import { FaTools } from "react-icons/fa";
+import { HiDocumentText } from "react-icons/hi2";
 
 import { PiHandsPrayingBold } from "react-icons/pi";
 
@@ -85,6 +86,12 @@ const webDev = [
   },
 ]
 
+const handleOpenResume = () => {
+  // Replace 'your-resume.pdf' with the actual path to your resume file
+  const resumeUrl = "https://drive.google.com/file/d/1gC-Gew05dzo0GINfC_zPwtVbggFt2adR/view?usp=sharing";
+  window.open(resumeUrl, "_blank");
+};
+
 const About = () => {
 
   return (
@@ -105,9 +112,9 @@ const About = () => {
 
       </motion.div>
 
-       {/* <div className='bento-card profile-img-box'>
+       <div className='bento-card profile-img-box'>
 
-       </div> */}
+       </div>
 
        <div className='flex flex-col sm:flex-row  bento-card gap-8 '>
           <div className='map-box'>
@@ -121,6 +128,15 @@ const About = () => {
           <div className='about-image-1'>
           </div>
         </motion.div>
+        </div>
+
+        <div>
+        <button
+          onClick={handleOpenResume}
+          className="resume-button"
+        >
+          View Resume <HiDocumentText size={18}  />
+        </button>
         </div>
 
 
