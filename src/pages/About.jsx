@@ -105,7 +105,7 @@ const About = () => {
           variants={textVariants}
           initial="initial"
           animate="animate"
-          className=" grid grid-cols-1 grid-rows-2 gap-4 sm:grid-cols-3 sm:grid-rows-1 "
+          className=" grid grid-cols-1 grid-rows-2 gap-8 sm:grid-cols-3 sm:grid-rows-1 sm:gap-10 "
         >
           <motion.div className="relative about-image-1">
             <button onClick={handleOpenResume} className="resume-button">
