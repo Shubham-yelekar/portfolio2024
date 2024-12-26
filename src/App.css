@@ -961,6 +961,7 @@ p {
 
   width: 100%;
   display: flex;
+
   justify-content: space-between;
 }
 
@@ -1793,6 +1794,11 @@ p {
   .experience-list {
     margin-top: 0.6rem;
     gap: 1rem;
+  }
+
+  .experience-list-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .experience-list-item h5 {
