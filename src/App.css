@@ -729,6 +729,19 @@ p {
 .archive-wrapper {
   /* max-width: 768px; */
   margin: 0 auto;
+  /* display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(2, 1fr); */
+}
+
+.archive-major-wrapper {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 24px;
+}
+
+.archive-mini-wrapper {
   display: grid;
   gap: 1.6rem;
   grid-template-columns: repeat(3, 1fr);
@@ -738,8 +751,8 @@ p {
   border-radius: 1.4rem;
   border: 1px solid var(--border-gray);
   background: var(--black-white);
-  margin-bottom: 16px;
-  height: 450px;
+  /* margin-bottom: 16px; */
+  /* height: 600px; */
   text-decoration: none;
   color: var(--text-color);
   position: relative;
@@ -747,6 +760,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.archive-major-wrapper .archive-card {
+  height: 600px;
+}
+
+.archive-mini-wrapper .archive-card {
+  height: 400px;
 }
 
 .archive-card img {
@@ -1352,6 +1373,18 @@ p {
   .archive-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .archive-major-wrapper .archive-card {
+    height: 450px;
+  }
+
+  .archive-mini-wrapper .archive-card {
+    height: 350px;
+  }
+
+  .archive-info h5 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1552,6 +1585,22 @@ p {
     /* height: 380px; */
   }
 
+  .archive-major-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .archive-mini-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archive-major-wrapper .archive-card {
+    height: 400px;
+  }
+
+  .archive-mini-wrapper .archive-card {
+    height: 250px;
+  }
+
   .title-wrapper p {
     width: auto;
     font-size: 14px;
@@ -1644,12 +1693,22 @@ p {
   }
 
   .archive-info {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .archive-mini-wrapper .archive-info {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .archive-info h5 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 2rem;
+  }
+
+  .archive-info p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 
   .tech-box-grid {
