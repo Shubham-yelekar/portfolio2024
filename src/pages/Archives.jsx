@@ -16,7 +16,6 @@ const Archives = () => {
   useEffect(() => {
     if (data?.archive){
       setArchivePost(data.archive)
-
     }
 
   }, [data])
@@ -28,7 +27,8 @@ const Archives = () => {
   if (!archivePost.length) {
     return <p>No Archives found</p>
   }
-
+  console.log(archivePost);
+  
   return (
     <motion.div variants={textVariants} initial="initial" animate="animate" className='p-4'>
       <motion.div className='top-blob-archive'></motion.div>
