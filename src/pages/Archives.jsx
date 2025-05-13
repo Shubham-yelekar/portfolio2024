@@ -10,8 +10,6 @@ import { useData } from "../DataContext"; //
 const Archives = () => {
   const [archivePost, setArchivePost] = useState([]);
   const { data, loading } = useData();
-  const majorProjects = archivePost.filter((item) => item.type === "major");
-  const minorProjects = archivePost.filter((item) => item.type === "mini");
 
   useEffect(() => {
     if (data?.archive) {
@@ -46,7 +44,7 @@ const Archives = () => {
       </motion.div>
       <div className="archive-wrapper">
         <div className="archive-major-wrapper">
-          {majorProjects.map((items, index) => (
+          {archivePost.map((items, index) => (
             <div key={index} className="archive-card">
               {items.video ? (
                 <video
@@ -72,8 +70,8 @@ const Archives = () => {
             </div>
           ))}
         </div>
-        <div className="archive-mini-wrapper">
-          {minorProjects.map((items, index) => (
+        {/* <div className="archive-mini-wrapper">
+          {archivePost.map((items, index) => (
             <div key={index} className="archive-card">
               {items.video ? (
                 <video
@@ -98,7 +96,7 @@ const Archives = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </motion.div>
