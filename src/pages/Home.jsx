@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Aurora from "../components/Aurora";
 import textVariants from "../static/textVariants";
 import childVariants from "../static/childVariants";
 
