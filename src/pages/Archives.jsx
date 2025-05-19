@@ -13,7 +13,7 @@ const Archives = () => {
 
   useEffect(() => {
     if (data?.archive) {
-      setArchivePost(data.archive);
+      setArchivePost(data.archive.reverse());
     }
   }, [data]);
 
