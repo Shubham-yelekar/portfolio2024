@@ -1,9 +1,9 @@
-import React from 'react'
-import XDotCom from '../icons/XDotCom'
-import Github from '../icons/Github'
-import Linkedin from '../icons/Linkedin'
-import { motion } from 'framer-motion'
-import textVariants from '../static/textVariants'
+import React from "react";
+import XDotCom from "../icons/XDotCom";
+import Github from "../icons/Github";
+import Linkedin from "../icons/Linkedin";
+import { motion } from "framer-motion";
+import textVariants from "../static/textVariants";
 
 const navLinkVariant = {
   initial: {
@@ -14,28 +14,54 @@ const navLinkVariant = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const SocialLinks = () => {
   return (
-    <motion.div className='social-links' variants={textVariants} initial="initial" animate="animate">
-          <motion.a className='link-box ' href="https://x.com/@shubu_y" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
-            <XDotCom/>
-            {/* <span>username</span> */}
-          </motion.a>
-          <motion.a className='link-box' href="https://www.linkedin.com/in/shubhamy1997" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
-            <Linkedin/>
-            {/* <span>username</span> */}
-          </motion.a>
-          <motion.a className='link-box' href="https://github.com/Shubham-yelekar" target='_blank' variants={navLinkVariant} initial="initial" animate="animate">
-            <Github/>
-            {/* <span>username</span> */}
-          </motion.a>
-        </motion.div>
-  )
-}
+    <motion.div
+      className="social-links"
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+    >
+      <motion.a
+        className="link-box "
+        href="https://x.com/@shubu_y"
+        target="_blank"
+        variants={navLinkVariant}
+        initial="initial"
+        animate="animate"
+      >
+        <XDotCom />
+        {/* <span>username</span> */}
+      </motion.a>
+      <motion.a
+        className="link-box"
+        href="https://www.linkedin.com/in/shubhamyelekar/"
+        target="_blank"
+        variants={navLinkVariant}
+        initial="initial"
+        animate="animate"
+      >
+        <Linkedin />
+        {/* <span>username</span> */}
+      </motion.a>
+      <motion.a
+        className="link-box"
+        href="https://github.com/Shubham-yelekar"
+        target="_blank"
+        variants={navLinkVariant}
+        initial="initial"
+        animate="animate"
+      >
+        <Github />
+        {/* <span>username</span> */}
+      </motion.a>
+    </motion.div>
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;
