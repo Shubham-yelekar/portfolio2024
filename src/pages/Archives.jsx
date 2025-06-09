@@ -15,7 +15,7 @@ const Archives = () => {
     if (data?.archive) {
       setArchivePost(data.archive.reverse());
     }
-  }, [data]);
+  }, []);
 
   if (loading) {
     return <p>Loading</p>;

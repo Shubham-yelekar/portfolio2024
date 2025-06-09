@@ -175,12 +175,17 @@ p {
   position: absolute;
   font-family: var(--font-mono);
   color: var(--nav-icon-higlight);
+  background-color: var(--nav-highlight);
+  padding: 8px 12px;
+  border-radius: 24px;
   font-weight: 200;
   font-size: 1.4rem;
-  top: -2.4rem;
+  top: -3.6rem;
+  /* left: -4rem; */
   opacity: 0;
   visibility: hidden;
-  filter: invert(75%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   transition: opacity 0.4s ease, visibility 0.3s ease;
 }
 
@@ -727,7 +732,7 @@ p {
 }
 
 .archive-wrapper {
-  /* max-width: 1200px; */
+  max-width: 1200px;
   margin: 0 auto;
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
