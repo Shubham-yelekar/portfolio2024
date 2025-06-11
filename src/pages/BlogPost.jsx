@@ -25,10 +25,7 @@ const BlogPost = () => {
   }, [data, slug]);
   if (!blog) {
     return (
-      <div className="error-wrapper">
-        <h1>404 - Blog Not Found</h1>
-        <p>Sorry, the blog post you're looking for does not exist.</p>
-      </div>
+      <div class="w-10 h-10 border-4 border-t-blue-500 border-gray-300 rounded-full animate-spin"></div>
     );
   }
 
@@ -49,8 +46,8 @@ const BlogPost = () => {
       >
         <article>
           <header>
+            <p className="blog-date">{date}</p>
             <h1 className="blog-title">{title}</h1>
-            <p>{date}</p>
           </header>
           <section className="blog-content">
             <Component />

@@ -12,7 +12,6 @@ const CodeBlock = ({ children, className }) => {
   return (
     <div className="code-block-wrapper">
       <div className="code-block-language">{language}</div>
-
       <SyntaxHighlighter
         language={language}
         style={dark}
