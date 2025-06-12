@@ -5,6 +5,7 @@ import SEOHelmet from "../components/ui/SEOHelmet";
 import ImageWrapper from "../components/ui/ImageWrapper";
 import QuoteBlock from "../components/ui/QuoteBlock";
 import CodeBlock from "../components/ui/CodeBlock";
+import BlogFooter from "../components/ui/BlogFooter";
 import { useData } from "../DataContext";
 import { Another, Hello, SpaceTimeComplexity } from "../blog-posts";
 
@@ -47,7 +48,7 @@ const BlogPost = () => {
         }}
       >
         <article>
-          <header>
+          <header className="grid-pattern">
             <p className="blog-date">{date}</p>
             <h1 className="blog-title">{title}</h1>
           </header>
@@ -56,6 +57,7 @@ const BlogPost = () => {
           </section>
         </article>
       </MDXProvider>
+      <BlogFooter />
     </div>
   );
 };

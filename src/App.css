@@ -39,6 +39,10 @@
   --nav-highlight: rgb(209, 209, 209);
   --nav-icon-border: rgb(96, 96, 96);
   --nav-icon-higlight: rgb(38, 38, 38);
+
+  --gray-1: rgb(225, 225, 225);
+  --gray-2: rgb(210, 210, 210);
+  --gray-3: rgb(180, 180, 180);
 }
 
 [data-theme="dark"] {
@@ -59,6 +63,10 @@
   --nav-highlight: rgb(58, 58, 58);
   --nav-icon-border: rgb(96, 96, 96);
   --nav-icon-higlight: rgb(235, 235, 235);
+
+  --gray-1: rgb(30, 30, 30);
+  --gray-2: rgb(40, 40, 40);
+  --gray-3: rgb(60, 60, 60);
 }
 
 * {
@@ -1351,6 +1359,10 @@ p {
 article header {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3.6rem;
+  padding: 2.4rem;
+  border: 2px dashed var(--border-gray);
+  border-radius: 1rem;
 }
 .blog-title {
   font-size: 3.2rem;
@@ -1360,7 +1372,7 @@ article header {
   font-size: 1.4rem;
   line-height: 3.6rem;
   font-family: var(--font-mono);
-  color: var(--nav-icon-color);
+  color: var(--text-color-2);
 }
 
 .blog-post-wrapper {
@@ -1370,27 +1382,31 @@ article header {
 
 .blog-content h1 {
   font-size: 3.2rem;
-  line-height: 4rem;
+  line-height: 4.2rem;
 }
 
 .blog-content h2 {
   font-size: 2.8rem;
   line-height: 3.2rem;
+  margin: 3rem 0 1rem;
 }
 
 .blog-content h3 {
   font-size: 2.4rem;
-  line-height: 3rem;
+  line-height: 3.2rem;
+  margin: 3rem 0 1rem;
 }
 
 .blog-content h4 {
   font-size: 2rem;
   line-height: 3rem;
+  margin: 3rem 0 1rem;
 }
 
 .blog-content h5 {
   font-size: 1.8rem;
   line-height: 2.8rem;
+  margin: 3rem 0 1rem;
 }
 
 .blog-content h6 {
@@ -1446,6 +1462,7 @@ article header {
   object-fit: contain;
   object-position: center;
   border-radius: 8px;
+  margin: 3rem 0;
 }
 
 .blog-content hr {
@@ -1467,10 +1484,11 @@ article header {
 .quote-block p {
   font-size: 2.4rem;
   line-height: 3.6rem;
+  color: var(--nav-icon-higlight);
 }
 
 .code-block-wrapper {
-  margin-top: 6.4rem;
+  margin-top: 3.6rem;
 }
 
 .code-block-wrapper .code-block-language {
@@ -1502,6 +1520,53 @@ article header {
 
 .code-block code {
   line-height: 2.4rem !important;
+}
+
+.blog-footer {
+  height: 30vh;
+  margin-top: 3.6rem;
+  padding: 2rem;
+  border-top: 2px solid var(--border-gray);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.blog-footer a {
+  background-color: var(--nav-icon-higlight);
+  color: var(--nav-color);
+  padding: 1rem 2.4rem;
+  border-radius: 2.4rem;
+}
+
+/* From Uiverse.io by chris_6688 */
+.grid-pattern {
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-1); /* Dark background color */
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      var(--gray-3) 1px,
+      transparent 0
+    ),
+    linear-gradient(var(--gray-2) 1px, transparent 0),
+    linear-gradient(90deg, var(--gray-2) 1px, transparent 0);
+  background-size: 40px 40px, 20px 20px, 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-pattern::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--border-gray) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 2;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 1200px) {

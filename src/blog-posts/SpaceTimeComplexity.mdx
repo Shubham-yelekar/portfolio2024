@@ -7,14 +7,173 @@ export const metadata = {
 
 Week one of the [**Namaste DSA**](https://namastedev.com/learn/namaste-dsa) course I’ve learned the Space time complexity concept , here are the few point I’ve noted
 
+---
+
 ### What is BigO notation?
 
 - Categorize an algorithms **time** or **memory** based on input; Growth w.r.t Input
 - The use Data Structures determines the algorithms that effects BigO
 
-### **O(n) – Linear Time**
+---
+
+### **O(n)** – Linear Time
 
 - **Meaning:** Time grows **directly** with input size.
 - **Example:**
   - Searching for a number in a list by **checking one by one**.
   - Reversing a list by **going through each item**.
+
+<ImageWrapper
+  src="https://ucarecdn.com/de01a7fd-1aaf-46af-8f9e-b06fa41279b5/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### **O(n²) – Quadratic Time**
+
+- **Meaning:** Time grows **much faster** because of **loops inside loops**.
+- **Example:**
+  - Comparing **every pair** of numbers in a list.
+  - Sorting a list using **Bubble Sort** or **Selection Sort**.
+
+<ImageWrapper
+  src="https://ucarecdn.com/6d54d2fb-b388-4137-9c84-a2a535cd6435/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### **O(n log n) – Log-Linear Time**
+
+- **Meaning:** Split the work into **halves**, then process each half.
+- **Example:**
+  - Sorting a list using **Quick Sort** or **Merge Sort**.
+
+<ImageWrapper
+  src="https://ucarecdn.com/9dd79fb0-1f77-43da-a0e2-2a22ca213c20/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### **O(log n) – Logarithmic Time**
+
+- **Meaning:** Time grows **very slowly** as input size increases.
+- **Example:**
+  - Searching in a **sorted list** by **cutting it in half** each time (**Binary Search**).
+
+<ImageWrapper
+  src="https://ucarecdn.com/9beb117f-dcf6-440f-bc06-8c1ed14d1b8d/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### **O(1) – Constant Time**
+
+- **Meaning:** Time stays the **same** no matter the input size.
+- **Example:**
+  - Accessing an item in an array by index.
+  - Inserting/removing at the end of a stack.
+  - Checking if a number is even or odd.
+
+<ImageWrapper
+  src="https://ucarecdn.com/0d8a7b21-c5c5-4b46-a8db-4b504133e6d7/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### **O(2ⁿ) – Exponential Time**
+
+- **Meaning:** Time **doubles** with each additional input.
+- **Example:**
+  - Solving the **Subset Sum Problem.**
+  - Calculating all subsets of a set.
+  - **Recursive Fibonacci** without memoization.
+
+<ImageWrapper
+  src="https://ucarecdn.com/60e582a9-8865-4848-bb0f-260899edecaa/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### **O(n!) – Factorial Time**
+
+- **Meaning:** Time grows **extremely** fast, worse than exponential.
+- **Example:**
+  - Solving the Traveling Salesman Problem (brute-force).
+  - Generating all **permutations** of a list.
+
+<ImageWrapper
+  src="https://ucarecdn.com/0c7efcb3-8cdd-4437-afd6-da65fb1c3814/-/preview/1000x750/"
+  alt="Example Image"
+/>
+
+---
+
+### What is Space Complexity?
+
+Space Complexity is the amount of memory an algorithm uses in relation to the input size (n).
+
+This includes:
+
+- Input storage
+- Temporary variables
+- Function call stack (in recursion)
+- Auxiliary data structures (arrays, hashmaps, etc.)
+
+#### Examples
+
+##### O(1) – Constant Space
+
+- Uses the same fixed amount of memory, regardless of input size.
+
+```javascript
+function isEven(n) {
+  return n % 2 === 0; // uses no extra memory
+}
+```
+
+##### O(n) – Linear Space
+
+- Memory usage grows directly with input size.
+
+```javascript
+function copyArray(arr) {
+  return [...arr]; // creates a new array of size n
+}
+```
+
+##### O(n²) – Quadratic Space
+
+- Common when using a 2D matrix or storing all pairs.
+- Creating an n x n grid.
+
+##### Time vs Space Trade-off
+
+- Sometimes we use **more memory** to make the algorithm faster.
+- Example: Using a **hash table** to avoid repeated calculations in memoization.
+
+---
+
+#### Conclusion
+
+- Big-O Notation helps analyze how an algorithm's time and space grow with input size.
+
+- It’s essential for writing efficient code, especially with large data.
+
+- Time Complexity tells us how fast an algorithm runs.
+  Space Complexity tells us how much memory it uses.
+
+- Different problems demand different trade-offs between speed and memory.
+
+- Knowing Big-O helps in:
+
+  - Choosing the right data structures
+  - Optimizing performance
+  - Cracking coding interviews and solving real-world problems
+
+> Always aim for the lowest complexity that still meets the problem’s needs.

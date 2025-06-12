@@ -6,6 +6,7 @@ const SEOHelmet = ({ title, description }) => {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <script src="https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js"></script>
     </Helmet>
   );
 };
