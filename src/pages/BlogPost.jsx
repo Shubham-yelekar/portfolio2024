@@ -23,7 +23,6 @@ const BlogPost = () => {
     if (data?.blogPosts) {
       const blog = data?.blogPosts?.find((post) => post.slug === slug);
       setBlog({ ...blog, Component: componentMap[blog.Component] });
-      console.log("componentMap:", componentMap);
     }
   }, [data, slug]);
   if (!blog) {
