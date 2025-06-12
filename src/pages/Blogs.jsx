@@ -8,7 +8,8 @@ const Blogs = () => {
 
   useEffect(() => {
     if (data?.blogPosts) {
-      setBlogPosts(data.blogPosts); // Update state when `data.blogPosts` changes
+      const activeBlogs = data.blogPosts.filter((blog) => blog.active);
+      setBlogPosts(activeBlogs); // Update state when `data.blogPosts` changes
     }
   }, [data]);
 

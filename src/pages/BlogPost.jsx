@@ -6,12 +6,13 @@ import ImageWrapper from "../components/ui/ImageWrapper";
 import QuoteBlock from "../components/ui/QuoteBlock";
 import CodeBlock from "../components/ui/CodeBlock";
 import { useData } from "../DataContext";
-import { Another, Hello } from "../blog-posts";
+import { Another, Hello, SpaceTimeComplexity } from "../blog-posts";
 
 const BlogPost = () => {
   const componentMap = {
     Hello,
     Another,
+    SpaceTimeComplexity,
   };
   const { slug } = useParams();
   const { data } = useData(); // Correctly destructure the context data
@@ -21,6 +22,7 @@ const BlogPost = () => {
     if (data?.blogPosts) {
       const blog = data?.blogPosts?.find((post) => post.slug === slug);
       setBlog({ ...blog, Component: componentMap[blog.Component] });
+      console.log("componentMap:", componentMap);
     }
   }, [data, slug]);
   if (!blog) {
