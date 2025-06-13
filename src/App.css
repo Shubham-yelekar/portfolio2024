@@ -19,6 +19,32 @@
   --green: rgba(166, 252, 8, 1);
 
   --orange: rgb(249, 115, 0);
+
+  --icon-home: radial-gradient(
+    100% 100% at 50.46% 0%,
+    #fa5959 0%,
+    #cd1818 100%
+  );
+  --icon-projects: radial-gradient(
+    100% 100% at 50.46% 0%,
+    #f3e447 0%,
+    #86be1e 100%
+  );
+  --icon-archive: radial-gradient(
+    100% 100% at 50.46% 0%,
+    #3df746 0%,
+    #19a714 100%
+  );
+  --icon-blogs: radial-gradient(
+    100% 100% at 50.46% 100%,
+    #3a7fcf 0%,
+    #21ccff 100%
+  );
+  --icon-me: radial-gradient(
+    100% 100% at 50.46% 100%,
+    #6b41e9 0%,
+    #74a0ff 100%
+  );
 }
 
 [data-theme="light"] {
@@ -174,15 +200,41 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--light-gray);
+  /* color: var(--light-gray); */
   transition: all 300ms ease-in-out;
   border-radius: 1.4rem;
-  background: var(--nav-icon-box);
+  /* background: var(--nav-icon-box); */
+}
+
+.icon-home {
+  background: var(--icon-home);
+  border-radius: 1.4rem;
+}
+
+.icon-projects {
+  background: var(--icon-projects);
+  border-radius: 1.4rem;
+}
+
+.icon-archives {
+  background: var(--icon-archive);
+  border-radius: 1.4rem;
+}
+
+.icon-blogs {
+  background: var(--icon-blogs);
+  border-radius: 1.4rem;
+}
+
+.icon-me {
+  background: var(--icon-me);
+  border-radius: 1.4rem;
 }
 
 .tool-tip {
   position: absolute;
   font-family: var(--font-mono);
+  font-weight: 900;
   color: var(--nav-icon-higlight);
   background-color: var(--nav-highlight);
   padding: 8px 12px;
@@ -209,15 +261,16 @@ p {
 }
 
 .nav-link a:hover {
-  background: var(--nav-highlight);
+  /* background: var(--nav-highlight); */
 }
 
 .nav-link a:focus {
-  background: var(--nav-highlight);
+  outline: 2px solid var(--border-gray);
 }
 
 .nav-link svg path {
-  fill: var(--nav-icon-color) !important;
+  fill: var(--white) !important;
+  opacity: 0.6;
   transition: all 300ms ease-in-out !important;
 }
 
@@ -228,7 +281,8 @@ p {
 }
 
 .activeLink svg path {
-  fill: var(--nav-icon-higlight) !important;
+  fill: var(--white) !important;
+  opacity: 1;
 }
 
 /* .activeLink::before{
