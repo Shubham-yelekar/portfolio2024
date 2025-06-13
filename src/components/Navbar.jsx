@@ -5,6 +5,7 @@ import HomeIcon from "../icons/HomeIcon";
 import ProjectIcon from "./ProjectIcon";
 import ArchiveIcons from "../icons/ArchiveIcons";
 import MyIcon from "../icons/MyIcon";
+import BlogsIcon from "../icons/BlogsIcon";
 
 const navVariant = {
   initial: {
@@ -48,32 +49,55 @@ const Navbar = () => {
       animate="animate"
     >
       <ul>
-        <motion.li className="nav-link" variants={navLinkVariant}>
-          <span className="tool-tip" style={{ left: "2%" }}>
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
+          <span
+            className="tool-tip"
+            style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
+          >
             /home
           </span>
           <NavLink className={linkClass} to={"/"}>
             <HomeIcon />
           </NavLink>
         </motion.li>
-        <motion.li className="nav-link" variants={navLinkVariant}>
-          <span className="tool-tip" style={{ left: "20%" }}>
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
+          <span
+            className="tool-tip"
+            style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
+          >
             /projects
           </span>
           <NavLink className={linkClass} to={"/projects"}>
             <ProjectIcon />
           </NavLink>
         </motion.li>
-        <motion.li className="nav-link" variants={navLinkVariant}>
-          <span className="tool-tip" style={{ left: "48%" }}>
+        <motion.li className="nav-link  relative" variants={navLinkVariant}>
+          <span
+            className="tool-tip"
+            style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
+          >
             /archives
           </span>
           <NavLink className={linkClass} to={"/archives"}>
             <ArchiveIcons />
           </NavLink>
         </motion.li>
-        <motion.li className="nav-link" variants={navLinkVariant}>
-          <span className="tool-tip" style={{ left: "77%" }}>
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
+          <span
+            className="tool-tip"
+            style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
+          >
+            /blogs
+          </span>
+          <NavLink className={linkClass} to={"/blogs"}>
+            <BlogsIcon />
+          </NavLink>
+        </motion.li>
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
+          <span
+            className="tool-tip"
+            style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
+          >
             /about
           </span>
           <NavLink className={linkClass} to={"/about"}>
