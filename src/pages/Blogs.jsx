@@ -19,13 +19,14 @@ const Blogs = () => {
         <h3 className="text-center w-full">All Blogs</h3>
         <div className="dotted-line"></div>
       </div>
-      <div className="max-w-[768px] m-auto">
+      <div className="max-w-[768px] m-auto grid grid-cols-2 gap-4">
         {blogPosts.length > 0 ? (
           blogPosts.map((post, index) => <BlogCard blog={post} key={index} />)
         ) : (
           <p>No blogs available.</p>
         )}
       </div>
+  
     </div>
   );
 };

@@ -1391,17 +1391,23 @@ p {
 }
 
 .blog-link {
-  background: var(--na);
-  border-bottom: 0.5px solid var(--border-gray);
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  padding: 1rem 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
-.blog-link:hover {
-  padding: 1rem 1rem;
-  border-bottom: 0.5px solid var(--text-color-08);
+
+.blog-link .bar {
+  width: 0px;
+  transition: all 0.4s ease-out;
+}
+
+.blog-link:hover .bar {
+  background-color: var(--nav-highlight);
+  height: 1px ;
+  width: 100%;
 }
 
 .blog-link h6 {
@@ -1411,7 +1417,8 @@ p {
 
 .blog-link p {
   font-size: 1.4rem;
-  text-align: right;
+  text-align: left;
+  margin-top: 1rem;
   color: var(--nav-icon-color);
   font-family: var(--font-mono);
 }
