@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import textVariants from "../static/textVariants";
 import childVariants from "../static/childVariants";
+import Scene from "../components/Scene";
+import Bg3d from "../components/Bg3d";
 
 const Home = () => {
   return (
@@ -51,6 +53,7 @@ const Home = () => {
           the way.
         </motion.p>
       </motion.div>
+      <Bg3d />
     </motion.div>
   );
 };
