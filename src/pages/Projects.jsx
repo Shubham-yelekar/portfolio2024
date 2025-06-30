@@ -14,10 +14,7 @@ const Projects = () => {
     if (data?.projectList) {
       SetProjects(data.projectList);
     }
-    // else {
-    //   console.log("no data");
-    // }
-  }, []);
+  }, [data]);
 
   if (loading) {
     return <p>Loading</p>;

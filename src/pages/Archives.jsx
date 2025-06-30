@@ -10,21 +10,17 @@ import { useData } from "../DataContext"; //
 const Archives = () => {
   const [archivePost, setArchivePost] = useState([]);
   const { data, loading } = useData();
-  console.log(data);
 
   useEffect(() => {
     if (data?.archive) {
       setArchivePost(data.archive.reverse());
     }
-  }, []);
+  }, [data]);
 
   if (loading) {
     return <p>Loading</p>;
   }
 
-  // if (!archivePost.length) {
-  //   return <p>No Archives found</p>;
-  // }
   return (
     <motion.div
       variants={textVariants}
