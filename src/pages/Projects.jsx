@@ -14,6 +14,9 @@ const Projects = () => {
     if (data?.projectList) {
       SetProjects(data.projectList);
     }
+    // else {
+    //   console.log("no data");
+    // }
   }, []);
 
   if (loading) {
@@ -43,15 +46,26 @@ const Projects = () => {
           <Link
             to={`/projects/${project.id}`}
             key={project.id}
-            className="project-card "
+            className="project-card"
           >
-            <div className="project-info">
+            {/* <div className="project-info">
               <h4>{project.name}</h4>
               <h6 className="tech-used">{project.tech}</h6>
               <p>{project.description}</p>
+            </div> */}
+            <div className="project-card-images">
+              <img src={project.thumbnail} alt={project.name} />
             </div>
-            {/* <img src={project.thumbnail} alt={project.name} /> */}
-            <div
+            <div className="project-info">
+              <div className="project-info-title">
+                <h4>{project.name}</h4>
+                <h6 className="tech-used">{project.tech}</h6>
+              </div>
+              <div className="project-info-description">
+                <p>{project.description}</p>
+              </div>
+            </div>
+            {/* <div
               className="project-card-image"
               style={{
                 backgroundImage: `url(${project.thumbnail})`,
@@ -59,7 +73,7 @@ const Projects = () => {
                 backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-            ></div>
+            ></div> */}
           </Link>
         ))}
       </motion.div>
