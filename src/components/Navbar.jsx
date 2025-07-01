@@ -49,10 +49,7 @@ const Navbar = () => {
       animate="animate"
     >
       <ul>
-        <motion.li
-          className="nav-link icon-home relative"
-          variants={navLinkVariant}
-        >
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
           <span
             className="tool-tip"
             style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
@@ -63,10 +60,7 @@ const Navbar = () => {
             <HomeIcon />
           </NavLink>
         </motion.li>
-        <motion.li
-          className="nav-link icon-projects relative"
-          variants={navLinkVariant}
-        >
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
           <span
             className="tool-tip"
             style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
@@ -77,10 +71,7 @@ const Navbar = () => {
             <ProjectIcon />
           </NavLink>
         </motion.li>
-        <motion.li
-          className="nav-link icon-archives relative"
-          variants={navLinkVariant}
-        >
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
           <span
             className="tool-tip"
             style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
@@ -91,24 +82,8 @@ const Navbar = () => {
             <ArchiveIcons />
           </NavLink>
         </motion.li>
-        <motion.li
-          className="nav-link icon-blogs relative"
-          variants={navLinkVariant}
-        >
-          <span
-            className="tool-tip"
-            style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
-          >
-            /blogs
-          </span>
-          <NavLink className={linkClass} to={"/blogs"}>
-            <BlogsIcon />
-          </NavLink>
-        </motion.li>
-        <motion.li
-          className="nav-link icon-me relative"
-          variants={navLinkVariant}
-        >
+
+        <motion.li className="nav-link relative" variants={navLinkVariant}>
           <span
             className="tool-tip"
             style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}

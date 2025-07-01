@@ -261,7 +261,7 @@ p {
 }
 
 .nav-link a:hover {
-  /* background: var(--nav-highlight); */
+  background: var(--nav-highlight);
 }
 
 .nav-link a:focus {
