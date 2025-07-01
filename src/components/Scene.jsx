@@ -2,12 +2,17 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
+import { useTheme } from "../Theme-context";
 
 const Scene = () => {
+  const { theme } = useTheme();
   return (
     <Canvas>
-      <directionalLight intensity={3} position={[0, 3, 2]} />
-      <Environment preset="forest" />
+      <directionalLight
+        intensity={theme === "dark" ? 8 : 3}
+        position={[0, 3, 2]}
+      />
+      <Environment preset={theme === "dark" ? "night" : "studio"} />
       <Model />
     </Canvas>
   );

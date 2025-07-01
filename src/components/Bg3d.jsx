@@ -3,7 +3,7 @@ import Scene from "./Scene";
 
 const Bg3d = () => {
   return (
-    <div className="absolute h-screen  w-full">
+    <div className="absolute h-screen z-[-8] w-full">
       <Scene />
     </div>
   );

@@ -14,8 +14,8 @@ const Home = () => {
       animate="animate"
       className="flex justify-center items-center home-page overflow-hidden"
     >
-      <motion.div className="top-blob-archive"></motion.div>
-      <motion.div className="bot-blob-home"></motion.div>
+      {/* <motion.div className="top-blob-archive"></motion.div>
+      <motion.div className="bot-blob-home"></motion.div> */}
       <motion.div
         variants={textVariants}
         initial="initial"

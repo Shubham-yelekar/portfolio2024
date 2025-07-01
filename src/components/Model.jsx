@@ -1,24 +1,32 @@
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
-import { useControls } from "leva";
-import React from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 
+import React, { useRef, useEffect } from "react";
+import { useControls } from "leva";
 const Model = (props) => {
   const { nodes, materials } = useGLTF("/Models/mylogo.glb");
 
   const { viewport } = useThree();
+  const mesh = useRef();
 
-  const materialProps = useControls({
-    thickness: { value: 0.3, min: 0, max: 3, steps: 0.05 },
-    roughness: { value: 0, min: 0, max: 1, steps: 0.1 },
-    transmission: { value: 1, min: 0, max: 1, step: 0.1 },
-    ior: { value: 1.2, min: 0, max: 3, step: 0.1 },
-    chromaticAberration: { value: 0.02, min: 0, max: 1 },
+  // Leva controls for material properties
+  const materialProps = useControls("Material Properties", {
+    transmission: { value: 0.1, min: 0, max: 1, step: 0.01 },
+    thickness: { value: 0.5, min: 0, max: 3, step: 0.1 },
+    roughness: { value: 0.1, min: 0, max: 1, step: 0.01 },
+    ior: { value: 1.5, min: 1, max: 3, step: 0.1 },
+    chromaticAberration: { value: 0.03, min: 0, max: 1, step: 0.01 },
     backside: { value: true },
   });
+
+  useFrame(() => {
+    mesh.current.rotation.z -= 0.01;
+  });
+
   return (
     <group {...props} dispose={null} scale={viewport.width / 4}>
       <mesh
+        ref={mesh}
         castShadow
         receiveShadow
         geometry={nodes.Curve.geometry}
