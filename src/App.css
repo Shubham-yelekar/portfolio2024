@@ -739,7 +739,7 @@ p {
 }
 
 .archive-wrapper {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
@@ -774,7 +774,7 @@ p {
 }
 
 .archive-major-wrapper .archive-card {
-  height: 400px;
+  height: 600px;
 }
 
 .archive-mini-wrapper .archive-card {
