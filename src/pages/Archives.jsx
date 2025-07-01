@@ -21,9 +21,6 @@ const Archives = () => {
     return <p>Loading</p>;
   }
 
-  if (!archivePost.length) {
-    return <p>No Archives found</p>;
-  }
   return (
     <motion.div
       variants={textVariants}
@@ -70,33 +67,6 @@ const Archives = () => {
             </div>
           ))}
         </div>
-        {/* <div className="archive-mini-wrapper">
-          {archivePost.map((items, index) => (
-            <div key={index} className="archive-card">
-              {items.video ? (
-                <video
-                  autoPlay
-                  muted
-                  playsInline
-                  loop
-                  src={items.video}
-                  alt={items.name}
-                ></video>
-              ) : (
-                <img src={items.thumbnail} alt={items.name} />
-              )}
-              <div className="archive-info">
-                <div>
-                  <h5>{items.name}</h5>
-                  <p>{items.description}</p>
-                </div>
-                <a href={items.link} target="_blank" className="link-button">
-                  <span>{items.linkType}</span> <BiLinkExternal size={18} />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div> */}
       </div>
       <Footer />
     </motion.div>
