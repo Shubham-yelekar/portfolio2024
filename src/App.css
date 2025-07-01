@@ -563,9 +563,9 @@ p {
   margin: 0 auto;
   display: grid;
   gap: 4.8rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   place-items: center;
-  max-width: 900px;
+  max-width: 1600px;
 }
 
 .project-card {
@@ -580,6 +580,7 @@ p {
   /* border: 1px solid var(--border-gray); */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   transition: all 400ms ease-in-out;
 }
@@ -587,6 +588,7 @@ p {
 .project-card-images {
   border-radius: 1.6rem;
   overflow: hidden;
+  aspect-ratio: 16/9;
   /* padding: 1.4rem; */
 }
 
@@ -737,7 +739,7 @@ p {
 }
 
 .archive-wrapper {
-  max-width: 900px;
+  max-width: 1600px;
   margin: 0 auto;
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
@@ -746,7 +748,7 @@ p {
 .archive-major-wrapper {
   display: grid;
   gap: 1.6rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 24px;
 }
 
@@ -1378,12 +1380,12 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .archive-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+  .archive-major-wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .archive-major-wrapper .archive-card {
-    height: 450px;
+    height: 320px;
   }
 
   .archive-mini-wrapper .archive-card {
@@ -1595,30 +1597,6 @@ p {
     width: auto;
   }
 
-  .archive-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .archive-card {
-    /* height: 380px; */
-  }
-
-  .archive-major-wrapper {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .archive-mini-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .archive-major-wrapper .archive-card {
-    height: 400px;
-  }
-
-  .archive-mini-wrapper .archive-card {
-    height: 250px;
-  }
-
   .title-wrapper p {
     width: auto;
     font-size: 14px;
@@ -1714,9 +1692,12 @@ p {
     padding: 1rem 0.5rem;
   }
 
-  .archive-mini-wrapper .archive-info {
-    flex-direction: column;
-    gap: 0.5rem;
+  .archive-major-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archive-major-wrapper .archive-card {
+    height: 360px;
   }
 
   .archive-info h5 {
@@ -1796,9 +1777,6 @@ p {
 
   .title-wrapper p {
     width: auto;
-  }
-  .archive-wrapper {
-    grid-template-columns: repeat(1, 1fr);
   }
 
   .hero-wrapper p {
@@ -1970,5 +1948,13 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .archive-major-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .archive-info {
+    padding: 1rem 1.2rem;
   }
 }
