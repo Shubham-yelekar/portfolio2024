@@ -19,32 +19,6 @@
   --green: rgba(166, 252, 8, 1);
 
   --orange: rgb(249, 115, 0);
-
-  --icon-home: radial-gradient(
-    100% 100% at 50.46% 0%,
-    #fa5959 0%,
-    #cd1818 100%
-  );
-  --icon-projects: radial-gradient(
-    100% 100% at 50.46% 0%,
-    #f3e447 0%,
-    #86be1e 100%
-  );
-  --icon-archive: radial-gradient(
-    100% 100% at 50.46% 0%,
-    #3df746 0%,
-    #19a714 100%
-  );
-  --icon-blogs: radial-gradient(
-    100% 100% at 50.46% 100%,
-    #3a7fcf 0%,
-    #21ccff 100%
-  );
-  --icon-me: radial-gradient(
-    100% 100% at 50.46% 100%,
-    #6b41e9 0%,
-    #74a0ff 100%
-  );
 }
 
 [data-theme="light"] {
@@ -269,19 +243,19 @@ p {
 }
 
 .nav-link svg path {
-  fill: var(--white) !important;
+  fill: var(--nav-icon-color) !important;
   opacity: 0.6;
   transition: all 300ms ease-in-out !important;
 }
 
 .activeLink {
   position: relative;
-  /* background-color: var(--nav-highlight); */
+  /* background-color: var(--nav-icon-higlight); */
   transition: all 300ms ease-in-out !important;
 }
 
 .activeLink svg path {
-  fill: var(--white) !important;
+  fill: var(--nav-icon-higlight) !important;
   opacity: 1;
 }
 
@@ -491,12 +465,17 @@ p {
   justify-content: center;
 }
 
-.title-wrapper h5 {
-  margin-top: 1rem;
+.title-wrapper h4 {
   font-weight: 400;
-  /* max-width: fit-content; */
-  color: var(--text-color-2);
-  text-align: left;
+  margin: 4rem 0 1rem;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.title-wrapper p {
+  color: var(--text-color-05);
+  text-align: center;
+  width: 100%;
 }
 
 .top-blob-projects {

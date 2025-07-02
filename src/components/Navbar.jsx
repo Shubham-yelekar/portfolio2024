@@ -73,12 +73,17 @@ const Navbar = () => {
         </motion.li>
         <motion.li className="nav-link relative" variants={navLinkVariant}>
           <span
-            className="tool-tip"
+            className="tool-tip text-nowrap"
             style={{ top: "-100%", left: "50%", transform: "translateX(-50%)" }}
           >
-            /archives
+            /Lab ↗
           </span>
-          <NavLink className={linkClass} to={"/archives"}>
+
+          <NavLink
+            className={linkClass}
+            to={"https://lab-drab-six.vercel.app/"}
+            target="_blank"
+          >
             <ArchiveIcons />
           </NavLink>
         </motion.li>
