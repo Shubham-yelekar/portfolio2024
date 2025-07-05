@@ -24,6 +24,11 @@ const design = [
     desc: "3d Editor",
   },
   {
+    name: "Blender",
+    logo: "/assets/various/blender.png",
+    desc: "3d Design Tool",
+  },
+  {
     name: "Illustrator",
     logo: "/assets/various/ai-logo.png",
     desc: "Vector Design Tool",
@@ -40,6 +45,11 @@ const webDev = [
     name: "JavaScript",
     logo: "/assets/various/js-logo.png",
     desc: "Languages of the web",
+  },
+  {
+    name: "TypeScript",
+    logo: "/assets/various/typescript.png",
+    desc: "Stricter JavaScript",
   },
   {
     name: "ReactJS",
@@ -65,6 +75,11 @@ const webDev = [
     name: "Redux",
     logo: "/assets/various/redux-logo.png",
     desc: "State Managment",
+  },
+  {
+    name: "Three.js",
+    logo: "/assets/various/threejs.png",
+    desc: "3d Javascript Library",
   },
   {
     name: "Git & GitHub",
@@ -102,9 +117,7 @@ const About = () => {
         className="about-grid-wrapper"
       >
         <motion.div
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
+          variants={childVariants}
           className=" grid grid-cols-1 grid-rows-2 gap-8 sm:grid-cols-3 sm:grid-rows-1 sm:gap-10 "
         >
           <motion.div className="relative about-image-1">
@@ -136,39 +149,57 @@ const About = () => {
 
         {/* <div className="bento-card profile-img-box"></div> */}
 
-        <div className="flex flex-col sm:flex-row  bento-card gap-8 ">
-          <div className="map-box">
+        <motion.div
+          variants={childVariants}
+          className="flex flex-col sm:flex-row  bento-card gap-8 "
+        >
+          <motion.div variants={childVariants} className="map-box">
             <div className="map-marking"></div>
-          </div>
-          <div className="about-image-2"></div>
-        </div>
+          </motion.div>
+          <motion.div
+            variants={childVariants}
+            className="about-image-2"
+          ></motion.div>
+        </motion.div>
 
-        <div className="bento-card experience-box">
-          <div className="flex text-[24px]  gap-4 items-center about-title">
+        <motion.div className="bento-card experience-box">
+          <motion.div
+            variants={childVariants}
+            className="flex text-[24px]  gap-4 items-center about-title"
+          >
             {" "}
             <MdWork size={18} /> <h6 className="text-[16px]">Experience</h6>{" "}
-          </div>
-          <div className="flex flex-col experience-list">
-            <div className="experience-list-item">
+          </motion.div>
+          <motion.div className="flex flex-col experience-list">
+            <motion.div
+              variants={childVariants}
+              className="experience-list-item"
+            >
               <h5>
                 Front-end Developer <span> ＠ Artificial Reality</span>{" "}
               </h5>
               <h6>➜ 2023 ―― Present</h6>
-            </div>
-            <div className="experience-list-item">
+            </motion.div>
+            <motion.div
+              variants={childVariants}
+              className="experience-list-item"
+            >
               <h5>
                 Web Developer & Designer <span> ＠ Freelance</span>{" "}
               </h5>
               <h6>➜ 2022 ―― 2023</h6>
-            </div>
-            <div className="experience-list-item">
+            </motion.div>
+            <motion.div
+              variants={childVariants}
+              className="experience-list-item"
+            >
               <h5>
                 Electronics Engineer<span> ＠ R.A.I.T., Navi Mumbai </span>{" "}
               </h5>
               <h6>➜ passout 2022</h6>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
         <div className="bento-card tools-box">
           <div className="flex  gap-4 items-center  about-title">
@@ -194,7 +225,7 @@ const About = () => {
           </div>
 
           <div className="mt-8">
-            <h4>UI Design</h4>
+            <h4>Design Tools</h4>
             <div className="mt-8 tech-box-grid">
               {design.map((box, index) => (
                 <div key={index} className="tech-box flex gap-4">
