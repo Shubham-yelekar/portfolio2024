@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Footer from "../components/Footer";
 import textVariants from "../static/textVariants";
 import childVariants from "../static/childVariants";
@@ -106,14 +106,17 @@ const handleOpenResume = () => {
 };
 
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <motion.div className="p-2 sm:p-4">
       <motion.div className="top-blob-about"></motion.div>
       <motion.div className="top-grid-about"></motion.div>
       <motion.div
+        ref={ref}
         variants={textVariants}
         initial="initial"
-        animate="animate"
+        animate={isInView ? "animate" : "initial"}
         className="about-grid-wrapper"
       >
         <motion.div
@@ -162,37 +165,28 @@ const About = () => {
           ></motion.div>
         </motion.div>
 
-        <motion.div className="bento-card experience-box">
-          <motion.div
-            variants={childVariants}
-            className="flex text-[24px]  gap-4 items-center about-title"
-          >
+        <motion.div
+          variants={childVariants}
+          className="bento-card experience-box"
+        >
+          <motion.div className="flex text-[24px]  gap-4 items-center about-title">
             {" "}
             <MdWork size={18} /> <h6 className="text-[16px]">Experience</h6>{" "}
           </motion.div>
           <motion.div className="flex flex-col experience-list">
-            <motion.div
-              variants={childVariants}
-              className="experience-list-item"
-            >
+            <motion.div className="experience-list-item">
               <h5>
                 Front-end Developer <span> ＠ Artificial Reality</span>{" "}
               </h5>
               <h6>➜ 2023 ―― Present</h6>
             </motion.div>
-            <motion.div
-              variants={childVariants}
-              className="experience-list-item"
-            >
+            <motion.div className="experience-list-item">
               <h5>
                 Web Developer & Designer <span> ＠ Freelance</span>{" "}
               </h5>
               <h6>➜ 2022 ―― 2023</h6>
             </motion.div>
-            <motion.div
-              variants={childVariants}
-              className="experience-list-item"
-            >
+            <motion.div className="experience-list-item">
               <h5>
                 Electronics Engineer<span> ＠ R.A.I.T., Navi Mumbai </span>{" "}
               </h5>
@@ -201,17 +195,26 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        <div className="bento-card tools-box">
+        <motion.div variants={childVariants} className="bento-card tools-box">
           <div className="flex  gap-4 items-center  about-title">
             {" "}
             <FaTools size={18} />{" "}
             <h6 className="text-[16px]">Technologies and Tool Box</h6>
           </div>
-          <div className="mt-8">
+          <motion.div variants={childVariants} className="mt-8">
             <h4>Web - Development</h4>
-            <div className="mt-8 tech-box-grid">
+            <motion.div
+              variants={textVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              className="mt-8 tech-box-grid"
+            >
               {webDev.map((box, index) => (
-                <div key={index} className="tech-box flex gap-4">
+                <motion.div
+                  variants={childVariants}
+                  key={index}
+                  className="tech-box flex gap-4"
+                >
                   <div className="logo-box">
                     <img src={box.logo} alt="" />
                   </div>
@@ -219,16 +222,25 @@ const About = () => {
                     <h6>{box.name}</h6>
                     <p>{box.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <div className="mt-8">
             <h4>Design Tools</h4>
-            <div className="mt-8 tech-box-grid">
+            <motion.div
+              variants={textVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              className="mt-8 tech-box-grid"
+            >
               {design.map((box, index) => (
-                <div key={index} className="tech-box flex gap-4">
+                <motion.div
+                  variants={childVariants}
+                  key={index}
+                  className="tech-box flex gap-4"
+                >
                   <div className="logo-box">
                     <img src={box.logo} alt="" />
                   </div>
@@ -236,11 +248,11 @@ const About = () => {
                     <h6>{box.name}</h6>
                     <p>{box.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="bento-card thankyou-box">
           <PiHandsPrayingBold size={32} />
