@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import textVariants from "../static/textVariants";
 import childVariants from "../static/childVariants";
+import GridBottom from "../icons/GridBottom";
+import GridTop from "../icons/GridTop";
 
 const Home = () => {
   return (
@@ -10,10 +12,14 @@ const Home = () => {
       variants={textVariants}
       initial="initial"
       animate="animate"
-      className="flex justify-center items-center home-page overflow-hidden"
+      className="flex justify-center items-center home-page overflow-hidden "
     >
-      <motion.div className="top-blob-archive"></motion.div>
-      <motion.div className="bot-blob-home"></motion.div>
+      {/* <motion.div className="top-blob-archive"></motion.div> */}
+      {/* <motion.div className="bot-blob-home"></motion.div> */}
+      <div className="absolute top-0 left-0 z-10 w-full h-screen ">
+        <GridTop />
+        <GridBottom />
+      </div>
       <motion.div
         variants={textVariants}
         initial="initial"

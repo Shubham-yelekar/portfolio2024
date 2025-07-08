@@ -9,6 +9,7 @@ import { MdWork } from "react-icons/md";
 
 import { FaTools } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi2";
+import { BiLinkExternal } from "react-icons/bi";
 
 import { PiHandsPrayingBold } from "react-icons/pi";
 
@@ -174,12 +175,43 @@ const About = () => {
             <MdWork size={18} /> <h6 className="text-[16px]">Experience</h6>{" "}
           </motion.div>
           <motion.div className="flex flex-col experience-list">
-            <motion.div className="experience-list-item">
-              <h5>
-                Front-end Developer <span> ＠ Artificial Reality</span>{" "}
-              </h5>
-              <h6>➜ 2023 ―― Present</h6>
-            </motion.div>
+            <div>
+              <motion.div className="experience-list-item">
+                <h5>
+                  Front-end Developer <span> ＠ Artificial Reality</span>{" "}
+                </h5>
+                <h6>➜ 2023 ―― Present</h6>
+              </motion.div>
+              {/* <div className="h-[200px] flex gap-8 items-center  py-8 ">
+                <div className="flex flex-col gap-4 overflow-hidden">
+                  <img
+                    className="w-[160px] h-[120px] rounded-2xl object-cover"
+                    src="https://ucarecdn.com/961683ce-ba5f-4a9d-809b-76a5fb34964f/-/preview/450x300/"
+                    alt=""
+                  />
+                  <a className="flex items-center justify-between">
+                    <span className="text-[1.4rem]  text-neutral-300 font-regural">
+                      LC300
+                    </span>{" "}
+                    <BiLinkExternal size={14} />
+                  </a>
+                </div>
+                <div className="rounded-xl overflow-hidden ">
+                  <img
+                    className="w-[160px] h-[120px]  object-cover"
+                    src="https://ucarecdn.com/8e125cef-7677-412d-b3c9-2080f1bf2917/-/preview/450x300/"
+                    alt=""
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden ">
+                  <img
+                    className="w-[160px] h-[120px]  object-cover"
+                    src="https://ucarecdn.com/8e125cef-7677-412d-b3c9-2080f1bf2917/-/preview/450x300/"
+                    alt=""
+                  />
+                </div>
+              </div> */}
+            </div>
             <motion.div className="experience-list-item">
               <h5>
                 Web Developer & Designer <span> ＠ Freelance</span>{" "}
