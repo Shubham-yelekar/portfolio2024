@@ -16,10 +16,15 @@ const Home = () => {
     >
       {/* <motion.div className="top-blob-archive"></motion.div> */}
       {/* <motion.div className="bot-blob-home"></motion.div> */}
-      <div className="absolute top-0 left-0 z-10 w-full h-screen ">
+      <motion.div
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+        className="absolute top-0 left-0 z-10 w-full h-screen "
+      >
         <GridTop />
         <GridBottom />
-      </div>
+      </motion.div>
       <motion.div
         variants={textVariants}
         initial="initial"
