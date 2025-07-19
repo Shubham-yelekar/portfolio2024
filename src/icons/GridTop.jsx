@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const GridTop = (props) => {
   const { theme } = useTheme();
-  const [fillColor, setFillColor] = useState("");
+  const [fillColor, setFillColor] = useState("currentColor");
 
   const getCssVariableValue = (variable) => {
     return getComputedStyle(document.documentElement).getPropertyValue(
