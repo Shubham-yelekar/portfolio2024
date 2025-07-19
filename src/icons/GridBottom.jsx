@@ -2,14 +2,15 @@ import React from "react";
 import { useTheme } from "../Theme-context";
 import { useState, useEffect } from "react";
 
+const getCssVariableValue = (variable) => {
+  return (
+    getComputedStyle(document.documentElement).getPropertyValue(variable) ||
+    "currentColor"
+  );
+};
+
 const GridBottom = (props) => {
   const { theme } = useTheme();
-
-  const getCssVariableValue = (variable) => {
-    return getComputedStyle(document.documentElement).getPropertyValue(
-      variable
-    );
-  };
 
   const [fillColor, setFillColor] = useState(() =>
     getCssVariableValue("--nav-icon-color")
