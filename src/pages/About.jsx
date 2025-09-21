@@ -102,7 +102,7 @@ const webDev = [
 const handleOpenResume = () => {
   // Replace 'your-resume.pdf' with the actual path to your resume file
   const resumeUrl =
-    "https://drive.google.com/file/d/1gC-Gew05dzo0GINfC_zPwtVbggFt2adR/view?usp=sharing";
+    "https://drive.google.com/file/d/1-gA8x_mUl8e3FQERkmoohWzjtP_AbLm6/view?usp=sharing";
   window.open(resumeUrl, "_blank");
 };
 
